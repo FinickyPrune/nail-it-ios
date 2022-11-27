@@ -12,7 +12,7 @@ enum TokenType {
     case nailItRefresh
 }
 
-class User: NSObject, NSCoding {
+final class User: NSObject, NSCoding {
 
     var nailItToken: String?
     var nailItRefreshToken: String?

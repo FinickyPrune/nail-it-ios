@@ -32,6 +32,12 @@
 		AFFA8EAB29215A4A0083764C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFA8EA829215A4A0083764C /* MainViewController.xib */; };
 		AFFA8EAC29215A4A0083764C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8EA929215A4A0083764C /* MainViewController.swift */; };
 		AFFA8EAD29215A4A0083764C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8EAA29215A4A0083764C /* MainViewModel.swift */; };
+		AFFE23ED2933339B00063168 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23EC2933339B00063168 /* Interactor.swift */; };
+		AFFE23EF293333AA00063168 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23EE293333AA00063168 /* NetworkService.swift */; };
+		AFFE23F12933349000063168 /* NailItProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F02933349000063168 /* NailItProvider.swift */; };
+		AFFE23F4293336CD00063168 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F3293336CD00063168 /* Response.swift */; };
+		AFFE23F7293345EF00063168 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F6293345EF00063168 /* UserManager.swift */; };
+		AFFE23F92933462F00063168 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F82933462F00063168 /* User.swift */; };
 		E4505E91C4DDDC86A211758D /* Pods_NailItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3B16F96BBCD26F71CE42E0 /* Pods_NailItTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +92,12 @@
 		AFFA8EA829215A4A0083764C /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		AFFA8EA929215A4A0083764C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		AFFA8EAA29215A4A0083764C /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		AFFE23EC2933339B00063168 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		AFFE23EE293333AA00063168 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AFFE23F02933349000063168 /* NailItProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItProvider.swift; sourceTree = "<group>"; };
+		AFFE23F3293336CD00063168 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		AFFE23F6293345EF00063168 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		AFFE23F82933462F00063168 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C8381A3F3C35C9FBEBE345BE /* Pods-NailIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailIt.debug.xcconfig"; path = "Target Support Files/Pods-NailIt/Pods-NailIt.debug.xcconfig"; sourceTree = "<group>"; };
 		DE3B16F96BBCD26F71CE42E0 /* Pods_NailItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NailItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C77F67483E133AF7131691 /* Pods_NailIt_NailItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NailIt_NailItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +166,8 @@
 		AF6385BE292150EA005851B4 /* NailIt */ = {
 			isa = PBXGroup;
 			children = (
+				AFFE23F2293336C500063168 /* Models */,
+				AFFE23EB2933338E00063168 /* Services */,
 				AFFA8E86292159430083764C /* ViewControllers */,
 				AFFA8E7B292159100083764C /* Extensions */,
 				AFFA8E752921586D0083764C /* Coordinators */,
@@ -242,6 +256,26 @@
 				AFFA8EAA29215A4A0083764C /* MainViewModel.swift */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		AFFE23EB2933338E00063168 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AFFE23F6293345EF00063168 /* UserManager.swift */,
+				AFFE23EC2933339B00063168 /* Interactor.swift */,
+				AFFE23EE293333AA00063168 /* NetworkService.swift */,
+				AFFE23F02933349000063168 /* NailItProvider.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AFFE23F2293336C500063168 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFFE23F3293336CD00063168 /* Response.swift */,
+				AFFE23F82933462F00063168 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FD7138EAE199BC012EE26E0B /* Pods */ = {
@@ -522,8 +556,12 @@
 				AF6385CA292150EA005851B4 /* NailIt.xcdatamodeld in Sources */,
 				AFFA8E792921586D0083764C /* Coordinator.swift in Sources */,
 				AFFA8E9D292159430083764C /* SignUpViewModel.swift in Sources */,
+				AFFE23F4293336CD00063168 /* Response.swift in Sources */,
+				AFFE23EF293333AA00063168 /* NetworkService.swift in Sources */,
 				AFFA8E81292159100083764C /* DataRequest+DataHandler.swift in Sources */,
+				AFFE23ED2933339B00063168 /* Interactor.swift in Sources */,
 				AFFA8E84292159100083764C /* NetworkError.swift in Sources */,
+				AFFE23F12933349000063168 /* NailItProvider.swift in Sources */,
 				AFFA8E83292159100083764C /* UIViewController+Nib.swift in Sources */,
 				AFFA8EAC29215A4A0083764C /* MainViewController.swift in Sources */,
 				AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */,
@@ -531,7 +569,9 @@
 				AFFA8EA1292159430083764C /* SignInViewController.swift in Sources */,
 				AFFA8E9C292159430083764C /* SignUpViewController.swift in Sources */,
 				AFFA8EA0292159430083764C /* SignInViewModel.swift in Sources */,
+				AFFE23F7293345EF00063168 /* UserManager.swift in Sources */,
 				AFFA8EAD29215A4A0083764C /* MainViewModel.swift in Sources */,
+				AFFE23F92933462F00063168 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

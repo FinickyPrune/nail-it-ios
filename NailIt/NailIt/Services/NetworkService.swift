@@ -13,7 +13,7 @@ enum ContentType: String {
     case urlencoded = "application/x-www-form-urlencoded"
 }
 
-class NetworkService {
+final class NetworkService {
     static let shared: NetworkService = NetworkService()
 
     let queue = DispatchQueue(label: "com.nsu.kravchenko.nailit", qos: .userInitiated, attributes: .concurrent)
@@ -92,4 +92,3 @@ private class NetworkRequestInterceptor: RequestInterceptor {
         completion(.success(urlRequest))
     }
 }
-

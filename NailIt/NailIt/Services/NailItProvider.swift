@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class NailItProvider: DataProvider {
+final class NailItProvider: DataProvider {
 
     private static let registerUrl = ""
     private static let loginUrl = ""
