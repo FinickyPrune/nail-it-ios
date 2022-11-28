@@ -30,15 +30,15 @@ class SignInViewModel {
             return
         }
         
-//        let loginData = AuthenticationDataObject(username: login, password: password)
-//        _ = Interactor.shared.performAutotunedSignInWith(loginData) { result in
-//            if result.error != nil {
-//                completion(result.message)
-//                return
-//            }
-//            completion(nil)
-//            self.didLoginSuccessfully()
-//        }
+        let loginData = AuthenticationDataObject(username: login, password: password)
+        _ = Interactor.shared.performSignInWith(loginData) { result in
+            if result.error != nil {
+                completion(result.message)
+                return
+            }
+            completion(nil)
+            self.didLoginSuccessfully()
+        }
     }
     
     private func isLoginValid (_ login: String) -> Bool {

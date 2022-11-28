@@ -45,53 +45,20 @@ class SignUpViewModel {
             completion("Change birth date")
             return
         }
-        
-//        guard let _heightUnits = HeightUnits(rawValue: heightUnits) else {
-//            completion("Invalid height units")
-//            return
-//        }
-//
-//        guard let _weightUnits = WeightUnits(rawValue: weightUnits) else {
-//            completion("Invalid weight units")
-//            return
-//        }
-//
-//        var _height = Height(units: _heightUnits, sourceString: height)
-//        var _weight = Weight(units: _weightUnits, sourceString: weight).sourceString
-//
-//        if _heightUnits == .feet {
-//            _height = MeasuresTranslator.translateFeetToMeters(feet: _height)
-//        }
-//
-//        if _weightUnits == .lbs {
-//            _weight = MeasuresTranslator.translateLbsToKg(lbsString: weight) ?? ""
-//        }
-//
-//        guard let floatHeight = Float(_height.sourceString) else {
-//            completion("Invalid height")
-//            return
-//        }
-//
-//        guard let floatWeight = Float(_weight) else {
-//            completion("Invalid weight")
-//            return
-//        }
-//
-//        let userInfo = RegistrationUserInfo(username: login,
-//                                            email: email,
-//                                            birthDate: date,
-//                                            country: country, city: city,
-//                                            height: floatHeight, heightUnits: _heightUnits.name(),
-//                                            weight: floatWeight, weightUnits: _weightUnits.name(),
-//                                            password: password)
-//        _ = Interactor.shared.performUserRegistration(userInfo: userInfo) { result in
-//            if result.error != nil {
-//                completion(result.message)
-//                return
-//            }
-//            completion(nil)
-//            self.didRegisterSuccessfully()
-//        }
+
+        let userInfo = RegistrationUserInfo(username: login,
+                                            email: email,
+                                            birthDate: date,
+                                            country: country, city: city,
+                                            password: password)
+        _ = Interactor.shared.performUserRegistration(userInfo: userInfo) { result in
+            if result.error != nil {
+                completion(result.message)
+                return
+            }
+            completion(nil)
+            self.didRegisterSuccessfully()
+        }
     }
     
     private func isLoginValid(_ login: String) -> Bool {
