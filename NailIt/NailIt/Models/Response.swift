@@ -68,16 +68,10 @@ struct RegistrationUserInfo: Codable {
     let birthDate: String
     let country: String
     let city: String
-    let height: Float
-    let heightUnits: String
-    let weight: Float
-    let weightUnits: String
     let password: String
 
     internal init(username: String, email: String, birthDate: Date,
                   country: String, city: String,
-                  height: Float, heightUnits: String,
-                  weight: Float, weightUnits: String,
                   password: String) {
         self.username = username
         self.email = email
@@ -88,10 +82,6 @@ struct RegistrationUserInfo: Codable {
 
         self.country = country
         self.city = city
-        self.height = height
-        self.heightUnits = heightUnits == "cm" ? "CM" : "FT"
-        self.weight = weight
-        self.weightUnits = weightUnits == "kg" ? "KG" : "LB"
         self.password = password
     }
 
