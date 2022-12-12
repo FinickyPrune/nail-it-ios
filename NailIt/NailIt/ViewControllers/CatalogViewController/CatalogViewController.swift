@@ -6,13 +6,14 @@
 //
 
 import UIKit
-import WebKit
+import CoreLocation
 
-class CatalogViewController: UIViewController {
-
-    var viewModel: CatalogViewModel?
+class CatalogViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet private weak var catalogCollectionView: UICollectionView!
+
+    var viewModel: CatalogViewModel?
+    var locationManager: CLLocationManager?
 
     private let identifier = "CatalogCollectionViewCell"
 
@@ -21,10 +22,34 @@ class CatalogViewController: UIViewController {
         catalogCollectionView.delegate = self
         catalogCollectionView.dataSource = self
         catalogCollectionView.register(UINib(nibName: identifier, bundle: nil), forCellWithReuseIdentifier: identifier)
+
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager?.delegate = self
+            locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager?.startUpdatingLocation()
+        }
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedAlways {
+            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
+                if CLLocationManager.isRangingAvailable() {
+                    // do stuff
+                }
+            }
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+            print("locations = \(locValue.latitude) \(locValue.longitude)")
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // Handle failure to get a user’s location
     }
 
 }

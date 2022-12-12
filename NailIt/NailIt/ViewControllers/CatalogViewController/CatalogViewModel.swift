@@ -28,13 +28,19 @@ final class CatalogViewModel {
         }
     }
 
-    let categories: [Category] = [Category(name: "category 1", products: [NIProduct(name: "Name 1", price: 500, productDescription: "วรขอคำปรึกษาช่วยเหลือจากผู้ที่ไว้วางใจ ไม่จมอยู่กับปัญหา มองหาหนทางคลี่คลาย หากอาการที่ท่านเป็นมีผลกระทบต่อการทำงานหรือการเข้าสังคม หรือมีอาการระดับนี้มานาน 1-2 สัปดาห์แล้วยังไม่ดีขึ้น ท่านควรเข้าพบแพทย์เพื่อรับการช่วยเหลือรักษาต่อไป"),
-                                                                          NIProduct(name: "Name 2", price: 250, productDescription: "Description Description"),
-                                                                          NIProduct(name: "Name 3", price: 500, productDescription: "Description Description"),
-                                                                          NIProduct(name: "Name 4", price: 250.5, productDescription: "Description Description")]),
-                                  Category(name: "category 2", products: [NIProduct(name: "Name 5", price: 500, productDescription: "Description Description"),
-                                                                          NIProduct(name: "Name 6", price: 250, productDescription: "Description Description"),
-                                                                          NIProduct(name: "Name 7", price: 500, productDescription: "Description Description")])]
+    let categories: [Category] = [Category(name: "Маникюр", products: [NIProduct(name: "Маникюр 1", price: 500, productDescription: "วรขอคำปรึกษาช่วยเหลือจากผู้ที่ไว้วางใจ ไม่จมอยู่กับปัญหา มองหาหนทางคลี่คลาย หากอาการที่ท่านเป็นมีผลกระทบต่อการทำงานหรือการเข้าสังคม หรือมีอาการระดับนี้มานาน 1-2 สัปดาห์แล้วยังไม่ดีขึ้น ท่านควรเข้าพบแพทย์เพื่อรับการช่วยเหลือรักษาต่อไป"),
+                                                                          NIProduct(name: "Маникюр 2", price: 250, productDescription: "Description Description"),
+                                                                          NIProduct(name: "Маникюр 3", price: 500, productDescription: "Description Description"),
+                                                                          NIProduct(name: "Маникюр 4", price: 250.5, productDescription: "Description Description")]),
+                                  Category(name: "Стрижка", products: [NIProduct(name: "Стрижка 5", price: 500, productDescription: "Description Description"),
+                                                                          NIProduct(name: "Стрижка 6", price: 250, productDescription: "Description Description"),
+                                                                          NIProduct(name: "Стрижка 7", price: 500, productDescription: "Description Description")]),
+                                  Category(name: "Макияж", products: [NIProduct(name: "Макияж 5", price: 500, productDescription: "Description Description"),
+                                                                       NIProduct(name: "Макияж 6", price: 250, productDescription: "Description Description"),
+                                                                      NIProduct(name: "Макияж 7", price: 500, productDescription: "Description Description")]),
+                                  Category(name: "Педикюр", products: [NIProduct(name: "Педикюр 5", price: 500, productDescription: "Description Description"),
+                                                                       NIProduct(name: "Педикюр 6", price: 250, productDescription: "Description Description"),
+                                                                       NIProduct(name: "Педикюр 7", price: 500, productDescription: "Description Description")])]
 
     func didLoginSuccessfully() {
 

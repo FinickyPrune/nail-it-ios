@@ -12,7 +12,7 @@ final class RootCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
-    
+
     var viewModel: CatalogViewModel?
     
     init(navigationController: UINavigationController) {
