@@ -16,22 +16,12 @@ class SignInViewModel {
     
     weak var actionDelegate: SignInViewModelActionDelegate?
         
-    func performLogin(login: String,
+    func performLogin(phoneNumber: String,
                       password: String,
                       completion: @escaping (_: String?) -> Void) {
-        
-        if !isLoginValid(login) {
-            completion("Login is incorrect.")
-            return
-        }
-        
-        if !isPasswordValid(password) {
-            completion("Invalid credentials.")
-            return
-        }
-        
-        let loginData = AuthenticationDataObject(username: login, password: password)
-        _ = Interactor.shared.performSignInWith(loginData) { result in
+
+        let loginData = AuthenticationDataObject(phoneNumber: phoneNumber, password: password)
+        Interactor.shared.performSignInWith(loginData) { result in
             if result.error != nil {
                 completion(result.message)
                 return
@@ -40,15 +30,7 @@ class SignInViewModel {
             self.didLoginSuccessfully()
         }
     }
-    
-    private func isLoginValid (_ login: String) -> Bool {
-        return true
-    }
-    
-    private func isPasswordValid (_ password: String) -> Bool {
-        return true
-    }
-    
+
     func didTapSingUp() {
         actionDelegate?.singInViewModelAttemptsToShowSignUpController(self)
     }

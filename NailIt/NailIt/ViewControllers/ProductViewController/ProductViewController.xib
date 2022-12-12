@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SukhumvitSet.ttc">
+            <string>SukhumvitSet-SemiBold</string>
+            <string>SukhumvitSet-Text</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductViewController" customModule="NailIt" customModuleProvider="target">
+            <connections>
+                <outlet property="productDescriptionLabel" destination="lC4-j1-Vl6" id="Uq5-nc-4FU"/>
+                <outlet property="productImageView" destination="IaN-rm-hP2" id="Q29-pW-0SH"/>
+                <outlet property="productNameLabel" destination="O7b-N0-nWb" id="XT1-W6-bQx"/>
+                <outlet property="productPriceLabel" destination="3EH-G9-aUP" id="8Gt-bh-Jyk"/>
+                <outlet property="view" destination="3dJ-B5-8YK" id="0gb-aj-jce"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3dJ-B5-8YK">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUm-wX-f1t">
+                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bz9-pM-0JV">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="398"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7b-N0-nWb">
+                                    <rect key="frame" x="15" y="10" width="360" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="5WT-hH-jBS"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SukhumvitSet-SemiBold" family="Sukhumvit Set" pointSize="18"/>
+                                    <color key="textColor" red="0.40000003579999999" green="0.40000003579999999" blue="0.40000003579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IaN-rm-hP2">
+                                    <rect key="frame" x="15" y="50.666666666666671" width="360" height="199.33333333333331"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="dDI-48-2lZ"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3EH-G9-aUP">
+                                    <rect key="frame" x="15" y="260" width="360" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Lky-3g-eNr"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SukhumvitSet-SemiBold" family="Sukhumvit Set" pointSize="18"/>
+                                    <color key="textColor" red="0.92156863209999995" green="0.27450981740000002" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lC4-j1-Vl6">
+                                    <rect key="frame" x="15" y="300" width="360" height="27"/>
+                                    <fontDescription key="fontDescription" name="SukhumvitSet-Text" family="Sukhumvit Set" pointSize="17"/>
+                                    <color key="textColor" red="0.60784316059999999" green="0.60784316059999999" blue="0.60784316059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bc4-5Z-bR6">
+                                    <rect key="frame" x="0.0" y="337" width="390" height="1"/>
+                                    <color key="backgroundColor" red="0.77647060160000003" green="0.78823530669999997" blue="0.81176471709999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="JD8-ur-mgk"/>
+                                    </constraints>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rn-DY-nLq">
+                                    <rect key="frame" x="138" y="348" width="114.33333333333331" height="40"/>
+                                    <color key="backgroundColor" red="0.34117650989999998" green="0.74901962280000001" blue="0.8156862855" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="csC-x0-696"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="เพิ่มลงตะกร้า">
+                                                <attributes>
+                                                    <font key="NSFont" size="17" name="SukhumvitSet-SemiBold"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </buttonConfiguration>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstItem="IaN-rm-hP2" firstAttribute="top" secondItem="O7b-N0-nWb" secondAttribute="bottom" constant="10" id="5Yh-CI-7OA"/>
+                                <constraint firstItem="lC4-j1-Vl6" firstAttribute="width" secondItem="3EH-G9-aUP" secondAttribute="width" id="7Gb-GK-sel"/>
+                                <constraint firstAttribute="trailing" secondItem="O7b-N0-nWb" secondAttribute="trailing" constant="15" id="F0G-Ma-bYx"/>
+                                <constraint firstItem="lC4-j1-Vl6" firstAttribute="top" secondItem="3EH-G9-aUP" secondAttribute="bottom" constant="10" id="Hwd-q6-rBN"/>
+                                <constraint firstItem="IaN-rm-hP2" firstAttribute="width" secondItem="O7b-N0-nWb" secondAttribute="width" id="I6y-xu-GVl"/>
+                                <constraint firstItem="6rn-DY-nLq" firstAttribute="centerX" secondItem="lC4-j1-Vl6" secondAttribute="centerX" id="KxF-la-vHy"/>
+                                <constraint firstItem="6rn-DY-nLq" firstAttribute="top" secondItem="Bc4-5Z-bR6" secondAttribute="bottom" constant="10" id="LJO-pn-MAb"/>
+                                <constraint firstItem="3EH-G9-aUP" firstAttribute="top" secondItem="IaN-rm-hP2" secondAttribute="bottom" constant="10" id="N4f-2b-AbN"/>
+                                <constraint firstItem="3EH-G9-aUP" firstAttribute="width" secondItem="O7b-N0-nWb" secondAttribute="width" id="Qj6-V3-kgx"/>
+                                <constraint firstItem="Bc4-5Z-bR6" firstAttribute="centerX" secondItem="lC4-j1-Vl6" secondAttribute="centerX" id="adI-ow-DVS"/>
+                                <constraint firstAttribute="bottom" secondItem="6rn-DY-nLq" secondAttribute="bottom" constant="10" id="czy-OD-xZr"/>
+                                <constraint firstItem="lC4-j1-Vl6" firstAttribute="centerX" secondItem="3EH-G9-aUP" secondAttribute="centerX" id="iSc-LE-xFG"/>
+                                <constraint firstItem="O7b-N0-nWb" firstAttribute="top" secondItem="Bz9-pM-0JV" secondAttribute="top" constant="10" id="jL2-yi-hZz"/>
+                                <constraint firstItem="O7b-N0-nWb" firstAttribute="leading" secondItem="Bz9-pM-0JV" secondAttribute="leading" constant="15" id="lxt-1F-EOd"/>
+                                <constraint firstItem="Bc4-5Z-bR6" firstAttribute="top" secondItem="lC4-j1-Vl6" secondAttribute="bottom" constant="10" id="mVA-a5-CpP"/>
+                                <constraint firstItem="IaN-rm-hP2" firstAttribute="centerX" secondItem="O7b-N0-nWb" secondAttribute="centerX" id="wdS-gE-3Wl"/>
+                                <constraint firstItem="3EH-G9-aUP" firstAttribute="centerX" secondItem="O7b-N0-nWb" secondAttribute="centerX" id="xmb-bk-3Xx"/>
+                                <constraint firstItem="Bc4-5Z-bR6" firstAttribute="width" secondItem="Bz9-pM-0JV" secondAttribute="width" id="yJc-i8-RFs"/>
+                                <constraint firstItem="O7b-N0-nWb" firstAttribute="centerX" secondItem="Bz9-pM-0JV" secondAttribute="centerX" id="zUr-nm-WjH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="Bz9-pM-0JV" secondAttribute="trailing" id="4yX-0C-AmS"/>
+                        <constraint firstItem="Bz9-pM-0JV" firstAttribute="leading" secondItem="rUm-wX-f1t" secondAttribute="leading" id="I6D-Zc-s9Z"/>
+                        <constraint firstAttribute="bottom" secondItem="Bz9-pM-0JV" secondAttribute="bottom" id="Sb5-Mn-eDd"/>
+                        <constraint firstItem="Bz9-pM-0JV" firstAttribute="centerX" secondItem="rUm-wX-f1t" secondAttribute="centerX" id="lvS-ki-tsr"/>
+                        <constraint firstItem="Bz9-pM-0JV" firstAttribute="top" secondItem="rUm-wX-f1t" secondAttribute="top" id="xWC-i2-TCX"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vqm-p5-kpX"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="rUm-wX-f1t" firstAttribute="top" secondItem="vqm-p5-kpX" secondAttribute="top" id="7pt-Bd-IFt"/>
+                <constraint firstItem="Bz9-pM-0JV" firstAttribute="width" secondItem="3dJ-B5-8YK" secondAttribute="width" id="AIT-vr-h6Z"/>
+                <constraint firstItem="vqm-p5-kpX" firstAttribute="trailing" secondItem="rUm-wX-f1t" secondAttribute="trailing" id="efF-v3-7N9"/>
+                <constraint firstItem="Bz9-pM-0JV" firstAttribute="height" secondItem="3dJ-B5-8YK" secondAttribute="height" priority="250" id="hwa-PY-uG0"/>
+                <constraint firstItem="vqm-p5-kpX" firstAttribute="bottom" secondItem="rUm-wX-f1t" secondAttribute="bottom" id="lk3-d7-CLL"/>
+                <constraint firstItem="rUm-wX-f1t" firstAttribute="leading" secondItem="vqm-p5-kpX" secondAttribute="leading" id="s9H-gG-VSh"/>
+            </constraints>
+            <point key="canvasLocation" x="114" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
+    </resources>
+</document>

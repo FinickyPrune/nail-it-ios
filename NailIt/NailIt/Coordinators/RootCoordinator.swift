@@ -13,7 +13,7 @@ final class RootCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
     
-    var viewModel: MainViewModel?
+    var viewModel: CatalogViewModel?
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
@@ -42,8 +42,8 @@ final class RootCoordinator: Coordinator {
     }
     
     private func pushMainController() {
-        let viewController = MainViewController.loadFromNib()
-        let viewModel = MainViewModel()
+        let viewController = CatalogViewController.loadFromNib()
+        let viewModel = CatalogViewModel()
         viewModel.displayDelegate = viewController
         viewModel.actionDelegate = self
         viewController.viewModel = viewModel
@@ -83,13 +83,26 @@ extension RootCoordinator: SignUpViewModelActionDelegate {
     
 }
 
-extension RootCoordinator: MainViewModelActionDelegate {
+extension RootCoordinator: CatalogViewModelActionDelegate {
+
+    func catalogViewModelAttemptsToDisplayProduct(_ viewModel: CatalogViewModel, product: NIProduct) {
+        let viewController = ProductViewController.loadFromNib()
+        let viewModel = ProductViewModel(product: product)
+        viewController.viewModel = viewModel
+        viewModel.displayDelegate = viewController
+        viewModel.actionDelegate = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
     
-    func mainViewModelAttemptsToLogin(_ viewModel: MainViewModel) {
+    func catalogViewModelAttemptsToLogin(_ viewModel: CatalogViewModel) {
         self.viewModel = viewModel
         DispatchQueue.main.async { [self] in
             presentSignInController()
         }
     }
+
+}
+
+extension RootCoordinator: ProductViewModelActionDelegate {
 
 }

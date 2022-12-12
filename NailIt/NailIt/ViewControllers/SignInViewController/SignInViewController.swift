@@ -10,14 +10,14 @@ import ProgressHUD
 
 class SignInViewController: UIViewController {
     
-    @IBOutlet private weak var loginTextField: UITextField!
+    @IBOutlet private weak var phoneNumberTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     
     @IBOutlet private weak var signInButton: UIButton!
     
     @IBOutlet private weak var scrollView: UIScrollView!
     
-    private let failMessage = "Log In Failed"
+    private let failMessage = "Ошибка входа"
     
     var viewModel: SignInViewModel?
     
@@ -54,11 +54,11 @@ class SignInViewController: UIViewController {
     
     @IBAction func signInButtonPressed(_ sender: Any) {
         self.view.endEditing(true)
-        if (loginTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
-            presentFailAlert(with: "Please, fill all fields.")
+        if (phoneNumberTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
+            presentFailAlert(with: "Пожалуйста, заполните все поля.")
         } else {
             ProgressHUD.show()
-            self.viewModel?.performLogin(login: loginTextField.text!,
+            self.viewModel?.performLogin(phoneNumber: phoneNumberTextField.text!,
                                          password: passwordTextField.text!) { message in
                 DispatchQueue.main.async { [self] in
                     ProgressHUD.dismiss()

@@ -15,54 +15,48 @@ final class NailItProvider: DataProvider {
     private static let refreshUrl = ""
 
     func performUserAuthentication(loginData: AuthenticationDataObject,
-                                   completion: @escaping (ServerResponse) -> Void) -> Request? {
+                                   completion: @escaping (ServerResponse) -> Void) {
 
-        guard let url = URL(string: NailItProvider.loginUrl) else { return nil }
+        guard let url = URL(string: NailItProvider.loginUrl) else { return }
 
         let parameters = try? loginData.toDictionary()
 
-        let request = NetworkService.shared.request(url,
-                                                    method: .post,
-                                                    parameters: parameters,
-                                                    encoding: JSONEncoding.default,
-                                                    contentType: .json,
-                                                    completion: completion)
-
-        return request
-
+        NetworkService.shared.request(url,
+                                      method: .post,
+                                      parameters: parameters,
+                                      encoding: JSONEncoding.default,
+                                      contentType: .json,
+                                      completion: completion)
     }
 
     func performUserRegistration(_ userInfo: RegistrationUserInfo,
-                                 completion: @escaping (ServerResponse) -> Void) -> Request? {
+                                 completion: @escaping (ServerResponse) -> Void) {
 
-        guard let url = URL(string: NailItProvider.registerUrl) else { return nil }
+        guard let url = URL(string: NailItProvider.registerUrl) else { return }
 
         let parameters = try? userInfo.toDictionary()
 
-        let request = NetworkService.shared.request(url,
-                                                    method: .post,
-                                                    parameters: parameters,
-                                                    encoding: JSONEncoding.default,
-                                                    contentType: .json,
-                                                    completion: completion)
-
-        return request
+        NetworkService.shared.request(url,
+                                      method: .post,
+                                      parameters: parameters,
+                                      encoding: JSONEncoding.default,
+                                      contentType: .json,
+                                      completion: completion)
     }
 
     func refreshToken(_ token: String?,
-                      completion: @escaping (ServerResponse) -> Void) -> Request? {
+                      completion: @escaping (ServerResponse) -> Void) {
 
-        guard let url = URL(string: NailItProvider.refreshUrl) else { return nil }
+        guard let url = URL(string: NailItProvider.refreshUrl) else { return }
 
         let token = token ?? ""
 
-        let request = NetworkService.shared.request(url,
-                                                    method: .get,
-                                                    encoding: JSONEncoding.default,
-                                                    contentType: .json,
-                                                    authorizationToken: "Bearer \(token)",
-                                                    completion: completion)
-        return request
+        NetworkService.shared.request(url,
+                                      method: .get,
+                                      encoding: JSONEncoding.default,
+                                      contentType: .json,
+                                      authorizationToken: "Bearer \(token)",
+                                      completion: completion)
     }
 
     func cancelDataHandler(handler: DataHandler) {

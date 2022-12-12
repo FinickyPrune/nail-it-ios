@@ -38,16 +38,13 @@ final class UserManager {
     }
 
     func updateUserWith(_ info: RegistrationUserInfo) {
-        self.user.username = info.username
-        self.user.email = info.email
-        self.user.birthday = info.birthDate
-        self.user.country = info.country
-        self.user.city = info.city
+        self.user.name = info.name
+        self.user.phoneNumber = info.phoneNumber
         saveUser()
     }
 
     func updateUserWith(_ username: String?) {
-        self.user.username = username
+        self.user.name = username
         saveUser()
     }
 

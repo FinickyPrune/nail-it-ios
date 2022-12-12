@@ -18,8 +18,8 @@ final class Interactor {
     // MARK: - NailIt API Interaction
 
     func performUserRegistration(userInfo: RegistrationUserInfo,
-                                 completion: @escaping (NailItRegistrationResult) -> Void) -> DataHandler? {
-        return nailItProvider.performUserRegistration(userInfo) { result in
+                                 completion: @escaping (NailItRegistrationResult) -> Void) {
+        nailItProvider.performUserRegistration(userInfo) { result in
             guard let data = result.data else {
                 completion(NailItRegistrationResult(message: result.error?.localizedDescription,
                                                        error: result.error,
@@ -49,12 +49,12 @@ final class Interactor {
                                                        handler: result.handler))
             }
 
-        } as? DataHandler
+        }
     }
 
     func performSignInWith(_ loginData: AuthenticationDataObject,
-                           completion: @escaping (NailItSignInResult) -> Void) -> DataHandler? {
-        return nailItProvider.performUserAuthentication(loginData: loginData) { result in
+                           completion: @escaping (NailItSignInResult) -> Void) {
+        nailItProvider.performUserAuthentication(loginData: loginData) { result in
             guard let data = result.data else {
                 completion(NailItSignInResult(message: result.error?.localizedDescription,
                                                  error: result.error,
@@ -83,13 +83,13 @@ final class Interactor {
                                                  error: error,
                                                  handler: result.handler))
             }
-        } as? DataHandler
+        }
     }
 
-    private func refreshToken(completion: @escaping (NailItRefreshTokenResult?) -> Void) -> DataHandler? {
+    private func refreshToken(completion: @escaping (NailItRefreshTokenResult?) -> Void) {
         let token = userManager.token(for: .nailItRefresh)
-        return nailItProvider.refreshToken(token) { result in
-            log.info("Attempts to refresh Autotuned token. \(Date())")
+        nailItProvider.refreshToken(token) { result in
+            log.info("Attempts to refresh NailIt token. \(Date())")
             guard let data = result.data else {
                 completion(NailItRefreshTokenResult(message: result.error?.localizedDescription,
                                                        error: result.error,
@@ -118,7 +118,7 @@ final class Interactor {
                                                        error: error,
                                                        handler: result.handler))
             }
-        } as? DataHandler
+        }
     }
 
 }

@@ -25,7 +25,7 @@ final class NetworkService {
                  contentType: ContentType? = nil,
                  authorizationToken: String? = nil,
                  accept: ContentType? = nil,
-                 completion: ((ServerResponse) -> Void)? = nil) -> DataRequest {
+                 completion: ((ServerResponse) -> Void)? = nil) {
 
         let interceptor = NetworkRequestInterceptor(contentType: contentType, authorizationToken: authorizationToken, accept: accept)
 
@@ -46,8 +46,6 @@ final class NetworkService {
                     completion?(ServerResponse(data: response.data, error: networkError, handler: request))
                 }
             }
-
-        return request
     }
 }
 

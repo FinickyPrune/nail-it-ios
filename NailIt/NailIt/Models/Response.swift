@@ -57,31 +57,19 @@ struct ServerResponse {
 }
 
 struct AuthenticationDataObject: Codable {
-    let username: String
+    let phoneNumber: String
     let password: String
 }
 
 struct RegistrationUserInfo: Codable {
 
-    let username: String
-    let email: String
-    let birthDate: String
-    let country: String
-    let city: String
+    let name: String
+    let phoneNumber: String
     let password: String
 
-    internal init(username: String, email: String, birthDate: Date,
-                  country: String, city: String,
-                  password: String) {
-        self.username = username
-        self.email = email
-
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM/dd/yyyy"
-        self.birthDate = dateFormatter.string(from: birthDate)
-
-        self.country = country
-        self.city = city
+    internal init(name: String, phoneNumber: String, password: String) {
+        self.name = name
+        self.phoneNumber = phoneNumber
         self.password = password
     }
 

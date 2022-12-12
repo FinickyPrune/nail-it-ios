@@ -29,7 +29,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yco-lK-b3F">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="259"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-UD-sVb">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-UD-sVb">
                                     <rect key="frame" x="0.0" y="0.0" width="354" height="49"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="49" id="QDt-lL-Lyi"/>
@@ -41,7 +41,7 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9a1-SP-cHM">
                                     <rect key="frame" x="0.0" y="79" width="354" height="180"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9C-Vl-zEb">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9C-Vl-zEb">
                                             <rect key="frame" x="0.0" y="0.0" width="354" height="35"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
@@ -53,7 +53,7 @@
                                                 <action selector="textFieldCompleteEditing:" destination="-1" eventType="editingDidEndOnExit" id="U8O-oP-LR4"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-Ky-qa8">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-Ky-qa8">
                                             <rect key="frame" x="0.0" y="45" width="354" height="35"/>
                                             <color key="backgroundColor" systemColor="systemGray6Color"/>
                                             <constraints>
@@ -84,7 +84,7 @@
                                                 <constraint firstAttribute="height" constant="40" id="5cy-Do-ILn"/>
                                             </constraints>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="New to Nail It? Sign Up"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Впервые в Nail It? Зарегистрируйтесь"/>
                                             <connections>
                                                 <action selector="singUpButtonPressed:" destination="-1" eventType="touchUpInside" id="OcF-lh-Tet"/>
                                             </connections>

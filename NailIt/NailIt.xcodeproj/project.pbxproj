@@ -16,6 +16,14 @@
 		AF6385DA292150EC005851B4 /* NailItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385D9292150EC005851B4 /* NailItTests.swift */; };
 		AF6385E4292150EC005851B4 /* NailItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385E3292150EC005851B4 /* NailItUITests.swift */; };
 		AF6385E6292150EC005851B4 /* NailItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385E5292150EC005851B4 /* NailItUITestsLaunchTests.swift */; };
+		AFA293FA29476AA800F699A6 /* CatalogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA293F829476AA800F699A6 /* CatalogCollectionViewCell.swift */; };
+		AFA293FB29476AA800F699A6 /* CatalogCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA293F929476AA800F699A6 /* CatalogCollectionViewCell.xib */; };
+		AFA293FF29476ADA00F699A6 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA293FD29476ADA00F699A6 /* CategoryCollectionViewCell.swift */; };
+		AFA2940029476ADA00F699A6 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA293FE29476ADA00F699A6 /* CategoryCollectionViewCell.xib */; };
+		AFA2940229476ECC00F699A6 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2940129476ECC00F699A6 /* Collection+Safe.swift */; };
+		AFA294062947702900F699A6 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA294042947702900F699A6 /* ProductViewController.swift */; };
+		AFA294072947702900F699A6 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA294052947702900F699A6 /* ProductViewController.xib */; };
+		AFA294092947705F00F699A6 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA294082947705F00F699A6 /* ProductViewModel.swift */; };
 		AFFA8E782921586D0083764C /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E762921586D0083764C /* RootCoordinator.swift */; };
 		AFFA8E792921586D0083764C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E772921586D0083764C /* Coordinator.swift */; };
 		AFFA8E81292159100083764C /* DataRequest+DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7C292159100083764C /* DataRequest+DataHandler.swift */; };
@@ -29,9 +37,9 @@
 		AFFA8E9F292159430083764C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFA8E90292159430083764C /* SignInViewController.xib */; };
 		AFFA8EA0292159430083764C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E91292159430083764C /* SignInViewModel.swift */; };
 		AFFA8EA1292159430083764C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E92292159430083764C /* SignInViewController.swift */; };
-		AFFA8EAB29215A4A0083764C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFA8EA829215A4A0083764C /* MainViewController.xib */; };
-		AFFA8EAC29215A4A0083764C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8EA929215A4A0083764C /* MainViewController.swift */; };
-		AFFA8EAD29215A4A0083764C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8EAA29215A4A0083764C /* MainViewModel.swift */; };
+		AFFA8EAB29215A4A0083764C /* CatalogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFA8EA829215A4A0083764C /* CatalogViewController.xib */; };
+		AFFA8EAC29215A4A0083764C /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8EA929215A4A0083764C /* CatalogViewController.swift */; };
+		AFFA8EAD29215A4A0083764C /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8EAA29215A4A0083764C /* CatalogViewModel.swift */; };
 		AFFE23ED2933339B00063168 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23EC2933339B00063168 /* Interactor.swift */; };
 		AFFE23EF293333AA00063168 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23EE293333AA00063168 /* NetworkService.swift */; };
 		AFFE23F12933349000063168 /* NailItProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F02933349000063168 /* NailItProvider.swift */; };
@@ -76,6 +84,14 @@
 		AF6385DF292150EC005851B4 /* NailItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NailItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6385E3292150EC005851B4 /* NailItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItUITests.swift; sourceTree = "<group>"; };
 		AF6385E5292150EC005851B4 /* NailItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AFA293F829476AA800F699A6 /* CatalogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFA293F929476AA800F699A6 /* CatalogCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogCollectionViewCell.xib; sourceTree = "<group>"; };
+		AFA293FD29476ADA00F699A6 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		AFA293FE29476ADA00F699A6 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		AFA2940129476ECC00F699A6 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		AFA294042947702900F699A6 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		AFA294052947702900F699A6 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
+		AFA294082947705F00F699A6 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		AFFA8E762921586D0083764C /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		AFFA8E772921586D0083764C /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		AFFA8E7C292159100083764C /* DataRequest+DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataRequest+DataHandler.swift"; sourceTree = "<group>"; };
@@ -89,9 +105,9 @@
 		AFFA8E90292159430083764C /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		AFFA8E91292159430083764C /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		AFFA8E92292159430083764C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		AFFA8EA829215A4A0083764C /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		AFFA8EA929215A4A0083764C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		AFFA8EAA29215A4A0083764C /* MainViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		AFFA8EA829215A4A0083764C /* CatalogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatalogViewController.xib; sourceTree = "<group>"; };
+		AFFA8EA929215A4A0083764C /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		AFFA8EAA29215A4A0083764C /* CatalogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
 		AFFE23EC2933339B00063168 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		AFFE23EE293333AA00063168 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AFFE23F02933349000063168 /* NailItProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItProvider.swift; sourceTree = "<group>"; };
@@ -197,6 +213,35 @@
 			path = NailItUITests;
 			sourceTree = "<group>";
 		};
+		AFA293F729476A9100F699A6 /* CatalogCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AFA293FC29476ABE00F699A6 /* CategoryCollectionViewCell */,
+				AFA293F829476AA800F699A6 /* CatalogCollectionViewCell.swift */,
+				AFA293F929476AA800F699A6 /* CatalogCollectionViewCell.xib */,
+			);
+			path = CatalogCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		AFA293FC29476ABE00F699A6 /* CategoryCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AFA293FD29476ADA00F699A6 /* CategoryCollectionViewCell.swift */,
+				AFA293FE29476ADA00F699A6 /* CategoryCollectionViewCell.xib */,
+			);
+			path = CategoryCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		AFA294032947700D00F699A6 /* ProductViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFA294042947702900F699A6 /* ProductViewController.swift */,
+				AFA294052947702900F699A6 /* ProductViewController.xib */,
+				AFA294082947705F00F699A6 /* ProductViewModel.swift */,
+			);
+			path = ProductViewController;
+			sourceTree = "<group>";
+		};
 		AFFA8E752921586D0083764C /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +259,7 @@
 				AFFA8E7E292159100083764C /* UIViewController+Nib.swift */,
 				AFFA8E7F292159100083764C /* NetworkError.swift */,
 				AFFA8E80292159100083764C /* UIToolbar+ToolbarPicker.swift */,
+				AFA2940129476ECC00F699A6 /* Collection+Safe.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -221,7 +267,8 @@
 		AFFA8E86292159430083764C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AFFA8EA729215A4A0083764C /* MainViewController */,
+				AFA294032947700D00F699A6 /* ProductViewController */,
+				AFFA8EA729215A4A0083764C /* CatalogViewController */,
 				AFFA8E8B292159430083764C /* SignUpViewController */,
 				AFFA8E8F292159430083764C /* SignInViewController */,
 			);
@@ -248,14 +295,15 @@
 			path = SignInViewController;
 			sourceTree = "<group>";
 		};
-		AFFA8EA729215A4A0083764C /* MainViewController */ = {
+		AFFA8EA729215A4A0083764C /* CatalogViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AFFA8EA829215A4A0083764C /* MainViewController.xib */,
-				AFFA8EA929215A4A0083764C /* MainViewController.swift */,
-				AFFA8EAA29215A4A0083764C /* MainViewModel.swift */,
+				AFA293F729476A9100F699A6 /* CatalogCollectionViewCell */,
+				AFFA8EA829215A4A0083764C /* CatalogViewController.xib */,
+				AFFA8EA929215A4A0083764C /* CatalogViewController.swift */,
+				AFFA8EAA29215A4A0083764C /* CatalogViewModel.swift */,
 			);
-			path = MainViewController;
+			path = CatalogViewController;
 			sourceTree = "<group>";
 		};
 		AFFE23EB2933338E00063168 /* Services */ = {
@@ -402,8 +450,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFFA8E9F292159430083764C /* SignInViewController.xib in Resources */,
+				AFA2940029476ADA00F699A6 /* CategoryCollectionViewCell.xib in Resources */,
+				AFA294072947702900F699A6 /* ProductViewController.xib in Resources */,
 				AF6385CF292150EC005851B4 /* LaunchScreen.storyboard in Resources */,
-				AFFA8EAB29215A4A0083764C /* MainViewController.xib in Resources */,
+				AFA293FB29476AA800F699A6 /* CatalogCollectionViewCell.xib in Resources */,
+				AFFA8EAB29215A4A0083764C /* CatalogViewController.xib in Resources */,
 				AFFA8E9E292159430083764C /* SignUpViewController.xib in Resources */,
 				AF6385CC292150EC005851B4 /* Assets.xcassets in Resources */,
 			);
@@ -553,9 +604,11 @@
 			files = (
 				AFFA8E782921586D0083764C /* RootCoordinator.swift in Sources */,
 				AFFA8E82292159100083764C /* Encodable.swift in Sources */,
+				AFA293FA29476AA800F699A6 /* CatalogCollectionViewCell.swift in Sources */,
 				AF6385CA292150EA005851B4 /* NailIt.xcdatamodeld in Sources */,
 				AFFA8E792921586D0083764C /* Coordinator.swift in Sources */,
 				AFFA8E9D292159430083764C /* SignUpViewModel.swift in Sources */,
+				AFA2940229476ECC00F699A6 /* Collection+Safe.swift in Sources */,
 				AFFE23F4293336CD00063168 /* Response.swift in Sources */,
 				AFFE23EF293333AA00063168 /* NetworkService.swift in Sources */,
 				AFFA8E81292159100083764C /* DataRequest+DataHandler.swift in Sources */,
@@ -563,14 +616,17 @@
 				AFFA8E84292159100083764C /* NetworkError.swift in Sources */,
 				AFFE23F12933349000063168 /* NailItProvider.swift in Sources */,
 				AFFA8E83292159100083764C /* UIViewController+Nib.swift in Sources */,
-				AFFA8EAC29215A4A0083764C /* MainViewController.swift in Sources */,
+				AFFA8EAC29215A4A0083764C /* CatalogViewController.swift in Sources */,
 				AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */,
 				AFFA8E85292159100083764C /* UIToolbar+ToolbarPicker.swift in Sources */,
+				AFA293FF29476ADA00F699A6 /* CategoryCollectionViewCell.swift in Sources */,
+				AFA294092947705F00F699A6 /* ProductViewModel.swift in Sources */,
 				AFFA8EA1292159430083764C /* SignInViewController.swift in Sources */,
 				AFFA8E9C292159430083764C /* SignUpViewController.swift in Sources */,
 				AFFA8EA0292159430083764C /* SignInViewModel.swift in Sources */,
 				AFFE23F7293345EF00063168 /* UserManager.swift in Sources */,
-				AFFA8EAD29215A4A0083764C /* MainViewModel.swift in Sources */,
+				AFFA8EAD29215A4A0083764C /* CatalogViewModel.swift in Sources */,
+				AFA294062947702900F699A6 /* ProductViewController.swift in Sources */,
 				AFFE23F92933462F00063168 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
