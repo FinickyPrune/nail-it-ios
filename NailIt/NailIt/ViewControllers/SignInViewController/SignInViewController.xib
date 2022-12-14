@@ -8,13 +8,22 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="NailIt" customModuleProvider="target">
             <connections>
-                <outlet property="loginTextField" destination="B9C-Vl-zEb" id="e5r-Rr-Mhb"/>
                 <outlet property="passwordTextField" destination="IQQ-Ky-qa8" id="FE9-aT-2UV"/>
+                <outlet property="phoneNumberTextField" destination="B9C-Vl-zEb" id="bc0-PA-Adv"/>
                 <outlet property="scrollView" destination="DCE-oD-sO3" id="SMg-fv-SjE"/>
                 <outlet property="signInButton" destination="Dbe-B6-du4" id="Q35-99-Bgt"/>
+                <outlet property="signUpButton" destination="ESM-CA-eeH" id="YoC-r8-UhB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,62 +38,73 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yco-lK-b3F">
                             <rect key="frame" x="0.0" y="0.0" width="354" height="259"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-UD-sVb">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти в аккаунт" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-UD-sVb">
                                     <rect key="frame" x="0.0" y="0.0" width="354" height="49"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="49" id="QDt-lL-Lyi"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="41"/>
-                                    <nil key="textColor"/>
+                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
+                                    <color key="textColor" red="0.94901960784313721" green="0.54509803921568623" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9a1-SP-cHM">
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9a1-SP-cHM">
                                     <rect key="frame" x="0.0" y="79" width="354" height="180"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9C-Vl-zEb">
-                                            <rect key="frame" x="0.0" y="0.0" width="354" height="35"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <rect key="frame" x="22" y="0.0" width="310" height="30"/>
+                                            <color key="backgroundColor" red="0.93333339689999995" green="0.86274516580000005" blue="0.8392156959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="Mxd-cT-5kO"/>
+                                                <constraint firstAttribute="width" constant="310" id="1T5-UX-NTv"/>
+                                                <constraint firstAttribute="height" constant="30" id="Mxd-cT-5kO"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" textContentType="username"/>
+                                            <color key="textColor" red="0.89411771299999998" green="0.5647059083" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" textContentType="tel"/>
                                             <connections>
                                                 <action selector="textFieldCompleteEditing:" destination="-1" eventType="editingDidEndOnExit" id="U8O-oP-LR4"/>
                                             </connections>
                                         </textField>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-Ky-qa8">
-                                            <rect key="frame" x="0.0" y="45" width="354" height="35"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                            <rect key="frame" x="22" y="40" width="310" height="30"/>
+                                            <color key="backgroundColor" red="0.93333333333333335" green="0.86274509803921573" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="35" id="jfC-jE-j81"/>
+                                                <constraint firstAttribute="width" constant="310" id="AP4-1N-ZTL"/>
+                                                <constraint firstAttribute="height" constant="30" id="jfC-jE-j81"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.89411771299999998" green="0.5647059083" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             <connections>
                                                 <action selector="textFieldCompleteEditing:" destination="-1" eventType="editingDidEndOnExit" id="BMg-Hi-hk6"/>
                                             </connections>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbe-B6-du4">
-                                            <rect key="frame" x="0.0" y="90" width="354" height="40"/>
-                                            <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                            <rect key="frame" x="77" y="80" width="200" height="30"/>
+                                            <color key="backgroundColor" red="0.88235294819999999" green="0.42745098469999998" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="kNa-Na-GnJ"/>
+                                                <constraint firstAttribute="width" constant="200" id="gcu-Wh-kbV"/>
+                                                <constraint firstAttribute="height" constant="30" id="kNa-Na-GnJ"/>
                                             </constraints>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
                                             <color key="tintColor" red="0.98039215800000001" green="0.94509804249999996" blue="0.81960785390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Sign In"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Войти"/>
                                             <connections>
                                                 <action selector="signInButtonPressed:" destination="-1" eventType="touchUpInside" id="CFz-HN-Jmh"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESM-CA-eeH">
-                                            <rect key="frame" x="0.0" y="140" width="354" height="40"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESM-CA-eeH">
+                                            <rect key="frame" x="77" y="120" width="200" height="60"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="40" id="5cy-Do-ILn"/>
+                                                <constraint firstAttribute="height" constant="60" id="5cy-Do-ILn"/>
+                                                <constraint firstAttribute="width" constant="200" id="dKZ-ug-ZnN"/>
                                             </constraints>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Впервые в Nail It? Зарегистрируйтесь"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                            <color key="tintColor" red="0.88235294819999999" green="0.42745098469999998" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Еще нет аккаунта? Зарегистрироваться">
+                                                <color key="titleColor" red="0.88235294819999999" green="0.42745098469999998" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
                                             <connections>
                                                 <action selector="singUpButtonPressed:" destination="-1" eventType="touchUpInside" id="OcF-lh-Tet"/>
                                             </connections>
@@ -114,7 +134,7 @@
                 </scrollView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DCE-oD-sO3" secondAttribute="bottom" constant="35" id="35v-Vw-AZ2"/>
                 <constraint firstItem="DCE-oD-sO3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="RNF-p8-3Xu"/>
@@ -127,12 +147,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

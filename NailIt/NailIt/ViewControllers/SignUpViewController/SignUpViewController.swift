@@ -26,7 +26,17 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        signUpButton.layer.cornerRadius = 5
+        nameTextField.layer.cornerRadius = 15
+        phoneNumberTextField.layer.cornerRadius = 15
+        passwordTextField.layer.cornerRadius = 15
+        repeatPasswordTextField.layer.cornerRadius = 15
+        signUpButton.layer.cornerRadius = 15
+        nameTextField.clipsToBounds = true
+        phoneNumberTextField.clipsToBounds = true
+        passwordTextField.clipsToBounds = true
+        repeatPasswordTextField.clipsToBounds = true
+
+
 
         NotificationCenter.default.addObserver(self,
                                        selector: #selector(keyboardWillHide),

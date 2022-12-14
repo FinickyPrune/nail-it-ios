@@ -14,6 +14,7 @@ class SignInViewController: UIViewController {
     @IBOutlet private weak var passwordTextField: UITextField!
     
     @IBOutlet private weak var signInButton: UIButton!
+    @IBOutlet private weak var signUpButton: UIButton!
     
     @IBOutlet private weak var scrollView: UIScrollView!
     
@@ -24,6 +25,15 @@ class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         signInButton.layer.cornerRadius = 5
+        phoneNumberTextField.layer.cornerRadius = 15
+        passwordTextField.layer.cornerRadius = 15
+        signInButton.layer.cornerRadius = 15
+
+        phoneNumberTextField.clipsToBounds = true
+        passwordTextField.clipsToBounds = true
+
+        signUpButton.titleLabel?.numberOfLines = 2
+        signUpButton.titleLabel?.textAlignment = .center
         
         NotificationCenter.default.addObserver(self,
                                        selector: #selector(keyboardWillHide),

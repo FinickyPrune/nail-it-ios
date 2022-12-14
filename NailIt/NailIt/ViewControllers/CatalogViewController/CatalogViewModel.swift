@@ -24,7 +24,7 @@ final class CatalogViewModel {
     weak var displayDelegate: CatalogViewModelDisplayDelegate?
     weak var actionDelegate: CatalogViewModelActionDelegate? {
         didSet {
-            //      actionDelegate?.catalogViewModelAttemptsToLogin(self) // TODO: Remove
+                  actionDelegate?.catalogViewModelAttemptsToLogin(self) // TODO: Remove
         }
     }
 
