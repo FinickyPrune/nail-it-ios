@@ -40,10 +40,10 @@ final class NetworkService {
                 switch response.result {
                 case .success(let data):
                     let networkError = NetworkError(rawValue: response.error?.responseCode ?? 0)
-                    completion?(ServerResponse(data: data, error: networkError, handler: request))
+                    completion?(ServerResponse(data: data, error: networkError))
                 case .failure(let error):
                     let networkError = NetworkError(rawValue: error.responseCode ?? 0)
-                    completion?(ServerResponse(data: response.data, error: networkError, handler: request))
+                    completion?(ServerResponse(data: response.data, error: networkError))
                 }
             }
     }

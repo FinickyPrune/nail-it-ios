@@ -36,8 +36,6 @@ class SignUpViewController: UIViewController {
         passwordTextField.clipsToBounds = true
         repeatPasswordTextField.clipsToBounds = true
 
-
-
         NotificationCenter.default.addObserver(self,
                                        selector: #selector(keyboardWillHide),
                                        name: UIResponder.keyboardWillHideNotification,
