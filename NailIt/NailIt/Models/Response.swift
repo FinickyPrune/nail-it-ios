@@ -10,19 +10,16 @@ import Foundation
 struct NailItRegistrationResult {
     let message: String?
     let error: Error?
-    let handler: DataHandler?
 }
 
 struct NailItSignInResult {
     let message: String?
     let error: Error?
-    let handler: DataHandler?
 }
 
 struct NailItRefreshTokenResult {
     let message: String?
     let error: Error?
-    let handler: DataHandler?
 }
 
 struct NailItSignUpResponse: Codable {
@@ -53,7 +50,6 @@ struct NailItRefreshTokenResponse: Codable {
 struct ServerResponse {
     let data: Data?
     let error: NetworkError?
-    let handler: DataHandler?
 }
 
 struct AuthenticationDataObject: Codable {
@@ -73,4 +69,17 @@ struct RegistrationUserInfo: Codable {
         self.password = password
     }
 
+}
+
+struct Salon: Codable {
+    let id: String
+    let name: String
+    var rate: Float
+    let address: String
+}
+
+struct NailItSalonsListResult {
+    let message: String?
+    let error: Error?
+    let salons: [Salon]?
 }
