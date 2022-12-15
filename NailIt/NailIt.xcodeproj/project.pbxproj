@@ -29,6 +29,11 @@
 		AF4DDD62294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD50294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf */; };
 		AF4DDD65294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD63294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf */; };
 		AF4DDD66294A329C000B21DD /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD64294A329C000B21DD /* Montserrat-VariableFont_wght.ttf */; };
+		AF4DDD6A294A3D0F000B21DD /* SalonCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */; };
+		AF4DDD6B294A3D0F000B21DD /* SalonCatalogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */; };
+		AF4DDD6F294A3D44000B21DD /* SalonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD6D294A3D44000B21DD /* SalonTableViewCell.swift */; };
+		AF4DDD70294A3D44000B21DD /* SalonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD6E294A3D44000B21DD /* SalonTableViewCell.xib */; };
+		AF4DDD72294A3D54000B21DD /* SalonCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */; };
 		AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385BF292150EA005851B4 /* AppDelegate.swift */; };
 		AF6385CA292150EA005851B4 /* NailIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF6385C8292150EA005851B4 /* NailIt.xcdatamodeld */; };
 		AF6385CC292150EC005851B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6385CB292150EC005851B4 /* Assets.xcassets */; };
@@ -113,6 +118,11 @@
 		AF4DDD50294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		AF4DDD63294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		AF4DDD64294A329C000B21DD /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonCatalogViewController.swift; sourceTree = "<group>"; };
+		AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalonCatalogViewController.xib; sourceTree = "<group>"; };
+		AF4DDD6D294A3D44000B21DD /* SalonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonTableViewCell.swift; sourceTree = "<group>"; };
+		AF4DDD6E294A3D44000B21DD /* SalonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalonTableViewCell.xib; sourceTree = "<group>"; };
+		AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonCatalogViewModel.swift; sourceTree = "<group>"; };
 		AF6385BC292150EA005851B4 /* NailIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NailIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6385BF292150EA005851B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6385C9292150EA005851B4 /* NailIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NailIt.xcdatamodel; sourceTree = "<group>"; };
@@ -240,6 +250,26 @@
 			path = Montserrat;
 			sourceTree = "<group>";
 		};
+		AF4DDD67294A3CF1000B21DD /* SalonCatalogViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF4DDD6C294A3D17000B21DD /* SalonTableViewCell */,
+				AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */,
+				AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */,
+				AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */,
+			);
+			path = SalonCatalogViewController;
+			sourceTree = "<group>";
+		};
+		AF4DDD6C294A3D17000B21DD /* SalonTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF4DDD6D294A3D44000B21DD /* SalonTableViewCell.swift */,
+				AF4DDD6E294A3D44000B21DD /* SalonTableViewCell.xib */,
+			);
+			path = SalonTableViewCell;
+			sourceTree = "<group>";
+		};
 		AF6385B3292150EA005851B4 = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +381,7 @@
 		AFFA8E86292159430083764C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF4DDD67294A3CF1000B21DD /* SalonCatalogViewController */,
 				AFA294032947700D00F699A6 /* ProductViewController */,
 				AFFA8EA729215A4A0083764C /* CatalogViewController */,
 				AFFA8E8B292159430083764C /* SignUpViewController */,
@@ -548,9 +579,11 @@
 				AF4DDD5C294A3289000B21DD /* Montserrat-LightItalic.ttf in Resources */,
 				AF4DDD5F294A3289000B21DD /* Montserrat-Black.ttf in Resources */,
 				AFA294072947702900F699A6 /* ProductViewController.xib in Resources */,
+				AF4DDD6B294A3D0F000B21DD /* SalonCatalogViewController.xib in Resources */,
 				AF4DDD51294A3289000B21DD /* Montserrat-Light.ttf in Resources */,
 				AF4DDD66294A329C000B21DD /* Montserrat-VariableFont_wght.ttf in Resources */,
 				AF4DDD59294A3289000B21DD /* Montserrat-ThinItalic.ttf in Resources */,
+				AF4DDD70294A3D44000B21DD /* SalonTableViewCell.xib in Resources */,
 				AF4DDD58294A3289000B21DD /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				AF6385CF292150EC005851B4 /* LaunchScreen.storyboard in Resources */,
 				AFA293FB29476AA800F699A6 /* CatalogCollectionViewCell.xib in Resources */,
@@ -721,9 +754,12 @@
 				AFFE23F12933349000063168 /* NailItProvider.swift in Sources */,
 				AFFA8E83292159100083764C /* UIViewController+Nib.swift in Sources */,
 				AFFA8EAC29215A4A0083764C /* CatalogViewController.swift in Sources */,
+				AF4DDD6A294A3D0F000B21DD /* SalonCatalogViewController.swift in Sources */,
 				AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */,
 				AFFA8E85292159100083764C /* UIToolbar+ToolbarPicker.swift in Sources */,
+				AF4DDD72294A3D54000B21DD /* SalonCatalogViewModel.swift in Sources */,
 				AFA293FF29476ADA00F699A6 /* CategoryCollectionViewCell.swift in Sources */,
+				AF4DDD6F294A3D44000B21DD /* SalonTableViewCell.swift in Sources */,
 				AFA294092947705F00F699A6 /* ProductViewModel.swift in Sources */,
 				AFFA8EA1292159430083764C /* SignInViewController.swift in Sources */,
 				AFFA8E9C292159430083764C /* SignUpViewController.swift in Sources */,
