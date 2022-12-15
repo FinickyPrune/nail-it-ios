@@ -8,11 +8,12 @@
 import Foundation
 import Alamofire
 
-final class NailItProvider: DataProvider {
+final class NailItProvider {
 
     private static let registerUrl = ""
     private static let loginUrl = ""
     private static let refreshUrl = ""
+    private static let salonsListUrl = "https://639b3b1231877e43d686a6e6.mockapi.io/api/v1/salons"
 
     func performUserAuthentication(loginData: AuthenticationDataObject,
                                    completion: @escaping (ServerResponse) -> Void) {
@@ -59,8 +60,18 @@ final class NailItProvider: DataProvider {
                                       completion: completion)
     }
 
-    func cancelDataHandler(handler: DataHandler) {
-        (handler as? DataRequest)?.cancel()
+    func salonsList(_ token: String?,
+                    completion: @escaping (ServerResponse) -> Void) {
+        guard let url = URL(string: NailItProvider.salonsListUrl) else { return }
+
+        let token = token ?? ""
+
+        NetworkService.shared.request(url,
+                                      method: .get,
+                                      encoding: JSONEncoding.default,
+                                      contentType: .json,
+//                                      authorizationToken: "Bearer \(token)", // TODO: Enable token
+                                      completion: completion)
     }
 
 }

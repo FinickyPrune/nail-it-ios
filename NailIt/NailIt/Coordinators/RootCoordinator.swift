@@ -20,7 +20,7 @@ final class RootCoordinator: Coordinator {
     }
     
     func start() {
-        pushMainController()
+        pushSalonCatalogController()
     }
     
     private func presentSignInController() {
@@ -40,10 +40,10 @@ final class RootCoordinator: Coordinator {
         guard let presentedViewController = navigationController.presentedViewController as? SignInViewController else { return }
         presentedViewController.present(viewController, animated: true)
     }
-    
-    private func pushMainController() {
-        let viewController = CatalogViewController.loadFromNib()
-        let viewModel = CatalogViewModel()
+
+    private func pushSalonCatalogController() {
+        let viewController = SalonCatalogViewController.loadFromNib()
+        let viewModel = SalonCatalogViewModel()
         viewModel.displayDelegate = viewController
         viewModel.actionDelegate = self
         viewController.viewModel = viewModel
@@ -81,6 +81,10 @@ extension RootCoordinator: SignUpViewModelActionDelegate {
         self.viewModel?.didLoginSuccessfully()
     }
     
+}
+
+extension RootCoordinator: SalonCAtalogViewModelActionDelegate {
+
 }
 
 extension RootCoordinator: CatalogViewModelActionDelegate {
