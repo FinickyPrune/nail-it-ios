@@ -10,6 +10,7 @@ import Foundation
 protocol SalonCatalogViewModelDisplayDelegate: AnyObject {
     var isFiltering: Bool { get }
     func reloadTable(_ viewModel: SalonCatalogViewModel)
+    func showBanner(_ viewModel: SalonCatalogViewModel, _ flag: Bool)
 }
 
 protocol SalonCAtalogViewModelActionDelegate: AnyObject {
@@ -28,9 +29,12 @@ class SalonCatalogViewModel {
 
     var count: Int {
         guard let displayDelegate = displayDelegate else { return 0 }
+        displayDelegate.showBanner(self, false)
         if displayDelegate.isFiltering {
+            if filteredSalons.count == 0 { displayDelegate.showBanner(self, true) }
             return filteredSalons.count
         }
+        if salons.count == 0 { displayDelegate.showBanner(self, true) }
         return salons.count
 
     }

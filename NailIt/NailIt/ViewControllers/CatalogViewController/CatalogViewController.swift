@@ -6,14 +6,12 @@
 //
 
 import UIKit
-import CoreLocation
 
-class CatalogViewController: UIViewController, CLLocationManagerDelegate {
+class CatalogViewController: UIViewController {
 
     @IBOutlet private weak var catalogCollectionView: UICollectionView!
 
     var viewModel: CatalogViewModel?
-    var locationManager: CLLocationManager?
 
     private let identifier = "CatalogCollectionViewCell"
 
@@ -22,36 +20,7 @@ class CatalogViewController: UIViewController, CLLocationManagerDelegate {
         catalogCollectionView.delegate = self
         catalogCollectionView.dataSource = self
         catalogCollectionView.register(UINib(nibName: identifier, bundle: nil), forCellWithReuseIdentifier: identifier)
-
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager?.delegate = self
-            locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager?.startUpdatingLocation()
-        }
     }
-
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        if status == .authorizedAlways {
-            if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
-                if CLLocationManager.isRangingAvailable() {
-                    // do stuff
-                }
-            }
-        }
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-            print("locations = \(locValue.latitude) \(locValue.longitude)")
-    }
-
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // Handle failure to get a user’s location
-    }
-
 }
 
 extension CatalogViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

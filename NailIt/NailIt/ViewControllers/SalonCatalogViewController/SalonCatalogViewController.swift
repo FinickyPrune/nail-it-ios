@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import CoreLocation
 
 final class SalonCatalogViewController: UIViewController {
 
     @IBOutlet private weak var sortButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var bannerView: UIView!
 
     private let searchController = UISearchController(searchResultsController: nil)
     var isSearchBarEmpty: Bool {
@@ -18,6 +20,7 @@ final class SalonCatalogViewController: UIViewController {
     }
 
     var viewModel: SalonCatalogViewModel?
+    var locationManager: CLLocationManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +44,9 @@ final class SalonCatalogViewController: UIViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
 
-        viewModel?.loadData { error in
-            if error == nil {
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.requestWhenInUseAuthorization()
     }
 
     @IBAction private func didTapSort(_ sender: UIButton) {
@@ -55,6 +54,16 @@ final class SalonCatalogViewController: UIViewController {
         viewModel.didTapSort()
         sender.backgroundColor =  viewModel.isSorting ? sender.tintColor : .white
         sender.setTitleColor( !viewModel.isSorting ? sender.tintColor : .white, for: .normal)
+    }
+
+    private func fetchData() {
+        viewModel?.loadData { error in
+            if error == nil {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
 }
@@ -103,11 +112,44 @@ extension SalonCatalogViewController: UISearchResultsUpdating {
 
 extension SalonCatalogViewController: SalonCatalogViewModelDisplayDelegate {
 
+    func showBanner(_ viewModel: SalonCatalogViewModel, _ flag: Bool) {
+        bannerView.isHidden = !flag
+    }
+
     func reloadTable(_ viewModel: SalonCatalogViewModel) {
         tableView.reloadData()
     }
 
     var isFiltering: Bool {
         return searchController.isActive && !isSearchBarEmpty
+    }
+}
+
+extension SalonCatalogViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            return
+        case .restricted:
+            return
+        case .denied:
+            return
+        case .authorizedAlways, .authorizedWhenInUse, .authorized:
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager?.delegate = self
+                locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                locationManager?.startUpdatingLocation()
+                fetchData()
+            }
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        log.debug("locations = \(locValue.latitude) \(locValue.longitude)")
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // Handle failure to get a user’s location
     }
 }

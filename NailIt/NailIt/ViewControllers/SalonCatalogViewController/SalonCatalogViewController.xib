@@ -8,9 +8,15 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SalonCatalogViewController" customModule="NailIt" customModuleProvider="target">
             <connections>
+                <outlet property="bannerView" destination="JE0-Jh-Iek" id="SSo-EP-gzo"/>
                 <outlet property="sortButton" destination="KXj-2C-wpU" id="qj9-8T-slc"/>
                 <outlet property="tableView" destination="FIc-Lb-yfj" id="4Pc-ve-9Vo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -47,6 +53,32 @@
                     <rect key="frame" x="20" y="92" width="350" height="718"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JE0-Jh-Iek">
+                    <rect key="frame" x="20" y="92" width="350" height="718"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ничего не найдено" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8l-4J-EWl">
+                            <rect key="frame" x="52.666666666666686" y="199" width="245" height="19.666666666666657"/>
+                            <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
+                            <color key="textColor" red="0.70588237050000002" green="0.42745098469999998" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-binoculars 1" translatesAutoresizingMaskIntoConstraints="NO" id="1OL-Jh-DdO">
+                            <rect key="frame" x="150.66666666666666" y="150" width="49" height="39"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="49" id="97F-U4-zSD"/>
+                                <constraint firstAttribute="height" constant="39" id="Mnt-Si-mOo"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="g8l-4J-EWl" firstAttribute="width" secondItem="JE0-Jh-Iek" secondAttribute="width" multiplier="0.7" id="TlS-i5-74T"/>
+                        <constraint firstItem="1OL-Jh-DdO" firstAttribute="centerX" secondItem="JE0-Jh-Iek" secondAttribute="centerX" id="VMs-3j-g45"/>
+                        <constraint firstItem="g8l-4J-EWl" firstAttribute="top" secondItem="1OL-Jh-DdO" secondAttribute="bottom" constant="10" id="VPn-D5-m1B"/>
+                        <constraint firstItem="g8l-4J-EWl" firstAttribute="centerX" secondItem="1OL-Jh-DdO" secondAttribute="centerX" id="h5s-O3-y8D"/>
+                        <constraint firstItem="1OL-Jh-DdO" firstAttribute="top" secondItem="JE0-Jh-Iek" secondAttribute="top" constant="150" id="prp-gc-Tod"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -55,13 +87,18 @@
                 <constraint firstItem="KXj-2C-wpU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9gn-4a-1Zk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FIc-Lb-yfj" secondAttribute="trailing" constant="20" id="IOZ-yc-LvC"/>
                 <constraint firstItem="KXj-2C-wpU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QD4-Th-NPP"/>
+                <constraint firstItem="JE0-Jh-Iek" firstAttribute="top" secondItem="FIc-Lb-yfj" secondAttribute="top" id="Y0e-Q1-kyb"/>
+                <constraint firstItem="JE0-Jh-Iek" firstAttribute="trailing" secondItem="FIc-Lb-yfj" secondAttribute="trailing" id="lAe-1u-dOG"/>
+                <constraint firstItem="JE0-Jh-Iek" firstAttribute="bottom" secondItem="FIc-Lb-yfj" secondAttribute="bottom" id="lpn-27-o1F"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FIc-Lb-yfj" secondAttribute="bottom" id="rQk-f5-N9p"/>
+                <constraint firstItem="JE0-Jh-Iek" firstAttribute="leading" secondItem="FIc-Lb-yfj" secondAttribute="leading" id="txn-Ff-CvP"/>
                 <constraint firstItem="FIc-Lb-yfj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zkR-37-Liy"/>
             </constraints>
             <point key="canvasLocation" x="140" y="21"/>
         </view>
     </objects>
     <resources>
+        <image name="icons8-binoculars 1" width="48" height="39"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
