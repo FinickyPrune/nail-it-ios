@@ -36,7 +36,6 @@ class SalonCatalogViewModel {
         }
         if salons.count == 0 { displayDelegate.showBanner(self, true) }
         return salons.count
-
     }
 
     func salon(for index: Int) -> Salon? {
@@ -66,7 +65,7 @@ class SalonCatalogViewModel {
         Interactor.shared.getSalonsList { result in
             if result.error == nil {
                 self.salons = result.salons ?? []
-                self.salons = self.salons.map { Salon(id: $0.id, name: $0.name, rate: Float.random(in: 0...5.0), address: $0.address) } // TODO: Remove
+                self.salons = self.salons.map { Salon(id: $0.id, name: $0.name, rate: Float.random(in: 0...5.0), address: $0.address, distance: $0.distance) }.sorted(by: { $0.distance < $1.distance }) // TODO: Remove
                 completion(nil)
             }
             completion(result.error)
@@ -74,9 +73,9 @@ class SalonCatalogViewModel {
     }
 
     func filterContentForSearchText(_ searchText: String) {
-            filteredSalons = salons.filter { salon -> Bool in
-                return salon.name.lowercased().contains(searchText.lowercased())
-            }
+        filteredSalons = salons.filter { salon -> Bool in
+            return salon.name.lowercased().contains(searchText.lowercased())
+        }
     }
 
 }

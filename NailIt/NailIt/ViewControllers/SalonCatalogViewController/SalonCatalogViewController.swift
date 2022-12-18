@@ -24,36 +24,78 @@ final class SalonCatalogViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Найти салон"
-        searchController.searchBar.delegate = self
-        searchController.searchBar.showsBookmarkButton = true
-        searchController.searchBar.setImage(UIImage(named: "menu button"), for: .bookmark, state: .normal)
-        searchController.searchBar.setPositionAdjustment(UIOffset(horizontal: -10, vertical: 0), for: .bookmark)
-        navigationItem.searchController = searchController
-        searchController.searchResultsUpdater = self
-
         sortButton.layer.cornerRadius = 15
         sortButton.layer.borderWidth = 1
         sortButton.layer.borderColor = sortButton.tintColor.cgColor
 
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: SalonTableViewCell.identifier, bundle: nil),
-                           forCellReuseIdentifier: SalonTableViewCell.identifier)
+        tableView.register(UINib(nibName: NailItTableViewCell.identifier, bundle: nil),
+                           forCellReuseIdentifier: NailItTableViewCell.identifier)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
 
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+    }
+
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        guard let userInfo = notification.userInfo else { return }
+        let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        var contentInset = tableView.contentInset
+        contentInset.bottom = keyboardFrame.size.height - 20
+        tableView.contentInset = contentInset
+    }
+
+    @objc private func keyboardWillHide(notification: NSNotification) {
+        let contentInset = UIEdgeInsets.zero
+        tableView.contentInset = contentInset
+    }
+
+    private func setupNavigationBar() {
+        searchController.obscuresBackgroundDuringPresentation = false
+        let searchBar = searchController.searchBar
+        searchBar.setPlaceholderColor(NailItAppearance.nailItPlaceholderTextColor)
+        searchBar.setTextColor(color: NailItAppearance.nailItPlaceholderTextColor)
+        searchBar.searchTextField.leftView?.tintColor = NailItAppearance.nailItPlaceholderTextColor
+        searchBar.placeholder = "Найти салон"
+        searchBar.delegate = self
+        searchBar.searchTextField.backgroundColor = NailItAppearance.nailItOrangeColor
+        let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: NailItAppearance.nailItOrangeColor]
+        UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes, for: .normal)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: nil)
+        navigationItem.rightBarButtonItem?.tintColor = NailItAppearance.nailItBrownColor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: NailItAppearance.nailItBrownColor]
+        navigationItem.title = "Поиск салона"
+
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setupNavigationBar()
+        tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     }
 
     @IBAction private func didTapSort(_ sender: UIButton) {
         guard let viewModel = viewModel else { return }
         viewModel.didTapSort()
-        sender.backgroundColor =  viewModel.isSorting ? sender.tintColor : .white
-        sender.setTitleColor( !viewModel.isSorting ? sender.tintColor : .white, for: .normal)
+        sender.backgroundColor =  viewModel.isSorting ? NailItAppearance.nailItOrangeColor : .white
+        sender.setTitleColor( !viewModel.isSorting ? NailItAppearance.nailItOrangeColor : .white, for: .normal)
     }
 
     private func fetchData() {
@@ -75,7 +117,7 @@ extension SalonCatalogViewController: UITableViewDataSource, UITableViewDelegate
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: SalonTableViewCell.identifier) as? SalonTableViewCell,
+        if let cell = tableView.dequeueReusableCell(withIdentifier: NailItTableViewCell.identifier) as? NailItTableViewCell,
            let salon = viewModel?.salon(for: indexPath.row) {
             let backgroundView = UIView()
             backgroundView.backgroundColor = .clear
