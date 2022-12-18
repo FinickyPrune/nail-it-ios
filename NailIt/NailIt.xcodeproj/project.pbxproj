@@ -31,8 +31,8 @@
 		AF4DDD66294A329C000B21DD /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD64294A329C000B21DD /* Montserrat-VariableFont_wght.ttf */; };
 		AF4DDD6A294A3D0F000B21DD /* SalonCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */; };
 		AF4DDD6B294A3D0F000B21DD /* SalonCatalogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */; };
-		AF4DDD6F294A3D44000B21DD /* SalonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD6D294A3D44000B21DD /* SalonTableViewCell.swift */; };
-		AF4DDD70294A3D44000B21DD /* SalonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD6E294A3D44000B21DD /* SalonTableViewCell.xib */; };
+		AF4DDD6F294A3D44000B21DD /* NailItTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD6D294A3D44000B21DD /* NailItTableViewCell.swift */; };
+		AF4DDD70294A3D44000B21DD /* NailItTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD6E294A3D44000B21DD /* NailItTableViewCell.xib */; };
 		AF4DDD72294A3D54000B21DD /* SalonCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */; };
 		AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385BF292150EA005851B4 /* AppDelegate.swift */; };
 		AF6385CA292150EA005851B4 /* NailIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF6385C8292150EA005851B4 /* NailIt.xcdatamodeld */; };
@@ -41,6 +41,9 @@
 		AF6385DA292150EC005851B4 /* NailItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385D9292150EC005851B4 /* NailItTests.swift */; };
 		AF6385E4292150EC005851B4 /* NailItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385E3292150EC005851B4 /* NailItUITests.swift */; };
 		AF6385E6292150EC005851B4 /* NailItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385E5292150EC005851B4 /* NailItUITestsLaunchTests.swift */; };
+		AF802DA1294ED0AF0087DA0D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */; };
+		AF802DA3294ED12D0087DA0D /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA2294ED12D0087DA0D /* Appearance.swift */; };
+		AF802DA5294ED4030087DA0D /* UISearchbar+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */; };
 		AFA293FA29476AA800F699A6 /* CatalogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA293F829476AA800F699A6 /* CatalogCollectionViewCell.swift */; };
 		AFA293FB29476AA800F699A6 /* CatalogCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA293F929476AA800F699A6 /* CatalogCollectionViewCell.xib */; };
 		AFA293FF29476ADA00F699A6 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA293FD29476ADA00F699A6 /* CategoryCollectionViewCell.swift */; };
@@ -120,8 +123,8 @@
 		AF4DDD64294A329C000B21DD /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonCatalogViewController.swift; sourceTree = "<group>"; };
 		AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalonCatalogViewController.xib; sourceTree = "<group>"; };
-		AF4DDD6D294A3D44000B21DD /* SalonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonTableViewCell.swift; sourceTree = "<group>"; };
-		AF4DDD6E294A3D44000B21DD /* SalonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalonTableViewCell.xib; sourceTree = "<group>"; };
+		AF4DDD6D294A3D44000B21DD /* NailItTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItTableViewCell.swift; sourceTree = "<group>"; };
+		AF4DDD6E294A3D44000B21DD /* NailItTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NailItTableViewCell.xib; sourceTree = "<group>"; };
 		AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonCatalogViewModel.swift; sourceTree = "<group>"; };
 		AF6385BC292150EA005851B4 /* NailIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NailIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6385BF292150EA005851B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +137,9 @@
 		AF6385DF292150EC005851B4 /* NailItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NailItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6385E3292150EC005851B4 /* NailItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItUITests.swift; sourceTree = "<group>"; };
 		AF6385E5292150EC005851B4 /* NailItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		AF802DA2294ED12D0087DA0D /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchbar+Color.swift"; sourceTree = "<group>"; };
 		AFA293F829476AA800F699A6 /* CatalogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewCell.swift; sourceTree = "<group>"; };
 		AFA293F929476AA800F699A6 /* CatalogCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogCollectionViewCell.xib; sourceTree = "<group>"; };
 		AFA293FD29476ADA00F699A6 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -264,8 +270,8 @@
 		AF4DDD6C294A3D17000B21DD /* SalonTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				AF4DDD6D294A3D44000B21DD /* SalonTableViewCell.swift */,
-				AF4DDD6E294A3D44000B21DD /* SalonTableViewCell.xib */,
+				AF4DDD6D294A3D44000B21DD /* NailItTableViewCell.swift */,
+				AF4DDD6E294A3D44000B21DD /* NailItTableViewCell.xib */,
 			);
 			path = SalonTableViewCell;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 				AF6385CD292150EC005851B4 /* LaunchScreen.storyboard */,
 				AF6385D0292150EC005851B4 /* Info.plist */,
 				AF6385C8292150EA005851B4 /* NailIt.xcdatamodeld */,
+				AF802DA2294ED12D0087DA0D /* Appearance.swift */,
 			);
 			path = NailIt;
 			sourceTree = "<group>";
@@ -374,6 +381,8 @@
 				AFFA8E7F292159100083764C /* NetworkError.swift */,
 				AFFA8E80292159100083764C /* UIToolbar+ToolbarPicker.swift */,
 				AFA2940129476ECC00F699A6 /* Collection+Safe.swift */,
+				AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */,
+				AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -583,7 +592,7 @@
 				AF4DDD51294A3289000B21DD /* Montserrat-Light.ttf in Resources */,
 				AF4DDD66294A329C000B21DD /* Montserrat-VariableFont_wght.ttf in Resources */,
 				AF4DDD59294A3289000B21DD /* Montserrat-ThinItalic.ttf in Resources */,
-				AF4DDD70294A3D44000B21DD /* SalonTableViewCell.xib in Resources */,
+				AF4DDD70294A3D44000B21DD /* NailItTableViewCell.xib in Resources */,
 				AF4DDD58294A3289000B21DD /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				AF6385CF292150EC005851B4 /* LaunchScreen.storyboard in Resources */,
 				AFA293FB29476AA800F699A6 /* CatalogCollectionViewCell.xib in Resources */,
@@ -744,10 +753,13 @@
 				AFA293FA29476AA800F699A6 /* CatalogCollectionViewCell.swift in Sources */,
 				AF6385CA292150EA005851B4 /* NailIt.xcdatamodeld in Sources */,
 				AFFA8E792921586D0083764C /* Coordinator.swift in Sources */,
+				AF802DA5294ED4030087DA0D /* UISearchbar+Color.swift in Sources */,
 				AFFA8E9D292159430083764C /* SignUpViewModel.swift in Sources */,
 				AFA2940229476ECC00F699A6 /* Collection+Safe.swift in Sources */,
 				AFFE23F4293336CD00063168 /* Response.swift in Sources */,
+				AF802DA3294ED12D0087DA0D /* Appearance.swift in Sources */,
 				AFFE23EF293333AA00063168 /* NetworkService.swift in Sources */,
+				AF802DA1294ED0AF0087DA0D /* UIColor+Hex.swift in Sources */,
 				AFFA8E81292159100083764C /* DataRequest+DataHandler.swift in Sources */,
 				AFFE23ED2933339B00063168 /* Interactor.swift in Sources */,
 				AFFA8E84292159100083764C /* NetworkError.swift in Sources */,
@@ -759,7 +771,7 @@
 				AFFA8E85292159100083764C /* UIToolbar+ToolbarPicker.swift in Sources */,
 				AF4DDD72294A3D54000B21DD /* SalonCatalogViewModel.swift in Sources */,
 				AFA293FF29476ADA00F699A6 /* CategoryCollectionViewCell.swift in Sources */,
-				AF4DDD6F294A3D44000B21DD /* SalonTableViewCell.swift in Sources */,
+				AF4DDD6F294A3D44000B21DD /* NailItTableViewCell.swift in Sources */,
 				AFA294092947705F00F699A6 /* ProductViewModel.swift in Sources */,
 				AFFA8EA1292159430083764C /* SignInViewController.swift in Sources */,
 				AFFA8E9C292159430083764C /* SignUpViewController.swift in Sources */,

@@ -76,6 +76,7 @@ struct Salon: Codable {
     let name: String
     var rate: Float
     let address: String
+    let distance: Float
 }
 
 struct NailItSalonsListResult {
