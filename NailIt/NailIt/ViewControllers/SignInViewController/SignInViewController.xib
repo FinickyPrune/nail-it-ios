@@ -36,10 +36,17 @@
                     <rect key="frame" x="30" y="86" width="354" height="741"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yco-lK-b3F">
-                            <rect key="frame" x="0.0" y="0.0" width="354" height="259"/>
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="387"/>
                             <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3T-2b-mcM">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="128"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="128" id="kOC-6R-bu0"/>
+                                    </constraints>
+                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти в аккаунт" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-UD-sVb">
-                                    <rect key="frame" x="0.0" y="0.0" width="354" height="49"/>
+                                    <rect key="frame" x="0.0" y="128" width="354" height="49"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="49" id="QDt-lL-Lyi"/>
                                     </constraints>
@@ -48,7 +55,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9a1-SP-cHM">
-                                    <rect key="frame" x="0.0" y="79" width="354" height="180"/>
+                                    <rect key="frame" x="0.0" y="207" width="354" height="180"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9C-Vl-zEb">
                                             <rect key="frame" x="22" y="0.0" width="310" height="30"/>
@@ -114,13 +121,16 @@
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
+                                <constraint firstItem="x3T-2b-mcM" firstAttribute="top" secondItem="yco-lK-b3F" secondAttribute="top" id="11C-et-94W"/>
                                 <constraint firstAttribute="trailing" secondItem="OOu-UD-sVb" secondAttribute="trailing" id="3a3-lG-gl6"/>
                                 <constraint firstAttribute="trailing" secondItem="9a1-SP-cHM" secondAttribute="trailing" id="4EQ-gd-OUr"/>
                                 <constraint firstItem="9a1-SP-cHM" firstAttribute="leading" secondItem="yco-lK-b3F" secondAttribute="leading" id="9uQ-Sv-0wU"/>
                                 <constraint firstAttribute="bottom" secondItem="9a1-SP-cHM" secondAttribute="bottom" id="Ou9-UF-1Pu"/>
+                                <constraint firstItem="x3T-2b-mcM" firstAttribute="bottom" secondItem="OOu-UD-sVb" secondAttribute="top" id="Upk-du-dbU"/>
+                                <constraint firstAttribute="trailing" secondItem="x3T-2b-mcM" secondAttribute="trailing" id="WL7-9B-bYA"/>
                                 <constraint firstItem="9a1-SP-cHM" firstAttribute="top" secondItem="OOu-UD-sVb" secondAttribute="bottom" constant="30" id="Wcf-Ky-wIV"/>
                                 <constraint firstItem="OOu-UD-sVb" firstAttribute="leading" secondItem="yco-lK-b3F" secondAttribute="leading" id="iWu-LY-MJ2"/>
-                                <constraint firstItem="OOu-UD-sVb" firstAttribute="top" secondItem="yco-lK-b3F" secondAttribute="top" id="lgd-MC-G4a"/>
+                                <constraint firstItem="x3T-2b-mcM" firstAttribute="leading" secondItem="yco-lK-b3F" secondAttribute="leading" id="qYg-eh-0bQ"/>
                             </constraints>
                         </view>
                     </subviews>
