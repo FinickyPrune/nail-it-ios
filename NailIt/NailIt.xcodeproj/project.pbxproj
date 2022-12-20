@@ -35,7 +35,6 @@
 		AF4DDD70294A3D44000B21DD /* NailItTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD6E294A3D44000B21DD /* NailItTableViewCell.xib */; };
 		AF4DDD72294A3D54000B21DD /* SalonCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */; };
 		AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385BF292150EA005851B4 /* AppDelegate.swift */; };
-		AF6385CA292150EA005851B4 /* NailIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF6385C8292150EA005851B4 /* NailIt.xcdatamodeld */; };
 		AF6385CC292150EC005851B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6385CB292150EC005851B4 /* Assets.xcassets */; };
 		AF6385CF292150EC005851B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6385CD292150EC005851B4 /* LaunchScreen.storyboard */; };
 		AF6385DA292150EC005851B4 /* NailItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385D9292150EC005851B4 /* NailItTests.swift */; };
@@ -44,17 +43,17 @@
 		AF802DA1294ED0AF0087DA0D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */; };
 		AF802DA3294ED12D0087DA0D /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA2294ED12D0087DA0D /* Appearance.swift */; };
 		AF802DA5294ED4030087DA0D /* UISearchbar+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */; };
-		AFA293FA29476AA800F699A6 /* CatalogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA293F829476AA800F699A6 /* CatalogCollectionViewCell.swift */; };
-		AFA293FB29476AA800F699A6 /* CatalogCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA293F929476AA800F699A6 /* CatalogCollectionViewCell.xib */; };
-		AFA293FF29476ADA00F699A6 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA293FD29476ADA00F699A6 /* CategoryCollectionViewCell.swift */; };
-		AFA2940029476ADA00F699A6 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA293FE29476ADA00F699A6 /* CategoryCollectionViewCell.xib */; };
+		AF802DA9294EDB6C0087DA0D /* SalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA7294EDB6C0087DA0D /* SalonViewController.swift */; };
+		AF802DAA294EDB6C0087DA0D /* SalonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DA8294EDB6C0087DA0D /* SalonViewController.xib */; };
+		AF802DAC294EDD840087DA0D /* SalonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DAB294EDD840087DA0D /* SalonViewModel.swift */; };
+		AF802DB2294F36850087DA0D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB0294F36850087DA0D /* AccountViewController.swift */; };
+		AF802DB3294F36850087DA0D /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DB1294F36850087DA0D /* AccountViewController.xib */; };
+		AF802DB5294F36930087DA0D /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB4294F36930087DA0D /* AccountViewModel.swift */; };
+		AF802DB9294F47420087DA0D /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */; };
+		AF802DBA294F47420087DA0D /* AppointmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */; };
 		AFA2940229476ECC00F699A6 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2940129476ECC00F699A6 /* Collection+Safe.swift */; };
-		AFA294062947702900F699A6 /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA294042947702900F699A6 /* ProductViewController.swift */; };
-		AFA294072947702900F699A6 /* ProductViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA294052947702900F699A6 /* ProductViewController.xib */; };
-		AFA294092947705F00F699A6 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA294082947705F00F699A6 /* ProductViewModel.swift */; };
 		AFFA8E782921586D0083764C /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E762921586D0083764C /* RootCoordinator.swift */; };
 		AFFA8E792921586D0083764C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E772921586D0083764C /* Coordinator.swift */; };
-		AFFA8E81292159100083764C /* DataRequest+DataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7C292159100083764C /* DataRequest+DataHandler.swift */; };
 		AFFA8E82292159100083764C /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7D292159100083764C /* Encodable.swift */; };
 		AFFA8E83292159100083764C /* UIViewController+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7E292159100083764C /* UIViewController+Nib.swift */; };
 		AFFA8E84292159100083764C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7F292159100083764C /* NetworkError.swift */; };
@@ -65,9 +64,6 @@
 		AFFA8E9F292159430083764C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFA8E90292159430083764C /* SignInViewController.xib */; };
 		AFFA8EA0292159430083764C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E91292159430083764C /* SignInViewModel.swift */; };
 		AFFA8EA1292159430083764C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E92292159430083764C /* SignInViewController.swift */; };
-		AFFA8EAB29215A4A0083764C /* CatalogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFA8EA829215A4A0083764C /* CatalogViewController.xib */; };
-		AFFA8EAC29215A4A0083764C /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8EA929215A4A0083764C /* CatalogViewController.swift */; };
-		AFFA8EAD29215A4A0083764C /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8EAA29215A4A0083764C /* CatalogViewModel.swift */; };
 		AFFE23ED2933339B00063168 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23EC2933339B00063168 /* Interactor.swift */; };
 		AFFE23EF293333AA00063168 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23EE293333AA00063168 /* NetworkService.swift */; };
 		AFFE23F12933349000063168 /* NailItProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F02933349000063168 /* NailItProvider.swift */; };
@@ -128,7 +124,6 @@
 		AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonCatalogViewModel.swift; sourceTree = "<group>"; };
 		AF6385BC292150EA005851B4 /* NailIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NailIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6385BF292150EA005851B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF6385C9292150EA005851B4 /* NailIt.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NailIt.xcdatamodel; sourceTree = "<group>"; };
 		AF6385CB292150EC005851B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6385CE292150EC005851B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF6385D0292150EC005851B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -140,17 +135,17 @@
 		AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		AF802DA2294ED12D0087DA0D /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchbar+Color.swift"; sourceTree = "<group>"; };
-		AFA293F829476AA800F699A6 /* CatalogCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogCollectionViewCell.swift; sourceTree = "<group>"; };
-		AFA293F929476AA800F699A6 /* CatalogCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogCollectionViewCell.xib; sourceTree = "<group>"; };
-		AFA293FD29476ADA00F699A6 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
-		AFA293FE29476ADA00F699A6 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		AF802DA7294EDB6C0087DA0D /* SalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonViewController.swift; sourceTree = "<group>"; };
+		AF802DA8294EDB6C0087DA0D /* SalonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalonViewController.xib; sourceTree = "<group>"; };
+		AF802DAB294EDD840087DA0D /* SalonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonViewModel.swift; sourceTree = "<group>"; };
+		AF802DB0294F36850087DA0D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AF802DB1294F36850087DA0D /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		AF802DB4294F36930087DA0D /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewCell.swift; sourceTree = "<group>"; };
+		AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentTableViewCell.xib; sourceTree = "<group>"; };
 		AFA2940129476ECC00F699A6 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
-		AFA294042947702900F699A6 /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
-		AFA294052947702900F699A6 /* ProductViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductViewController.xib; sourceTree = "<group>"; };
-		AFA294082947705F00F699A6 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
 		AFFA8E762921586D0083764C /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		AFFA8E772921586D0083764C /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		AFFA8E7C292159100083764C /* DataRequest+DataHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataRequest+DataHandler.swift"; sourceTree = "<group>"; };
 		AFFA8E7D292159100083764C /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
 		AFFA8E7E292159100083764C /* UIViewController+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Nib.swift"; sourceTree = "<group>"; };
 		AFFA8E7F292159100083764C /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -161,9 +156,6 @@
 		AFFA8E90292159430083764C /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
 		AFFA8E91292159430083764C /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		AFFA8E92292159430083764C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		AFFA8EA829215A4A0083764C /* CatalogViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CatalogViewController.xib; sourceTree = "<group>"; };
-		AFFA8EA929215A4A0083764C /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
-		AFFA8EAA29215A4A0083764C /* CatalogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
 		AFFE23EC2933339B00063168 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		AFFE23EE293333AA00063168 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		AFFE23F02933349000063168 /* NailItProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItProvider.swift; sourceTree = "<group>"; };
@@ -259,7 +251,6 @@
 		AF4DDD67294A3CF1000B21DD /* SalonCatalogViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AF4DDD6C294A3D17000B21DD /* SalonTableViewCell */,
 				AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */,
 				AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */,
 				AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */,
@@ -267,13 +258,13 @@
 			path = SalonCatalogViewController;
 			sourceTree = "<group>";
 		};
-		AF4DDD6C294A3D17000B21DD /* SalonTableViewCell */ = {
+		AF4DDD6C294A3D17000B21DD /* NailItTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				AF4DDD6D294A3D44000B21DD /* NailItTableViewCell.swift */,
 				AF4DDD6E294A3D44000B21DD /* NailItTableViewCell.xib */,
 			);
-			path = SalonTableViewCell;
+			path = NailItTableViewCell;
 			sourceTree = "<group>";
 		};
 		AF6385B3292150EA005851B4 = {
@@ -311,7 +302,6 @@
 				AF6385CB292150EC005851B4 /* Assets.xcassets */,
 				AF6385CD292150EC005851B4 /* LaunchScreen.storyboard */,
 				AF6385D0292150EC005851B4 /* Info.plist */,
-				AF6385C8292150EA005851B4 /* NailIt.xcdatamodeld */,
 				AF802DA2294ED12D0087DA0D /* Appearance.swift */,
 			);
 			path = NailIt;
@@ -334,33 +324,34 @@
 			path = NailItUITests;
 			sourceTree = "<group>";
 		};
-		AFA293F729476A9100F699A6 /* CatalogCollectionViewCell */ = {
+		AF802DA6294EDB540087DA0D /* SalonViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AFA293FC29476ABE00F699A6 /* CategoryCollectionViewCell */,
-				AFA293F829476AA800F699A6 /* CatalogCollectionViewCell.swift */,
-				AFA293F929476AA800F699A6 /* CatalogCollectionViewCell.xib */,
+				AF802DA7294EDB6C0087DA0D /* SalonViewController.swift */,
+				AF802DA8294EDB6C0087DA0D /* SalonViewController.xib */,
+				AF802DAB294EDD840087DA0D /* SalonViewModel.swift */,
 			);
-			path = CatalogCollectionViewCell;
+			path = SalonViewController;
 			sourceTree = "<group>";
 		};
-		AFA293FC29476ABE00F699A6 /* CategoryCollectionViewCell */ = {
+		AF802DAF294F365F0087DA0D /* AccountViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AFA293FD29476ADA00F699A6 /* CategoryCollectionViewCell.swift */,
-				AFA293FE29476ADA00F699A6 /* CategoryCollectionViewCell.xib */,
+				AF802DB6294F47270087DA0D /* AccountTableViewCell */,
+				AF802DB0294F36850087DA0D /* AccountViewController.swift */,
+				AF802DB1294F36850087DA0D /* AccountViewController.xib */,
+				AF802DB4294F36930087DA0D /* AccountViewModel.swift */,
 			);
-			path = CategoryCollectionViewCell;
+			path = AccountViewController;
 			sourceTree = "<group>";
 		};
-		AFA294032947700D00F699A6 /* ProductViewController */ = {
+		AF802DB6294F47270087DA0D /* AccountTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				AFA294042947702900F699A6 /* ProductViewController.swift */,
-				AFA294052947702900F699A6 /* ProductViewController.xib */,
-				AFA294082947705F00F699A6 /* ProductViewModel.swift */,
+				AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */,
+				AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */,
 			);
-			path = ProductViewController;
+			path = AccountTableViewCell;
 			sourceTree = "<group>";
 		};
 		AFFA8E752921586D0083764C /* Coordinators */ = {
@@ -375,7 +366,6 @@
 		AFFA8E7B292159100083764C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AFFA8E7C292159100083764C /* DataRequest+DataHandler.swift */,
 				AFFA8E7D292159100083764C /* Encodable.swift */,
 				AFFA8E7E292159100083764C /* UIViewController+Nib.swift */,
 				AFFA8E7F292159100083764C /* NetworkError.swift */,
@@ -390,9 +380,10 @@
 		AFFA8E86292159430083764C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AF802DAF294F365F0087DA0D /* AccountViewController */,
+				AF802DA6294EDB540087DA0D /* SalonViewController */,
+				AF4DDD6C294A3D17000B21DD /* NailItTableViewCell */,
 				AF4DDD67294A3CF1000B21DD /* SalonCatalogViewController */,
-				AFA294032947700D00F699A6 /* ProductViewController */,
-				AFFA8EA729215A4A0083764C /* CatalogViewController */,
 				AFFA8E8B292159430083764C /* SignUpViewController */,
 				AFFA8E8F292159430083764C /* SignInViewController */,
 			);
@@ -417,17 +408,6 @@
 				AFFA8E92292159430083764C /* SignInViewController.swift */,
 			);
 			path = SignInViewController;
-			sourceTree = "<group>";
-		};
-		AFFA8EA729215A4A0083764C /* CatalogViewController */ = {
-			isa = PBXGroup;
-			children = (
-				AFA293F729476A9100F699A6 /* CatalogCollectionViewCell */,
-				AFFA8EA829215A4A0083764C /* CatalogViewController.xib */,
-				AFFA8EA929215A4A0083764C /* CatalogViewController.swift */,
-				AFFA8EAA29215A4A0083764C /* CatalogViewModel.swift */,
-			);
-			path = CatalogViewController;
 			sourceTree = "<group>";
 		};
 		AFFE23EB2933338E00063168 /* Services */ = {
@@ -581,23 +561,22 @@
 				AF4DDD56294A3289000B21DD /* Montserrat-Regular.ttf in Resources */,
 				AF4DDD62294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				AFFA8E9F292159430083764C /* SignInViewController.xib in Resources */,
-				AFA2940029476ADA00F699A6 /* CategoryCollectionViewCell.xib in Resources */,
 				AF4DDD54294A3289000B21DD /* Montserrat-Italic.ttf in Resources */,
 				AF4DDD61294A3289000B21DD /* Montserrat-SemiBold.ttf in Resources */,
 				AF4DDD60294A3289000B21DD /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				AF4DDD5C294A3289000B21DD /* Montserrat-LightItalic.ttf in Resources */,
+				AF802DAA294EDB6C0087DA0D /* SalonViewController.xib in Resources */,
 				AF4DDD5F294A3289000B21DD /* Montserrat-Black.ttf in Resources */,
-				AFA294072947702900F699A6 /* ProductViewController.xib in Resources */,
 				AF4DDD6B294A3D0F000B21DD /* SalonCatalogViewController.xib in Resources */,
 				AF4DDD51294A3289000B21DD /* Montserrat-Light.ttf in Resources */,
+				AF802DBA294F47420087DA0D /* AppointmentTableViewCell.xib in Resources */,
 				AF4DDD66294A329C000B21DD /* Montserrat-VariableFont_wght.ttf in Resources */,
 				AF4DDD59294A3289000B21DD /* Montserrat-ThinItalic.ttf in Resources */,
 				AF4DDD70294A3D44000B21DD /* NailItTableViewCell.xib in Resources */,
 				AF4DDD58294A3289000B21DD /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				AF6385CF292150EC005851B4 /* LaunchScreen.storyboard in Resources */,
-				AFA293FB29476AA800F699A6 /* CatalogCollectionViewCell.xib in Resources */,
 				AF4DDD5A294A3289000B21DD /* Montserrat-ExtraLight.ttf in Resources */,
-				AFFA8EAB29215A4A0083764C /* CatalogViewController.xib in Resources */,
+				AF802DB3294F36850087DA0D /* AccountViewController.xib in Resources */,
 				AF4DDD65294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
 				AFFA8E9E292159430083764C /* SignUpViewController.xib in Resources */,
 				AF4DDD53294A3289000B21DD /* Montserrat-Bold.ttf in Resources */,
@@ -750,9 +729,9 @@
 			files = (
 				AFFA8E782921586D0083764C /* RootCoordinator.swift in Sources */,
 				AFFA8E82292159100083764C /* Encodable.swift in Sources */,
-				AFA293FA29476AA800F699A6 /* CatalogCollectionViewCell.swift in Sources */,
-				AF6385CA292150EA005851B4 /* NailIt.xcdatamodeld in Sources */,
+				AF802DAC294EDD840087DA0D /* SalonViewModel.swift in Sources */,
 				AFFA8E792921586D0083764C /* Coordinator.swift in Sources */,
+				AF802DB9294F47420087DA0D /* AppointmentTableViewCell.swift in Sources */,
 				AF802DA5294ED4030087DA0D /* UISearchbar+Color.swift in Sources */,
 				AFFA8E9D292159430083764C /* SignUpViewModel.swift in Sources */,
 				AFA2940229476ECC00F699A6 /* Collection+Safe.swift in Sources */,
@@ -760,25 +739,22 @@
 				AF802DA3294ED12D0087DA0D /* Appearance.swift in Sources */,
 				AFFE23EF293333AA00063168 /* NetworkService.swift in Sources */,
 				AF802DA1294ED0AF0087DA0D /* UIColor+Hex.swift in Sources */,
-				AFFA8E81292159100083764C /* DataRequest+DataHandler.swift in Sources */,
 				AFFE23ED2933339B00063168 /* Interactor.swift in Sources */,
 				AFFA8E84292159100083764C /* NetworkError.swift in Sources */,
+				AF802DB5294F36930087DA0D /* AccountViewModel.swift in Sources */,
 				AFFE23F12933349000063168 /* NailItProvider.swift in Sources */,
 				AFFA8E83292159100083764C /* UIViewController+Nib.swift in Sources */,
-				AFFA8EAC29215A4A0083764C /* CatalogViewController.swift in Sources */,
 				AF4DDD6A294A3D0F000B21DD /* SalonCatalogViewController.swift in Sources */,
 				AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */,
 				AFFA8E85292159100083764C /* UIToolbar+ToolbarPicker.swift in Sources */,
 				AF4DDD72294A3D54000B21DD /* SalonCatalogViewModel.swift in Sources */,
-				AFA293FF29476ADA00F699A6 /* CategoryCollectionViewCell.swift in Sources */,
 				AF4DDD6F294A3D44000B21DD /* NailItTableViewCell.swift in Sources */,
-				AFA294092947705F00F699A6 /* ProductViewModel.swift in Sources */,
 				AFFA8EA1292159430083764C /* SignInViewController.swift in Sources */,
 				AFFA8E9C292159430083764C /* SignUpViewController.swift in Sources */,
 				AFFA8EA0292159430083764C /* SignInViewModel.swift in Sources */,
+				AF802DB2294F36850087DA0D /* AccountViewController.swift in Sources */,
 				AFFE23F7293345EF00063168 /* UserManager.swift in Sources */,
-				AFFA8EAD29215A4A0083764C /* CatalogViewModel.swift in Sources */,
-				AFA294062947702900F699A6 /* ProductViewController.swift in Sources */,
+				AF802DA9294EDB6C0087DA0D /* SalonViewController.swift in Sources */,
 				AFFE23F92933462F00063168 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1119,19 +1095,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AF6385C8292150EA005851B4 /* NailIt.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AF6385C9292150EA005851B4 /* NailIt.xcdatamodel */,
-			);
-			currentVersion = AF6385C9292150EA005851B4 /* NailIt.xcdatamodel */;
-			path = NailIt.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AF6385B4292150EA005851B4 /* Project object */;
 }
