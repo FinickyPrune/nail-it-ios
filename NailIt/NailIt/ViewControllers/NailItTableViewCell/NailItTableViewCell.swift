@@ -50,9 +50,9 @@ class NailItTableViewCell: UITableViewCell {
 
     func configure(with service: Service) {
         titleLabel.text = service.title
-        subtitleLabel.text = String(service.price)
+        subtitleLabel.text = "\(service.price)р"
         starsImageViews.forEach { $0.isHidden = true  }
         secondSubtitleLabel.isHidden = false
-        secondSubtitleLabel.text = service.timeEstimate
+        secondSubtitleLabel.text = service.estimate
     }
 }

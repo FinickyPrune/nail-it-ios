@@ -15,6 +15,7 @@ protocol SalonViewModelDisplayDelegate: AnyObject {
 
 protocol SalonViewModelActionDelegate: AnyObject {
     func salonViewModelAttempsToDisplayAccountController(_ viewModel: SalonViewModel)
+    func salonViewModelAttempsToDisplayAppointmnentController(_ viewModel: SalonViewModel, for: Service, _ salon: Salon)
 }
 
 class SalonViewModel {
@@ -40,9 +41,9 @@ class SalonViewModel {
     func services(for serviceType: ServiceType) -> [Service] {
         guard let displayDelegate = displayDelegate else { return [] }
         if displayDelegate.isFiltering {
-            return filteredServices.filter { $0.serviceTypeTitle == serviceType.title }
+            return filteredServices.filter { $0.service == serviceType.title }
         }
-        return services.filter { $0.serviceTypeTitle == serviceType.title }
+        return services.filter { $0.service == serviceType.title }
     }
 
     func serviceType(for index: Int) -> ServiceType? {
@@ -52,28 +53,31 @@ class SalonViewModel {
     func count(for serviceType: ServiceType) -> Int {
         guard let displayDelegate = displayDelegate else { return 0 }
         if displayDelegate.isFiltering {
-            return filteredServices.filter { $0.serviceTypeTitle == serviceType.title }.count
+            return filteredServices.filter { $0.service == serviceType.title }.count
         }
-        return services.filter { $0.serviceTypeTitle == serviceType.title }.count
+        return services.filter { $0.service == serviceType.title }.count
     }
 
-    func didSelectItem(with index: Int) {
-
+    func didSelectItem(with indexPath: IndexPath) {
+        guard let serviceType = serviceType(for: indexPath.section),
+              let service = services(for: serviceType)[safe: indexPath.row] else { return }
+        actionDelegate?.salonViewModelAttempsToDisplayAppointmnentController(self, for: service, salon)
     }
 
     func loadData(completion: @escaping (Error?) -> Void) {
 
         Interactor.shared.getServiceTypesList { serviceTypesResult in
             if serviceTypesResult.error == nil {
-                self.serviceTypes = (serviceTypesResult.serviceTypes ?? []).map { ServiceType(id: $0.id, title: $0.title.replacingOccurrences(of: "title", with: "serviceTypeTitle", options: .literal, range: nil)) } // TODO: Change
-                Interactor.shared.getSalonsList(for: 0) { result in // TODO: Change
+                self.serviceTypes = (serviceTypesResult.serviceTypes ?? [])
+
+                Interactor.shared.getServicesList(for: self.salon.id) { result in
                     if result.error == nil {
-                        self.services.append(contentsOf: result.services ?? []) // TODO: Change
-                        self.services.append(contentsOf: result.services ?? []) // TODO: Change
-                        self.services = self.services.sorted(by: { $0.serviceTypeTitle < $1.serviceTypeTitle }) // TODO: Change
+                        self.services.append(contentsOf: result.services ?? []) 
                         completion(nil)
+                        return
                     }
                     completion(result.error)
+                    return
                 }
             }
             completion(serviceTypesResult.error)
