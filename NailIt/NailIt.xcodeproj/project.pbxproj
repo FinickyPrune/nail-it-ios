@@ -45,6 +45,8 @@
 		AF6385E6292150EC005851B4 /* NailItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385E5292150EC005851B4 /* NailItUITestsLaunchTests.swift */; };
 		AF7663D429584FDA00517409 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D229584FDA00517409 /* MasterTableViewCell.swift */; };
 		AF7663D529584FDA00517409 /* MasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7663D329584FDA00517409 /* MasterTableViewCell.xib */; };
+		AF7663D72958738500517409 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D62958738500517409 /* LocationService.swift */; };
+		AF7663D929589EE700517409 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D829589EE700517409 /* String+Date.swift */; };
 		AF802DA1294ED0AF0087DA0D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */; };
 		AF802DA3294ED12D0087DA0D /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA2294ED12D0087DA0D /* Appearance.swift */; };
 		AF802DA5294ED4030087DA0D /* UISearchbar+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */; };
@@ -143,6 +145,8 @@
 		AF6385E5292150EC005851B4 /* NailItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AF7663D229584FDA00517409 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 		AF7663D329584FDA00517409 /* MasterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterTableViewCell.xib; sourceTree = "<group>"; };
+		AF7663D62958738500517409 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		AF7663D829589EE700517409 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		AF802DA2294ED12D0087DA0D /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchbar+Color.swift"; sourceTree = "<group>"; };
@@ -406,6 +410,7 @@
 				AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */,
 				AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */,
 				AF94B1792955DD5400B34ACF /* UILabel+DynamicHeight.swift */,
+				AF7663D829589EE700517409 /* String+Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -451,6 +456,7 @@
 				AFFE23EC2933339B00063168 /* Interactor.swift */,
 				AFFE23EE293333AA00063168 /* NetworkService.swift */,
 				AFFE23F02933349000063168 /* NailItProvider.swift */,
+				AF7663D62958738500517409 /* LocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -763,6 +769,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7663D929589EE700517409 /* String+Date.swift in Sources */,
 				AFFA8E782921586D0083764C /* RootCoordinator.swift in Sources */,
 				AFFA8E82292159100083764C /* Encodable.swift in Sources */,
 				AF802DAC294EDD840087DA0D /* SalonViewModel.swift in Sources */,
@@ -795,6 +802,7 @@
 				AF94B17A2955DD5400B34ACF /* UILabel+DynamicHeight.swift in Sources */,
 				AF802DA9294EDB6C0087DA0D /* SalonViewController.swift in Sources */,
 				AF7663D429584FDA00517409 /* MasterTableViewCell.swift in Sources */,
+				AF7663D72958738500517409 /* LocationService.swift in Sources */,
 				AFFE23F92933462F00063168 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

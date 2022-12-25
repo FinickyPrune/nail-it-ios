@@ -34,24 +34,26 @@ class AccountViewModel {
 
     var sectionsCount: Int { 2 }
 
-    func count(for index: Int) -> Int? { // TODO: Change
+    func count(for index: Int) -> Int? {
         guard let section = Section(rawValue: index) else { return nil }
+        let now = Date()
         switch section {
         case .coming:
-            return appointments.filter { Int($0.id)! <= 5 }.count
+            return appointments.filter { $0.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") ?? Date() > now }.count
         case .history:
-            return appointments.filter { Int($0.id)! > 5 }.count
+            return appointments.filter { $0.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") ?? Date() < now }.count
         }
 
     }
 
-    func appointments(for index: Int) -> [Appointment]? { // TODO: Change
+    func appointments(for index: Int) -> [Appointment]? {
         guard let section = Section(rawValue: index) else { return nil }
+        let now = Date()
         switch section {
         case .coming:
-            return appointments.filter { Int($0.id)! <= 5 }
+            return appointments.filter { $0.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") ?? Date() > now }
         case .history:
-            return appointments.filter { Int($0.id)! > 5 }
+            return appointments.filter { $0.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") ?? Date() < now }
         }
     }
 
@@ -64,8 +66,8 @@ class AccountViewModel {
     }
 
     func loadData(completion: @escaping (Error?) -> Void) {
-
-        Interactor.shared.getAppointmentsList(for: 0) { result in // TODO: Change
+        guard let id = UserManager.shared.id else { return }
+        Interactor.shared.getAppointmentsList(for: id) { result in
             if result.error == nil {
                 self.appointments = result.appointments ?? []
                 completion(nil)
