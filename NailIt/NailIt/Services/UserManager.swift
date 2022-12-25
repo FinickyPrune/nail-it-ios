@@ -25,7 +25,7 @@ final class UserManager {
                     log.error("Cannot fetch user from user defaults")
                 }
             } catch {
-                log.error("Cannot fetch user from user defaults")
+                log.error(error.localizedDescription)
             }
         }
     }
@@ -37,14 +37,11 @@ final class UserManager {
         userDefaults.synchronize()
     }
 
-    func updateUserWith(_ info: RegistrationUserInfo) {
-        self.user.name = info.name
-        self.user.phoneNumber = info.phoneNumber
-        saveUser()
-    }
-
-    func updateUserWith(_ username: String?) {
-        self.user.name = username
+    func updateUserWith(id: Int, name: String, phone: String, token: String) {
+        self.user.id = id
+        self.user.name = name
+        self.user.phoneNumber = phone
+        self.user.nailItToken = token
         saveUser()
     }
 
@@ -52,14 +49,10 @@ final class UserManager {
         switch type {
         case .nailIt:
             return user.nailItToken
-        case .nailItRefresh:
-            return user.nailItRefreshToken
         }
     }
 
-    func changeToken(newToken: String?, tokenType: TokenType) {
-        user.changeToken(newToken: newToken, tokenType: tokenType)
-        saveUser()
-    }
-
+    var id: Int? {  user.id }
+    var username: String? { user.name }
+    var phoneNumber: String? { user.phoneNumber }
 }
