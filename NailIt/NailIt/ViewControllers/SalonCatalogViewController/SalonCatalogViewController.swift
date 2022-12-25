@@ -21,6 +21,7 @@ final class SalonCatalogViewController: UIViewController {
 
     var viewModel: SalonCatalogViewModel?
     var locationManager: CLLocationManager?
+    private var isFirstTime = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +48,11 @@ final class SalonCatalogViewController: UIViewController {
                                                selector: #selector(keyboardWillShow),
                                                name: UIResponder.keyboardWillShowNotification,
                                                object: nil)
+
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(fetchDataWithLocation),
+                                               name: .didUpdateLocation,
+                                               object: nil)
     }
 
     @objc private func keyboardWillShow(notification: NSNotification) {
@@ -62,33 +68,45 @@ final class SalonCatalogViewController: UIViewController {
         tableView.contentInset = contentInset
     }
 
+    @objc private func fetchDataWithLocation(notification: Notification) {
+        fetchData()
+    }
+
     private func setupNavigationBar() {
         searchController.obscuresBackgroundDuringPresentation = false
         let searchBar = searchController.searchBar
+
         searchBar.setPlaceholderColor(NailItAppearance.nailItPlaceholderTextColor)
         searchBar.setTextColor(color: NailItAppearance.nailItPlaceholderTextColor)
         searchBar.searchTextField.leftView?.tintColor = NailItAppearance.nailItPlaceholderTextColor
         searchBar.placeholder = "Найти салон"
         searchBar.delegate = self
         searchBar.searchTextField.backgroundColor = NailItAppearance.nailItOrangeColor
-        let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: NailItAppearance.nailItOrangeColor]
-        UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes, for: .normal)
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"),
                                                             style: .plain,
                                                             target: self,
-                                                            action: nil)
+                                                            action: #selector(didTapAccount))
         navigationItem.rightBarButtonItem?.tintColor = NailItAppearance.nailItBrownColor
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: NailItAppearance.nailItBrownColor]
+
         navigationItem.title = "Поиск салона"
 
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
     }
 
+    @objc private func didTapAccount() {
+        viewModel?.didTapAccount()
+    }
+
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupNavigationBar()
         tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigationBar()
     }
 
     @IBAction private func didTapSort(_ sender: UIButton) {
@@ -107,7 +125,6 @@ final class SalonCatalogViewController: UIViewController {
             }
         }
     }
-
 }
 
 extension SalonCatalogViewController: UITableViewDataSource, UITableViewDelegate {
@@ -119,9 +136,6 @@ extension SalonCatalogViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: NailItTableViewCell.identifier) as? NailItTableViewCell,
            let salon = viewModel?.salon(for: indexPath.row) {
-            let backgroundView = UIView()
-            backgroundView.backgroundColor = .clear
-            cell.selectedBackgroundView = backgroundView
             cell.configure(with: salon)
             return cell
         }
@@ -181,14 +195,13 @@ extension SalonCatalogViewController: CLLocationManagerDelegate {
                 locationManager?.delegate = self
                 locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
                 locationManager?.startUpdatingLocation()
-                fetchData()
             }
         }
     }
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        log.debug("locations = \(locValue.latitude) \(locValue.longitude)")
+        LocationService.shared.setCoordinates(lat: locValue.latitude, lon: locValue.longitude)
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

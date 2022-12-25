@@ -13,14 +13,15 @@ protocol SalonCatalogViewModelDisplayDelegate: AnyObject {
     func showBanner(_ viewModel: SalonCatalogViewModel, _ flag: Bool)
 }
 
-protocol SalonCAtalogViewModelActionDelegate: AnyObject {
-
+protocol SalonCatalogViewModelActionDelegate: AnyObject {
+    func salonCatalogViewModelAttempsToDisplaySalonController(_ viewModel: SalonCatalogViewModel, for salon: Salon)
+    func salonCatalogViewModelAttempsToDisplayAccountController(_ viewModel: SalonCatalogViewModel)
 }
 
 class SalonCatalogViewModel {
 
     weak var displayDelegate: SalonCatalogViewModelDisplayDelegate?
-    weak var actionDelegate: SalonCAtalogViewModelActionDelegate?
+    weak var actionDelegate: SalonCatalogViewModelActionDelegate?
 
     private(set) var isSorting = false
 
@@ -53,7 +54,8 @@ class SalonCatalogViewModel {
     }
 
     func didSelectItem(with index: Int) {
-        
+        guard let salon = salon(for: index) else { return }
+        actionDelegate?.salonCatalogViewModelAttempsToDisplaySalonController(self, for: salon)
     }
 
     func didTapSort() {
@@ -65,7 +67,7 @@ class SalonCatalogViewModel {
         Interactor.shared.getSalonsList { result in
             if result.error == nil {
                 self.salons = result.salons ?? []
-                self.salons = self.salons.map { Salon(id: $0.id, name: $0.name, rate: Float.random(in: 0...5.0), address: $0.address, distance: $0.distance) }.sorted(by: { $0.distance < $1.distance }) // TODO: Remove
+                self.salons = self.salons.sorted(by: { $0.distance < $1.distance })
                 completion(nil)
             }
             completion(result.error)
@@ -76,6 +78,14 @@ class SalonCatalogViewModel {
         filteredSalons = salons.filter { salon -> Bool in
             return salon.name.lowercased().contains(searchText.lowercased())
         }
+    }
+
+    func didLoginSuccessfully() {
+        
+    }
+
+    func didTapAccount() {
+        actionDelegate?.salonCatalogViewModelAttempsToDisplayAccountController(self)
     }
 
 }
