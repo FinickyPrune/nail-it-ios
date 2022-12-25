@@ -13,16 +13,28 @@ final class RootCoordinator: Coordinator {
     var childCoordinators = [Coordinator]()
     var navigationController: UINavigationController
 
-    var viewModel: CatalogViewModel?
-    
+    var viewModel: SalonCatalogViewModel?
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        setupNavigationController()
     }
     
     func start() {
         pushSalonCatalogController()
+        if !UserManager.shared.isNailItSignedIn {
+            presentSignInController()
+        }
+
     }
-    
+
+    private func setupNavigationController() {
+        navigationController.navigationBar.tintColor = NailItAppearance.nailItBrownColor
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: NailItAppearance.nailItBrownColor]
+        let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: NailItAppearance.nailItOrangeColor]
+        UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes, for: .normal)
+    }
+
     private func presentSignInController() {
         let viewController = SignInViewController.loadFromNib()
         let viewModel = SignInViewModel()
@@ -49,7 +61,37 @@ final class RootCoordinator: Coordinator {
         viewController.viewModel = viewModel
         navigationController.pushViewController(viewController, animated: false)
     }
-    
+
+    private func pushSalonController(for salon: Salon) {
+        let viewController = SalonViewController.loadFromNib()
+        let viewModel = SalonViewModel(salon: salon)
+        viewModel.displayDelegate = viewController
+        viewModel.actionDelegate = self
+        viewController.viewModel = viewModel
+        navigationController.pushViewController(viewController, animated: false)
+    }
+
+    private func presentAccountViewController() {
+        let viewController = AccountViewController.loadFromNib()
+        let viewModel = AccountViewModel()
+        viewModel.displayDelegate = viewController
+        viewModel.actionDelegate = self
+        viewController.viewModel = viewModel
+        viewController.modalPresentationStyle = .pageSheet
+        navigationController.present(viewController, animated: true)
+    }
+
+    private func pushAppointmentViewController(for service: Service, salon: Salon) {
+        if #available(iOS 16.0, *) {
+            let viewController = AppointmentViewController.loadFromNib()
+            let viewModel = AppointmentViewModel(service: service, salon: salon)
+            viewModel.displayDelegate = viewController
+            viewModel.actionDelegate = self
+            viewController.viewModel = viewModel
+            navigationController.pushViewController(viewController, animated: false)
+        }
+    }
+
 }
 
 extension RootCoordinator: SignInViewModelActionDelegate {
@@ -83,30 +125,33 @@ extension RootCoordinator: SignUpViewModelActionDelegate {
     
 }
 
-extension RootCoordinator: SalonCAtalogViewModelActionDelegate {
+extension RootCoordinator: SalonCatalogViewModelActionDelegate {
+
+    func salonCatalogViewModelAttempsToDisplayAccountController(_ viewModel: SalonCatalogViewModel) {
+        presentAccountViewController()
+    }
+
+    func salonCatalogViewModelAttempsToDisplaySalonController(_ viewModel: SalonCatalogViewModel, for salon: Salon) {
+        pushSalonController(for: salon)
+    }
+}
+
+extension RootCoordinator: SalonViewModelActionDelegate {
+
+    func salonViewModelAttempsToDisplayAppointmnentController(_ viewModel: SalonViewModel, for service: Service, _ salon: Salon) {
+        pushAppointmentViewController(for: service, salon: salon)
+    }
+
+    func salonViewModelAttempsToDisplayAccountController(_ viewModel: SalonViewModel) {
+        presentAccountViewController()
+    }
 
 }
 
-extension RootCoordinator: CatalogViewModelActionDelegate {
-
-    func catalogViewModelAttemptsToDisplayProduct(_ viewModel: CatalogViewModel, product: NIProduct) {
-        let viewController = ProductViewController.loadFromNib()
-        let viewModel = ProductViewModel(product: product)
-        viewController.viewModel = viewModel
-        viewModel.displayDelegate = viewController
-        viewModel.actionDelegate = self
-        navigationController.pushViewController(viewController, animated: true)
-    }
-    
-    func catalogViewModelAttemptsToLogin(_ viewModel: CatalogViewModel) {
-        self.viewModel = viewModel
-        DispatchQueue.main.async { [self] in
-            presentSignInController()
-        }
-    }
+extension RootCoordinator: AccountViewModelActionDelegate {
 
 }
 
-extension RootCoordinator: ProductViewModelActionDelegate {
+extension RootCoordinator: AppointmentViewModelActionDelegate {
 
 }
