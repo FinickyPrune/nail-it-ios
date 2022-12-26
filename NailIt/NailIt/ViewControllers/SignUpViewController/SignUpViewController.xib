@@ -109,7 +109,7 @@
                                             </constraints>
                                             <color key="textColor" red="0.89411771299999998" green="0.5647059083" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" textContentType="password"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             <connections>
                                                 <action selector="textFieldCompleteEditing:" destination="-1" eventType="editingDidEndOnExit" id="qmv-83-XuW"/>
                                                 <action selector="textFieldDidEdited:" destination="-1" eventType="editingChanged" id="ujq-vk-8Cy"/>
@@ -124,7 +124,7 @@
                                             </constraints>
                                             <color key="textColor" red="0.89411771299999998" green="0.5647059083" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits" textContentType="password"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             <connections>
                                                 <action selector="textFieldCompleteEditing:" destination="-1" eventType="editingDidEndOnExit" id="Eo5-V9-gMA"/>
                                                 <action selector="textFieldDidEdited:" destination="-1" eventType="editingChanged" id="Ogd-SL-EvV"/>

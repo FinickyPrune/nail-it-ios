@@ -116,11 +116,8 @@ extension RootCoordinator: SignUpViewModelActionDelegate {
         DispatchQueue.main.async {
             guard let signInViewController = self.navigationController.presentedViewController as? SignInViewController,
                   let signUpViewController = signInViewController.presentedViewController as? SignUpViewController  else { return }
-            signUpViewController.dismiss(animated: true) {
-                signInViewController.dismiss(animated: false)
-            }
+            signUpViewController.dismiss(animated: true)
         }
-        self.viewModel?.didLoginSuccessfully()
     }
     
 }

@@ -22,20 +22,20 @@ struct NailItRefreshTokenResult {
     let error: Error?
 }
 
-struct NailItSignUpResponse: Codable {
-    let id: Int
-    let name: String
-    let phoneNumber: String
-    let accessToken: String
-    let message: String?
-    let status: Int?
-
-    enum CodingKeys: String, CodingKey {
-        case id, name, message, status
-        case phoneNumber = "phone_number"
-        case accessToken
-    }
-}
+//struct NailItSignUpResponse: Codable {
+//    let id: Int
+//    let name: String
+//    let phoneNumber: String
+//    let accessToken: String
+//    let message: String?
+//    let status: Int?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case id, name, message, status
+//        case phoneNumber = "phone_number"
+//        case accessToken
+//    }
+//}
 
 struct NailItSignInResponse: Codable {
     let id: Int
@@ -71,21 +71,15 @@ struct AuthenticationDataObject: Codable {
 
 struct RegistrationUserInfo: Codable {
 
-    let name: String
+    let role: [String]
     let phoneNumber: String
     let password: String
 
-    internal init(name: String, phoneNumber: String, password: String) {
-        self.name = name
+    internal init(role: [String], phoneNumber: String, password: String) {
+        self.role = role
         self.phoneNumber = phoneNumber
         self.password = password
     }
-
-    enum CodingKeys: String, CodingKey {
-        case name, password
-        case phoneNumber = "phone_number"
-    }
-
 }
 
 struct Salon: Codable {

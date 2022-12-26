@@ -10,7 +10,7 @@ import Alamofire
 
 final class NailItProvider {
 
-    private static let registerUrl = ""
+    private static let registerUrl = "http://158.160.54.51:8080/auth/signup"
     private static let loginUrl = ""
     private static let salonsListUrl = "http://158.160.54.51:8080/beauty_salons?lat={lat}&lon={lon}"
     private static let servicesListUrl = "http://158.160.54.51:8080/services/{salon_id}"

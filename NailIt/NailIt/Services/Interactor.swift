@@ -26,23 +26,14 @@ final class Interactor {
                                                        error: result.error))
                 return
             }
-            do {
-                let response = try JSONDecoder().decode(NailItSignUpResponse.self, from: data)
                 if let error = result.error {
-                    completion(NailItRegistrationResult(message: response.message,
+                    completion(NailItRegistrationResult(message: error.localizedDescription,
                                                            error: error))
                     return
                 }
 
-                self.userManager.updateUserWith(id: response.id, name: response.name, phone: response.phoneNumber, token: response.accessToken)
                 completion(NailItRegistrationResult(message: nil,
                                                        error: nil))
-            } catch {
-                log.error(error.localizedDescription)
-                completion(NailItRegistrationResult(message: error.localizedDescription,
-                                                       error: error))
-            }
-
         }
     }
 

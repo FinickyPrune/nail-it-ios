@@ -35,7 +35,7 @@ class SignUpViewModel {
             return
         }
     
-        let userInfo = RegistrationUserInfo(name: name,
+        let userInfo = RegistrationUserInfo(role: ["cli"],
                                             phoneNumber: phoneNumber,
                                             password: password)
          Interactor.shared.performUserRegistration(userInfo: userInfo) { result in
