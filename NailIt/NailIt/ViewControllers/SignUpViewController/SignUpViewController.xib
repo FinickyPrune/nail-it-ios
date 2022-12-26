@@ -100,7 +100,7 @@
                                                 <action selector="textFieldDidEdited:" destination="-1" eventType="editingChanged" id="wAM-Ln-hqM"/>
                                             </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Паполь" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JwP-ND-LzV">
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JwP-ND-LzV">
                                             <rect key="frame" x="22" y="80" width="310" height="30"/>
                                             <color key="backgroundColor" red="0.93333339689999995" green="0.86274516580000005" blue="0.8392156959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <constraints>
