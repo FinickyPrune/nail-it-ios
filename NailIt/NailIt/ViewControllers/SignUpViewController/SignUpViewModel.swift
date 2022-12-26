@@ -30,7 +30,7 @@ class SignUpViewModel {
             completion("Пожалуйста, измените номер.")
         }
         
-        if !isPasswordsMatch(password, repeatPassword) {
+        if !isPasswordsMatch(password, repeatPassword) || password.count < 6 {
             completion("Пароли не совпадают.")
             return
         }
@@ -53,11 +53,11 @@ class SignUpViewModel {
     }
     
     private func isPhoneNumberValid(_ number: String) -> Bool {
-        return (11...12).contains(number.count) // TODO: More validation
+        return number.count == 12 && number.starts(with: "+7") && numberContainsOnlyNumbers(input: number)
     }
     
     private func isPasswordsMatch(_ password: String, _ repeatPassword: String) -> Bool {
-        return password == repeatPassword // TODO: Password validation
+        return password == repeatPassword
     }
 
     private func didRegisterSuccessfully() {
@@ -67,6 +67,16 @@ class SignUpViewModel {
     private func containsOnlyLetters(input: String) -> Bool {
         for chr in input {
             if !(chr >= "a" && chr <= "z") && !(chr >= "A" && chr <= "Z") && !(chr >= "а" && chr <= "я") && !(chr >= "А" && chr <= "Я") {
+                return false
+            }
+        }
+        return true
+    }
+
+    private func numberContainsOnlyNumbers(input: String) -> Bool {
+        for (index, chr) in input.enumerated() {
+            if index == 0 { continue }
+            if !(chr >= "0" && chr <= "9") {
                 return false
             }
         }

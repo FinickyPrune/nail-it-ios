@@ -11,6 +11,12 @@ class MasterTableViewCell: UITableViewCell {
 
     static let identifier = "MasterTableViewCell"
 
+    @IBOutlet private weak var masterLabel: UILabel!
+    @IBOutlet private var starsImageViews: [UIImageView]!
+
+    private let starImageStroke = UIImage(systemName: "star")
+    private let starImageFill = UIImage(systemName: "star.fill")
+
     override func awakeFromNib() {
         super.awakeFromNib()
         selectionStyle = .none
@@ -23,7 +29,9 @@ class MasterTableViewCell: UITableViewCell {
     }
 
     func configure(with master: Master) {
-
+        masterLabel.text = master.name
+        let rate = Int(round(master.rate))
+        starsImageViews.forEach { $0.image = ( $0.tag <= rate ? starImageFill : starImageStroke ) }
     }
     
 }

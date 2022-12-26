@@ -23,21 +23,33 @@ struct NailItRefreshTokenResult {
 }
 
 struct NailItSignUpResponse: Codable {
-    let id: String?
-    let username: String?
-    let email: String?
+    let id: Int
+    let name: String
+    let phoneNumber: String
     let accessToken: String
-    let refreshToken: String
     let message: String?
-    let status: Int
+    let status: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, message, status
+        case phoneNumber = "phone_number"
+        case accessToken
+    }
 }
 
 struct NailItSignInResponse: Codable {
+    let id: Int
+    let name: String
+    let phoneNumber: String
+    let accessToken: String
     let message: String?
-    let accessToken: String?
-    let refreshToken: String?
-    let username: String?
     let status: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, message, status
+        case phoneNumber = "phone_number"
+        case accessToken
+    }
 }
 
 struct NailItRefreshTokenResponse: Codable {
@@ -69,10 +81,15 @@ struct RegistrationUserInfo: Codable {
         self.password = password
     }
 
+    enum CodingKeys: String, CodingKey {
+        case name, password
+        case phoneNumber = "phone_number"
+    }
+
 }
 
 struct Salon: Codable {
-    let id: String
+    let id: Int
     let name: String
     var rate: Float
     let address: String
@@ -83,4 +100,80 @@ struct NailItSalonsListResult {
     let message: String?
     let error: Error?
     let salons: [Salon]?
+}
+
+struct Service: Codable {
+    let id: Int
+    let title: String
+    let estimate: String
+    let price: Int
+    let service: String
+}
+
+struct NailItServicesListResult {
+    let message: String?
+    let error: Error?
+    let services: [Service]?
+}
+
+struct ServiceType: Codable {
+    let id: Int
+    let title: String
+}
+
+struct NailItServiceTypesListResult {
+    let message: String?
+    let error: Error?
+    let serviceTypes: [ServiceType]?
+}
+
+struct Appointment: Codable {
+    let id: Int
+    let title: String
+    let salon: String?
+    let address: String?
+    let master: String?
+    let date: String
+    let price: Int?
+}
+
+struct NailItAppointmentsListResult {
+    let message: String?
+    let error: Error?
+    let appointments: [Appointment]?
+}
+
+struct Master: Codable, Hashable {
+    let id: Int
+    let name: String
+    let rate: Float
+    let beautySalonId: Int?
+    let masterCategoryId: Int?
+}
+
+struct MasterWithAppResponse: Codable {
+    let master: Master
+    let appointmentDtos: [Appointment]
+}
+
+struct NailItMastersWithTimesListResult {
+    let message: String?
+    let error: Error?
+    let mastersWithApps: [MasterWithAppResponse]?
+}
+
+struct MastersResponse: Codable {
+    let masters: [Master]
+}
+
+struct MastersListResult {
+    let message: String?
+    let error: Error?
+    let masters: [Master]?
+}
+
+struct EnrollResult {
+    let message: String?
+    let error: Error?
+    let appointment: Appointment?
 }

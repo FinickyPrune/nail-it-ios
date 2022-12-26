@@ -154,4 +154,8 @@ extension RootCoordinator: AccountViewModelActionDelegate {
 
 extension RootCoordinator: AppointmentViewModelActionDelegate {
 
+    func appointmentViewModelAttempsToDisplayAccountController(_ viewModel: AppointmentViewModel) {
+        presentAccountViewController()
+    }
+
 }

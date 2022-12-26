@@ -179,17 +179,28 @@ final class AppointmentViewController: UIViewController {
     @IBAction func textFieldCompleteEditing(_ sender: Any) {
         view.endEditing(true)
     }
+
+    @IBAction func didTapEnroll() {
+        viewModel?.didTapEnroll()
+    }
 }
 
 @available(iOS 16.0, *)
 extension AppointmentViewController: UICalendarSelectionSingleDateDelegate {
     func dateSelection(_ selection: UICalendarSelectionSingleDate, didSelectDate dateComponents: DateComponents?) {
-        print(dateComponents)
+        guard let dateComponents = dateComponents else { return }
+        viewModel?.didSelectDate(with: dateComponents)
     }
 }
 
 @available(iOS 16.0, *)
 extension AppointmentViewController: AppointmentViewModelDisplayDelegate {
+    
+    func reloadTableView(_ viewModel: AppointmentViewModel) {
+        DispatchQueue.main.async {
+            self.mastersTableView.reloadData()
+        }
+    }
 
 }
 
@@ -211,6 +222,7 @@ extension AppointmentViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         isEdited = true
         timeTextField.text = viewModel?.time(for: row) ?? ""
+        viewModel?.didSelectAppointment(for: row)
     }
 
     @objc func dismissPicker() {

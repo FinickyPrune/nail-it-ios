@@ -87,6 +87,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="masterLabel" destination="un6-o1-lbj" id="EKl-d0-q4J"/>
+                <outletCollection property="starsImageViews" destination="czB-97-izt" collectionClass="NSMutableArray" id="tLq-Xh-iup"/>
+                <outletCollection property="starsImageViews" destination="lZs-ga-vXb" collectionClass="NSMutableArray" id="fyI-sc-EiX"/>
+                <outletCollection property="starsImageViews" destination="Rxi-2o-7FD" collectionClass="NSMutableArray" id="wzP-8K-jsA"/>
+                <outletCollection property="starsImageViews" destination="xcm-Ss-ixZ" collectionClass="NSMutableArray" id="fPF-tF-doa"/>
+                <outletCollection property="starsImageViews" destination="I9H-4P-dgg" collectionClass="NSMutableArray" id="vZf-kj-kkU"/>
+            </connections>
             <point key="canvasLocation" x="-77" y="21"/>
         </tableViewCell>
     </objects>

@@ -30,12 +30,17 @@ class AppointmentTableViewCell: UITableViewCell {
     }
 
     func configure(with appointment: Appointment) {
-        serviceNameLabel.text = appointment.serviceTitle
-        salonNameLabel.text = appointment.salonTitle
-        masterNameLabel.text = appointment.masterName
-        dateLabel.text = appointment.date
-        timeLabel.text = appointment.time
-        priceLabel.text = "\(appointment.price)р"
+        serviceNameLabel.text = appointment.title
+        salonNameLabel.text = " \(appointment.address ?? ""), \(appointment.salon ?? "")"
+        masterNameLabel.text = appointment.master
+
+        if let date = appointment.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") {
+            let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+            dateLabel.text = "\(components.day ?? 0).\(components.month ?? 0).\(components.year ?? 0)"
+            timeLabel.text = "\(components.hour ?? 0):\(components.minute ?? 0)"
+
+        }
+        priceLabel.text = "\(appointment.price ?? 0)р"
     }
     
 }
