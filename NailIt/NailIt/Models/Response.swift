@@ -22,21 +22,6 @@ struct NailItRefreshTokenResult {
     let error: Error?
 }
 
-//struct NailItSignUpResponse: Codable {
-//    let id: Int
-//    let name: String
-//    let phoneNumber: String
-//    let accessToken: String
-//    let message: String?
-//    let status: Int?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id, name, message, status
-//        case phoneNumber = "phone_number"
-//        case accessToken
-//    }
-//}
-
 struct NailItSignInResponse: Codable {
     let id: Int
     let name: String
@@ -102,6 +87,7 @@ struct Service: Codable {
     let estimate: String
     let price: Int
     let service: String
+    let distance: Float?
 }
 
 struct NailItServicesListResult {

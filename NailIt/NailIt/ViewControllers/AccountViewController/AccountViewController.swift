@@ -100,7 +100,8 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: AppointmentTableViewCell.identifier) as? AppointmentTableViewCell,
            let appointment = viewModel?.appointments(for: indexPath.section)?[indexPath.row] {
-            cell.configure(with: appointment)
+            cell.configure(with: appointment,
+                           isAlertColor: viewModel?.conflictingAppointments.first(where: { $0.id == appointment.id }) != nil)
             return cell
         }
         return UITableViewCell()
@@ -116,5 +117,16 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension AccountViewController: AccountViewModelDisplayDelegate {
-    
+
+    func dispayAlert(_ viewModel: AccountViewModel, message: String) {
+        DispatchQueue.main.async {
+            self.presentFailAlert(with: message)
+        }
+    }
+
+    private func presentFailAlert(with message: String) {
+        let alertController = UIAlertController(title: "Внимание", message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertController, animated: true)
+    }
 }

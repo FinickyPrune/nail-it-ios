@@ -81,7 +81,7 @@ final class RootCoordinator: Coordinator {
         navigationController.present(viewController, animated: true)
     }
 
-    private func pushAppointmentViewController(for service: Service, salon: Salon) {
+    private func pushAppointmentViewController(for service: Service, salon: Salon?) {
         if #available(iOS 16.0, *) {
             let viewController = AppointmentViewController.loadFromNib()
             let viewModel = AppointmentViewModel(service: service, salon: salon)
@@ -124,6 +124,12 @@ extension RootCoordinator: SignUpViewModelActionDelegate {
 
 extension RootCoordinator: SalonCatalogViewModelActionDelegate {
 
+    func salonCatalogViewModelAttempsToDisplayAppointmentControllersStack(_ viewModel: SalonCatalogViewModel, for services: [Service]) {
+        for service in services.reversed() {
+            pushAppointmentViewController(for: service, salon: nil)
+        }
+    }
+
     func salonCatalogViewModelAttempsToDisplayAccountController(_ viewModel: SalonCatalogViewModel) {
         presentAccountViewController()
     }
@@ -149,10 +155,20 @@ extension RootCoordinator: AccountViewModelActionDelegate {
 
 }
 
+@available(iOS 16.0, *)
 extension RootCoordinator: AppointmentViewModelActionDelegate {
 
+    func appointmentViewModelAttempsToDismissController(_ viewModel: AppointmentViewModel) {
+        DispatchQueue.main.async {
+            guard (self.navigationController.topViewController as? AppointmentViewController) != nil else { return }
+            self.navigationController.popViewController(animated: true)
+        }
+    }
+
     func appointmentViewModelAttempsToDisplayAccountController(_ viewModel: AppointmentViewModel) {
-        presentAccountViewController()
+        DispatchQueue.main.async {
+            self.presentAccountViewController()
+        }
     }
 
 }

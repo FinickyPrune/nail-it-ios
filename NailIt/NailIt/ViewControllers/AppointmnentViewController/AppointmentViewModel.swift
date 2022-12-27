@@ -9,11 +9,14 @@ import Foundation
 
 protocol AppointmentViewModelDisplayDelegate: AnyObject {
     func reloadTableView(_ viewModel: AppointmentViewModel)
+    func showLoading(_ viewModel: AppointmentViewModel)
+    func stopLoading(_ viewModel: AppointmentViewModel)
+    func presentMessage(_ viewModel: AppointmentViewModel, message: String)
 }
 
 protocol AppointmentViewModelActionDelegate: AnyObject {
     func appointmentViewModelAttempsToDisplayAccountController(_ viewModel: AppointmentViewModel)
-
+    func appointmentViewModelAttempsToDismissController(_ viewModel: AppointmentViewModel)
 }
 
 class AppointmentViewModel {
@@ -22,14 +25,14 @@ class AppointmentViewModel {
     weak var actionDelegate: AppointmentViewModelActionDelegate?
 
     let service: Service
-    let salon: Salon
+    let salon: Salon?
 
     private var selectedDateСomponents: DateComponents?
     private var selectedMaster: Master?
     private var selectedAppointment: Appointment?
     private var filteredAppointments = [(Master, [Appointment])]()
 
-    init(service: Service, salon: Salon) {
+    init(service: Service, salon: Salon?) {
         self.service = service
         self.salon = salon
     }
@@ -38,7 +41,7 @@ class AppointmentViewModel {
         actionDelegate?.appointmentViewModelAttempsToDisplayAccountController(self)
     }
 
-    var salonName: String { salon.name }
+    var salonName: String? { salon?.name }
     var serviceName: String { service.title }
     var servicePrice: Int { service.price }
     var serviceDuration: String { service.estimate }
@@ -80,11 +83,20 @@ class AppointmentViewModel {
 
     func didTapEnroll() {
         guard let appId = selectedAppointment?.id else { return }
+        displayDelegate?.showLoading(self)
         Interactor.shared.enrollWith(appId: appId) { result in
+            self.displayDelegate?.stopLoading(self)
             if result.error == nil {
-                log.debug("App registered: \(String(describing: result.appointment))")
+                if self.salon != nil {
+                    self.actionDelegate?.appointmentViewModelAttempsToDismissController(self)
+                }
+
             } else {
                 log.error(result.error?.localizedDescription as Any)
+                //                self.displayDelegate?.presentMessage(self, message: result.error?.localizedDescription ?? "Что-то пошло не так :(")
+
+                    self.actionDelegate?.appointmentViewModelAttempsToDismissController(self)
+
             }
         }
     }

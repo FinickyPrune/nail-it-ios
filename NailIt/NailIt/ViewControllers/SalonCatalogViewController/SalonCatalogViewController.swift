@@ -11,8 +11,11 @@ import CoreLocation
 final class SalonCatalogViewController: UIViewController {
 
     @IBOutlet private weak var sortButton: UIButton!
+    @IBOutlet private weak var allServicesButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var bannerView: UIView!
+
+    @IBOutlet private weak var enrollButton: UIView!
 
     private let searchController = UISearchController(searchResultsController: nil)
     var isSearchBarEmpty: Bool {
@@ -29,12 +32,19 @@ final class SalonCatalogViewController: UIViewController {
         sortButton.layer.borderWidth = 1
         sortButton.layer.borderColor = sortButton.tintColor.cgColor
 
+        allServicesButton.layer.cornerRadius = 15
+        allServicesButton.layer.borderWidth = 1
+        allServicesButton.layer.borderColor = allServicesButton.tintColor.cgColor
+
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: NailItTableViewCell.identifier, bundle: nil),
                            forCellReuseIdentifier: NailItTableViewCell.identifier)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
+
+        enrollButton.layer.cornerRadius = 15
+        enrollButton.isHidden = true
 
         locationManager = CLLocationManager()
         locationManager?.delegate = self
@@ -53,6 +63,7 @@ final class SalonCatalogViewController: UIViewController {
                                                selector: #selector(fetchDataWithLocation),
                                                name: .didUpdateLocation,
                                                object: nil)
+
     }
 
     @objc private func keyboardWillShow(notification: NSNotification) {
@@ -110,10 +121,24 @@ final class SalonCatalogViewController: UIViewController {
     }
 
     @IBAction private func didTapSort(_ sender: UIButton) {
-        guard let viewModel = viewModel else { return }
+        guard let viewModel = viewModel, !viewModel.isServicesMode else { return }
         viewModel.didTapSort()
         sender.backgroundColor =  viewModel.isSorting ? NailItAppearance.nailItOrangeColor : .white
         sender.setTitleColor( !viewModel.isSorting ? NailItAppearance.nailItOrangeColor : .white, for: .normal)
+    }
+
+    @IBAction private func didTapAllServices(_ sender: UIButton) {
+        guard let viewModel = viewModel else { return }
+        viewModel.didTapAllServices()
+        tableView.allowsMultipleSelection = viewModel.isServicesMode
+        tableView.allowsMultipleSelectionDuringEditing = viewModel.isServicesMode
+        enrollButton.isHidden = !viewModel.isServicesMode
+        sender.backgroundColor =  viewModel.isServicesMode ? NailItAppearance.nailItOrangeColor : .white
+        sender.setTitleColor( !viewModel.isServicesMode ? NailItAppearance.nailItOrangeColor : .white, for: .normal)
+    }
+
+    @IBAction private func didTapEnroll() {
+        viewModel?.didTapEnroll()
     }
 
     private func fetchData() {
@@ -135,15 +160,37 @@ extension SalonCatalogViewController: UITableViewDataSource, UITableViewDelegate
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: NailItTableViewCell.identifier) as? NailItTableViewCell,
-           let salon = viewModel?.salon(for: indexPath.row) {
-            cell.configure(with: salon)
+            let viewModel = viewModel {
+
+            if viewModel.isServicesMode {
+                if let service = viewModel.service(for: indexPath.row) {
+                    cell.configure(with: service)
+                }
+                return cell
+            }
+
+            if let salon = viewModel.salon(for: indexPath.row) {
+                cell.configure(with: salon)
+            }
             return cell
         }
         return UITableViewCell()
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel?.didSelectItem(with: indexPath.row)
+        guard let viewModel = viewModel else { return }
+        if viewModel.isServicesMode {
+            viewModel.didSelectService(with: indexPath.row)
+            return
+        }
+        viewModel.didSelectItem(with: indexPath.row)
+    }
+
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        if viewModel.isServicesMode {
+            viewModel.didDeselectService(with: indexPath.row)
+        }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

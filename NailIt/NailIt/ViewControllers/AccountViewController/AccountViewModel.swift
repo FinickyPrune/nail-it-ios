@@ -13,7 +13,7 @@ enum Section: Int {
 }
 
 protocol AccountViewModelDisplayDelegate: AnyObject {
-
+    func dispayAlert(_ viewModel: AccountViewModel, message: String)
 }
 
 protocol AccountViewModelActionDelegate: AnyObject {
@@ -30,7 +30,13 @@ class AccountViewModel {
     var username: String? { userManager.username }
     var phoneNumber: String? { userManager.phoneNumber }
 
-    private var appointments = [Appointment]()
+    private var appointments = [Appointment]() {
+        didSet {
+            if conflictingAppointments.count != 0 {
+                displayDelegate?.dispayAlert(self, message: "У Вас есть конфликтующие записи.")
+            }
+        }
+    }
 
     var sectionsCount: Int { 2 }
 
@@ -75,6 +81,23 @@ class AccountViewModel {
             completion(result.error)
         }
 
+    }
+
+    var conflictingAppointments: [Appointment] {
+        var conflictingAppointments = [Appointment]()
+        appointments(for: Section.coming.rawValue)?.forEach { app in
+            guard let date = app.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") else { return }
+            let firstComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)
+            self.appointments.forEach { secondApp in
+                guard let secondDate = secondApp.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") else { return }
+                let secondComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: secondDate)
+                if app.id != secondApp.id && firstComponents == secondComponents {
+                    conflictingAppointments.append(app)
+                    conflictingAppointments.append(secondApp)
+                }
+            }
+        }
+        return conflictingAppointments
     }
 
 }

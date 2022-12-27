@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 @available(iOS 16.0, *)
 final class AppointmentViewController: UIViewController {
@@ -183,6 +184,12 @@ final class AppointmentViewController: UIViewController {
     @IBAction func didTapEnroll() {
         viewModel?.didTapEnroll()
     }
+
+    private func presentFailAlert(with message: String) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alertController, animated: true)
+    }
 }
 
 @available(iOS 16.0, *)
@@ -195,6 +202,26 @@ extension AppointmentViewController: UICalendarSelectionSingleDateDelegate {
 
 @available(iOS 16.0, *)
 extension AppointmentViewController: AppointmentViewModelDisplayDelegate {
+
+    func showLoading(_ viewModel: AppointmentViewModel) {
+        DispatchQueue.main.async {
+            ProgressHUD.show()
+        }
+
+    }
+
+    func stopLoading(_ viewModel: AppointmentViewModel) {
+        DispatchQueue.main.async {
+            ProgressHUD.dismiss()
+        }
+    }
+
+    func presentMessage(_ viewModel: AppointmentViewModel, message: String) {
+//        DispatchQueue.main.async {
+//            self.presentFailAlert(with: message)
+//        }
+    }
+
     
     func reloadTableView(_ viewModel: AppointmentViewModel) {
         DispatchQueue.main.async {

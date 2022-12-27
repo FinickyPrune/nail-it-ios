@@ -29,7 +29,10 @@ class AppointmentTableViewCell: UITableViewCell {
         contentView.frame = contentView.frame.insetBy(dx: 5, dy: 5)
     }
 
-    func configure(with appointment: Appointment) {
+    func configure(with appointment: Appointment, isAlertColor: Bool) {
+
+        contentView.backgroundColor = isAlertColor ? UIColor(red: 0.95, green: 0.724, blue: 0.665, alpha: 1) : UIColor(red: 0.949, green: 0.859, blue: 0.835, alpha: 0.5)
+
         serviceNameLabel.text = appointment.title
         salonNameLabel.text = " \(appointment.address ?? ""), \(appointment.salon ?? "")"
         masterNameLabel.text = appointment.master
@@ -42,5 +45,4 @@ class AppointmentTableViewCell: UITableViewCell {
         }
         priceLabel.text = "\(appointment.price ?? 0)р"
     }
-    
 }

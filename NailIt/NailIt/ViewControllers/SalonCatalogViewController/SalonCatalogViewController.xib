@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
         <array key="Montserrat-SemiBold.ttf">
             <string>Montserrat-SemiBold</string>
         </array>
@@ -16,7 +19,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SalonCatalogViewController" customModule="NailIt" customModuleProvider="target">
             <connections>
+                <outlet property="allServicesButton" destination="19b-ub-JQL" id="g0a-ax-mfk"/>
                 <outlet property="bannerView" destination="JE0-Jh-Iek" id="SSo-EP-gzo"/>
+                <outlet property="enrollButton" destination="K6n-Im-eQH" id="Asp-7A-Fdl"/>
                 <outlet property="sortButton" destination="KXj-2C-wpU" id="qj9-8T-slc"/>
                 <outlet property="tableView" destination="FIc-Lb-yfj" id="4Pc-ve-9Vo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -49,6 +54,28 @@
                         <action selector="didTapSort:" destination="-1" eventType="touchUpInside" id="J0N-tU-IYQ"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19b-ub-JQL">
+                    <rect key="frame" x="170" y="47" width="140" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="140" id="rh5-fx-KYl"/>
+                        <constraint firstAttribute="height" constant="30" id="xQ0-Yu-56M"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <color key="tintColor" red="0.94901960780000005" green="0.5450980392" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="По рейтингу">
+                        <color key="titleColor" red="0.89411764709999997" green="0.56470588239999997" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </state>
+                    <state key="selected" title="По рейтингу"/>
+                    <buttonConfiguration key="configuration" style="plain" title="По услугам">
+                        <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                        <color key="baseForegroundColor" red="0.89411764709999997" green="0.56470588239999997" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapAllServices:" destination="-1" eventType="touchUpInside" id="doq-L4-RkR"/>
+                    </connections>
+                </button>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FIc-Lb-yfj">
                     <rect key="frame" x="0.0" y="92" width="390" height="718"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,6 +106,21 @@
                         <constraint firstItem="1OL-Jh-DdO" firstAttribute="top" secondItem="JE0-Jh-Iek" secondAttribute="top" constant="150" id="prp-gc-Tod"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6n-Im-eQH">
+                    <rect key="frame" x="120" y="710" width="150" height="55"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.5450980392" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="8wP-j7-DAv"/>
+                        <constraint firstAttribute="height" constant="55" id="aV2-Aa-0d8"/>
+                        <constraint firstAttribute="width" constant="150" id="jTm-PX-8ji"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Записаться"/>
+                    <connections>
+                        <action selector="didTapEnroll" destination="-1" eventType="touchUpInside" id="vSw-9J-E09"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -86,12 +128,17 @@
                 <constraint firstItem="FIc-Lb-yfj" firstAttribute="top" secondItem="KXj-2C-wpU" secondAttribute="bottom" constant="15" id="4cG-JU-IHW"/>
                 <constraint firstItem="KXj-2C-wpU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9gn-4a-1Zk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FIc-Lb-yfj" secondAttribute="trailing" id="IOZ-yc-LvC"/>
+                <constraint firstItem="19b-ub-JQL" firstAttribute="height" secondItem="KXj-2C-wpU" secondAttribute="height" id="KdK-HC-KRo"/>
+                <constraint firstItem="19b-ub-JQL" firstAttribute="centerY" secondItem="KXj-2C-wpU" secondAttribute="centerY" id="PDr-S6-XwW"/>
                 <constraint firstItem="KXj-2C-wpU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="QD4-Th-NPP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="K6n-Im-eQH" secondAttribute="bottom" constant="45" id="SFf-bK-m9U"/>
                 <constraint firstItem="JE0-Jh-Iek" firstAttribute="top" secondItem="FIc-Lb-yfj" secondAttribute="top" id="Y0e-Q1-kyb"/>
                 <constraint firstItem="JE0-Jh-Iek" firstAttribute="trailing" secondItem="FIc-Lb-yfj" secondAttribute="trailing" id="lAe-1u-dOG"/>
                 <constraint firstItem="JE0-Jh-Iek" firstAttribute="bottom" secondItem="FIc-Lb-yfj" secondAttribute="bottom" id="lpn-27-o1F"/>
+                <constraint firstItem="19b-ub-JQL" firstAttribute="leading" secondItem="KXj-2C-wpU" secondAttribute="trailing" constant="10" id="mce-Ke-ESr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FIc-Lb-yfj" secondAttribute="bottom" id="rQk-f5-N9p"/>
                 <constraint firstItem="JE0-Jh-Iek" firstAttribute="leading" secondItem="FIc-Lb-yfj" secondAttribute="leading" id="txn-Ff-CvP"/>
+                <constraint firstItem="K6n-Im-eQH" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="u9M-va-G7x"/>
                 <constraint firstItem="FIc-Lb-yfj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zkR-37-Liy"/>
             </constraints>
             <point key="canvasLocation" x="140" y="21"/>

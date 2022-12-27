@@ -276,4 +276,36 @@ final class Interactor {
         }
     }
 
+    func getAllServicesList(completion: @escaping (NailItServicesListResult) -> Void) {
+        guard let lat = locationService.currentLat,
+              let lon = locationService.currentLon else { return }
+        nailItProvider.getAllServices(for: lat, lon: lon) { result in
+            guard let data = result.data else {
+                completion(NailItServicesListResult(message: result.error?.localizedDescription,
+                                                    error: result.error,
+                                                    services: nil))
+                return
+            }
+            do {
+                let response = try JSONDecoder().decode([Service].self, from: data)
+
+                if let error = result.error {
+                    completion(NailItServicesListResult(message: error.localizedDescription,
+                                                        error: error,
+                                                        services: nil))
+                    return
+                }
+                completion(NailItServicesListResult(message: nil,
+                                                    error: nil,
+                                                    services: response))
+            } catch {
+                log.error("\(error.localizedDescription) \(result)")
+                completion(NailItServicesListResult(message: error.localizedDescription,
+                                                    error: error,
+                                                    services: nil))
+            }
+        }
+
+    }
+
 }

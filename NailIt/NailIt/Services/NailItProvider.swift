@@ -19,6 +19,7 @@ final class NailItProvider {
     private static let mastersListUrl = "http://158.160.54.51:8080/masters"
     private static let appointmentsForMasterUrl = "http://158.160.54.51:8080/masters/{service_id}/provision"
     private static let enrollUrl = "http://158.160.54.51:8080/services/enroll/{app_id}?userId={user_id}"
+    private static let allServicesUrl = "http://158.160.54.51:8080/services/all?lat={lat}&lon={lon}"  // TODO: Change
 
     func performUserAuthentication(loginData: AuthenticationDataObject,
                                    completion: @escaping (ServerResponse) -> Void) {
@@ -112,6 +113,16 @@ final class NailItProvider {
         guard let url = URL(string: NailItProvider.enrollUrl.replacingOccurrences(of: "{app_id}", with: String(appId)).replacingOccurrences(of: "{user_id}", with: String(userId))) else { return }
         NetworkService.shared.request(url,
                                       method: .post,
+                                      encoding: JSONEncoding.default,
+                                      contentType: .json,
+                                      completion: completion)
+    }
+
+    func getAllServices(for lat: Double, lon: Double,
+                        completion: @escaping (ServerResponse) -> Void) {
+        guard let url = URL(string: NailItProvider.allServicesUrl.replacingOccurrences(of: "{lat}", with: String(lat)).replacingOccurrences(of: "{lon}", with: String(lon))) else { return }
+        NetworkService.shared.request(url,
+                                      method: .get,
                                       encoding: JSONEncoding.default,
                                       contentType: .json,
                                       completion: completion)
