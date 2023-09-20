@@ -9,6 +9,7 @@ target 'NailIt' do
   pod 'SwiftLint'
   pod 'ProgressHUD'
   pod 'Alamofire'
+  pod 'TinyConstraints'
 
   target 'NailItTests' do
     inherit! :search_paths

@@ -59,6 +59,7 @@
 		AF802DB9294F47420087DA0D /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */; };
 		AF802DBA294F47420087DA0D /* AppointmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */; };
 		AF94B17A2955DD5400B34ACF /* UILabel+DynamicHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF94B1792955DD5400B34ACF /* UILabel+DynamicHeight.swift */; };
+		AFA01E302ABB436E0018D39D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */; };
 		AFA2940229476ECC00F699A6 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2940129476ECC00F699A6 /* Collection+Safe.swift */; };
 		AFFA8E782921586D0083764C /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E762921586D0083764C /* RootCoordinator.swift */; };
 		AFFA8E792921586D0083764C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E772921586D0083764C /* Coordinator.swift */; };
@@ -159,6 +160,7 @@
 		AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewCell.swift; sourceTree = "<group>"; };
 		AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentTableViewCell.xib; sourceTree = "<group>"; };
 		AF94B1792955DD5400B34ACF /* UILabel+DynamicHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DynamicHeight.swift"; sourceTree = "<group>"; };
+		AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		AFA2940129476ECC00F699A6 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 		AFFA8E762921586D0083764C /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
 		AFFA8E772921586D0083764C /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 		AF6385B3292150EA005851B4 = {
 			isa = PBXGroup;
 			children = (
+				AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */,
 				AF6385BE292150EA005851B4 /* NailIt */,
 				AF6385D8292150EC005851B4 /* NailItTests */,
 				AF6385E2292150EC005851B4 /* NailItUITests */,
@@ -593,6 +596,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA01E302ABB436E0018D39D /* .swiftlint.yml in Resources */,
 				AF4DDD5B294A3289000B21DD /* Montserrat-MediumItalic.ttf in Resources */,
 				AF4DDD55294A3289000B21DD /* Montserrat-BoldItalic.ttf in Resources */,
 				AF4DDD57294A3289000B21DD /* Montserrat-Medium.ttf in Resources */,

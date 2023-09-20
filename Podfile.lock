@@ -3,12 +3,14 @@ PODS:
   - ProgressHUD (13.6)
   - SwiftLint (0.49.1)
   - SwiftyBeaver (1.9.6)
+  - TinyConstraints (4.0.2)
 
 DEPENDENCIES:
   - Alamofire
   - ProgressHUD
   - SwiftLint
   - SwiftyBeaver
+  - TinyConstraints
 
 SPEC REPOS:
   trunk:
@@ -16,13 +18,15 @@ SPEC REPOS:
     - ProgressHUD
     - SwiftLint
     - SwiftyBeaver
+    - TinyConstraints
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
   SwiftLint: 32ee33ded0636d0905ef6911b2b67bbaeeedafa5
   SwiftyBeaver: c8241b4745aa269a78ca5a022532c6915e948536
+  TinyConstraints: 7b7ccc0c485bb3bb47082138ff28bc33cd49897f
 
-PODFILE CHECKSUM: 1bd66ea6b903c5cef271fc1748e4b8461ec2d4cd
+PODFILE CHECKSUM: 1558702854d55bc55ce803822f692409ffb71a08
 
 COCOAPODS: 1.11.3
