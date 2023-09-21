@@ -222,7 +222,6 @@ extension AppointmentViewController: AppointmentViewModelDisplayDelegate {
 //        }
     }
 
-    
     func reloadTableView(_ viewModel: AppointmentViewModel) {
         DispatchQueue.main.async {
             self.mastersTableView.reloadData()

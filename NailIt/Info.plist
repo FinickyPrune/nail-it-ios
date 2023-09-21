@@ -30,5 +30,7 @@
 	<string>Приложение хочет использовать вашу локацию.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Приложение хочет использовать вашу локацию.</string>
+	<key>DEBUG_MODE</key>
+	<string>$(DEBUG_MODE)</string>
 </dict>
 </plist>
