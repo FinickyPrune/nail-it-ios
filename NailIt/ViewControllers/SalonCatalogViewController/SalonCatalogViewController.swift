@@ -87,17 +87,17 @@ final class SalonCatalogViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         let searchBar = searchController.searchBar
 
-        searchBar.setPlaceholderColor(NailItAppearance.nailItPlaceholderTextColor)
-        searchBar.setTextColor(color: NailItAppearance.nailItPlaceholderTextColor)
-        searchBar.searchTextField.leftView?.tintColor = NailItAppearance.nailItPlaceholderTextColor
+        searchBar.setPlaceholderColor(NIAppearance.nailItPlaceholderTextColor)
+        searchBar.setTextColor(color: NIAppearance.nailItPlaceholderTextColor)
+        searchBar.searchTextField.leftView?.tintColor = NIAppearance.nailItPlaceholderTextColor
         searchBar.placeholder = "Найти салон"
         searchBar.delegate = self
-        searchBar.searchTextField.backgroundColor = NailItAppearance.nailItOrangeColor
+        searchBar.searchTextField.backgroundColor = NIAppearance.nailItOrangeColor
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"),
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(didTapAccount))
-        navigationItem.rightBarButtonItem?.tintColor = NailItAppearance.nailItBrownColor
+        navigationItem.rightBarButtonItem?.tintColor = NIAppearance.nailItBrownColor
 
         navigationItem.title = "Поиск салона"
 
@@ -123,8 +123,8 @@ final class SalonCatalogViewController: UIViewController {
     @IBAction private func didTapSort(_ sender: UIButton) {
         guard let viewModel = viewModel, !viewModel.isServicesMode else { return }
         viewModel.didTapSort()
-        sender.backgroundColor =  viewModel.isSorting ? NailItAppearance.nailItOrangeColor : .white
-        sender.setTitleColor( !viewModel.isSorting ? NailItAppearance.nailItOrangeColor : .white, for: .normal)
+        sender.backgroundColor =  viewModel.isSorting ? NIAppearance.nailItOrangeColor : .white
+        sender.setTitleColor( !viewModel.isSorting ? NIAppearance.nailItOrangeColor : .white, for: .normal)
     }
 
     @IBAction private func didTapAllServices(_ sender: UIButton) {
@@ -133,8 +133,8 @@ final class SalonCatalogViewController: UIViewController {
         tableView.allowsMultipleSelection = viewModel.isServicesMode
         tableView.allowsMultipleSelectionDuringEditing = viewModel.isServicesMode
         enrollButton.isHidden = !viewModel.isServicesMode
-        sender.backgroundColor =  viewModel.isServicesMode ? NailItAppearance.nailItOrangeColor : .white
-        sender.setTitleColor( !viewModel.isServicesMode ? NailItAppearance.nailItOrangeColor : .white, for: .normal)
+        sender.backgroundColor =  viewModel.isServicesMode ? NIAppearance.nailItOrangeColor : .white
+        sender.setTitleColor( !viewModel.isServicesMode ? NIAppearance.nailItOrangeColor : .white, for: .normal)
     }
 
     @IBAction private func didTapEnroll() {

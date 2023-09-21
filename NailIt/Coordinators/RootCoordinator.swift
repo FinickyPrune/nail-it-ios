@@ -29,9 +29,9 @@ final class RootCoordinator: Coordinator {
     }
 
     private func setupNavigationController() {
-        navigationController.navigationBar.tintColor = NailItAppearance.nailItBrownColor
-        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: NailItAppearance.nailItBrownColor]
-        let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: NailItAppearance.nailItOrangeColor]
+        navigationController.navigationBar.tintColor = NIAppearance.nailItBrownColor
+        navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: NIAppearance.nailItBrownColor]
+        let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: NIAppearance.nailItOrangeColor]
         UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes, for: .normal)
     }
 

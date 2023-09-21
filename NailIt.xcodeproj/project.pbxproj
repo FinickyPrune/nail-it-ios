@@ -39,7 +39,6 @@
 		AF4DDD72294A3D54000B21DD /* SalonCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */; };
 		AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385BF292150EA005851B4 /* AppDelegate.swift */; };
 		AF6385CC292150EC005851B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6385CB292150EC005851B4 /* Assets.xcassets */; };
-		AF6385CF292150EC005851B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6385CD292150EC005851B4 /* LaunchScreen.storyboard */; };
 		AF6385DA292150EC005851B4 /* NailItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385D9292150EC005851B4 /* NailItTests.swift */; };
 		AF6385E4292150EC005851B4 /* NailItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385E3292150EC005851B4 /* NailItUITests.swift */; };
 		AF6385E6292150EC005851B4 /* NailItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385E5292150EC005851B4 /* NailItUITestsLaunchTests.swift */; };
@@ -48,7 +47,7 @@
 		AF7663D72958738500517409 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D62958738500517409 /* LocationService.swift */; };
 		AF7663D929589EE700517409 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D829589EE700517409 /* String+Date.swift */; };
 		AF802DA1294ED0AF0087DA0D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */; };
-		AF802DA3294ED12D0087DA0D /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA2294ED12D0087DA0D /* Appearance.swift */; };
+		AF802DA3294ED12D0087DA0D /* NIAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA2294ED12D0087DA0D /* NIAppearance.swift */; };
 		AF802DA5294ED4030087DA0D /* UISearchbar+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */; };
 		AF802DA9294EDB6C0087DA0D /* SalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA7294EDB6C0087DA0D /* SalonViewController.swift */; };
 		AF802DAA294EDB6C0087DA0D /* SalonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DA8294EDB6C0087DA0D /* SalonViewController.xib */; };
@@ -137,7 +136,6 @@
 		AF6385BC292150EA005851B4 /* NailIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NailIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6385BF292150EA005851B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6385CB292150EC005851B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF6385CE292150EC005851B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF6385D0292150EC005851B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF6385D5292150EC005851B4 /* NailItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NailItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6385D9292150EC005851B4 /* NailItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItTests.swift; sourceTree = "<group>"; };
@@ -149,7 +147,7 @@
 		AF7663D62958738500517409 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		AF7663D829589EE700517409 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
 		AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
-		AF802DA2294ED12D0087DA0D /* Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		AF802DA2294ED12D0087DA0D /* NIAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIAppearance.swift; sourceTree = "<group>"; };
 		AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchbar+Color.swift"; sourceTree = "<group>"; };
 		AF802DA7294EDB6C0087DA0D /* SalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonViewController.swift; sourceTree = "<group>"; };
 		AF802DA8294EDB6C0087DA0D /* SalonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalonViewController.xib; sourceTree = "<group>"; };
@@ -330,9 +328,8 @@
 				AFFA8E752921586D0083764C /* Coordinators */,
 				AF6385BF292150EA005851B4 /* AppDelegate.swift */,
 				AF6385CB292150EC005851B4 /* Assets.xcassets */,
-				AF6385CD292150EC005851B4 /* LaunchScreen.storyboard */,
 				AF6385D0292150EC005851B4 /* Info.plist */,
-				AF802DA2294ED12D0087DA0D /* Appearance.swift */,
+				AF802DA2294ED12D0087DA0D /* NIAppearance.swift */,
 			);
 			path = NailIt;
 			sourceTree = "<group>";
@@ -620,7 +617,6 @@
 				AF4DDD59294A3289000B21DD /* Montserrat-ThinItalic.ttf in Resources */,
 				AF4DDD70294A3D44000B21DD /* NailItTableViewCell.xib in Resources */,
 				AF4DDD58294A3289000B21DD /* Montserrat-ExtraLightItalic.ttf in Resources */,
-				AF6385CF292150EC005851B4 /* LaunchScreen.storyboard in Resources */,
 				AF4DDD5A294A3289000B21DD /* Montserrat-ExtraLight.ttf in Resources */,
 				AF802DB3294F36850087DA0D /* AccountViewController.xib in Resources */,
 				AF4DDD65294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
@@ -783,7 +779,7 @@
 				AFFA8E9D292159430083764C /* SignUpViewModel.swift in Sources */,
 				AFA2940229476ECC00F699A6 /* Collection+Safe.swift in Sources */,
 				AFFE23F4293336CD00063168 /* Response.swift in Sources */,
-				AF802DA3294ED12D0087DA0D /* Appearance.swift in Sources */,
+				AF802DA3294ED12D0087DA0D /* NIAppearance.swift in Sources */,
 				AFFE23EF293333AA00063168 /* NetworkService.swift in Sources */,
 				AF802DA1294ED0AF0087DA0D /* UIColor+Hex.swift in Sources */,
 				AFFE23ED2933339B00063168 /* Interactor.swift in Sources */,
@@ -842,17 +838,6 @@
 			targetProxy = AF6385E0292150EC005851B4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		AF6385CD292150EC005851B4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF6385CE292150EC005851B4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AF6385E7292150EC005851B4 /* Debug */ = {

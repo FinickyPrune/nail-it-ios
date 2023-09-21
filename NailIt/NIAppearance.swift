@@ -7,7 +7,7 @@
 
 import UIKit
 
-class  NailItAppearance {
+struct NIAppearance {
 
     static let nailItBrownColor = UIColor(hex: "#BF6860")!
     static let nailItOrangeColor = UIColor(hex: "#F28B66")!

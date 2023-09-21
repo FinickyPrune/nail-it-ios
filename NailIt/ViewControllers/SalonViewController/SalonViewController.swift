@@ -58,17 +58,17 @@ class SalonViewController: UIViewController {
     private func setupNavigationBar() {
         searchController.obscuresBackgroundDuringPresentation = false
         let searchBar = searchController.searchBar
-        searchBar.setPlaceholderColor(NailItAppearance.nailItPlaceholderTextColor)
-        searchBar.setTextColor(color: NailItAppearance.nailItPlaceholderTextColor)
-        searchBar.searchTextField.leftView?.tintColor = NailItAppearance.nailItPlaceholderTextColor
+        searchBar.setPlaceholderColor(NIAppearance.nailItPlaceholderTextColor)
+        searchBar.setTextColor(color: NIAppearance.nailItPlaceholderTextColor)
+        searchBar.searchTextField.leftView?.tintColor = NIAppearance.nailItPlaceholderTextColor
         searchBar.placeholder = "Найти услугу"
         searchBar.delegate = self
-        searchBar.searchTextField.backgroundColor = NailItAppearance.nailItOrangeColor
+        searchBar.searchTextField.backgroundColor = NIAppearance.nailItOrangeColor
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"),
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(didTapAccount))
-        navigationItem.rightBarButtonItem?.tintColor = NailItAppearance.nailItBrownColor
+        navigationItem.rightBarButtonItem?.tintColor = NIAppearance.nailItBrownColor
                 navigationController?.navigationBar.backItem?.title = ""
         navigationItem.title = viewModel?.salonName ?? ""
         navigationItem.searchController = searchController

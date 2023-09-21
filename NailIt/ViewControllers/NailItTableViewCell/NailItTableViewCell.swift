@@ -48,7 +48,7 @@ class NailItTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if cellType == .service {
-            contentView.layer.borderColor = selected ? NailItAppearance.nailItOrangeColor.cgColor : UIColor.clear.cgColor
+            contentView.layer.borderColor = selected ? NIAppearance.nailItOrangeColor.cgColor : UIColor.clear.cgColor
         }
     }
 

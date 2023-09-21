@@ -96,7 +96,7 @@ final class AppointmentViewController: UIViewController {
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(didTapAccount))
-        navigationItem.rightBarButtonItem?.tintColor = NailItAppearance.nailItBrownColor
+        navigationItem.rightBarButtonItem?.tintColor = NIAppearance.nailItBrownColor
         navigationController?.navigationBar.backItem?.title = ""
         navigationItem.title = viewModel?.salonName ?? ""
     }
@@ -165,7 +165,7 @@ final class AppointmentViewController: UIViewController {
         calendarView?.centerXAnchor.constraint(equalTo: calendarParentView.centerXAnchor).isActive = true
         calendarView?.centerYAnchor.constraint(equalTo: calendarParentView.centerYAnchor).isActive = true
 
-        calendarView?.tintColor = NailItAppearance.nailItOrangeColor
+        calendarView?.tintColor = NIAppearance.nailItOrangeColor
         calendarView?.availableDateRange = DateInterval(start: .now, end: .distantFuture)
 
         let selection = UICalendarSelectionSingleDate(delegate: self)
