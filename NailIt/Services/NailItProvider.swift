@@ -12,16 +12,22 @@ final class NailItProvider {
     func performUserAuthentication(loginData: AuthenticationDataObject,
                                    completion: @escaping (ServerResponse) -> Void) {
 
-        guard let url = URL(string: APIPaths.serviceTypesListUrl) else { return } // TODO: Change url
+        // Server processing imitation
 
-        let parameters = try? loginData.toDictionary()
+        DispatchQueue.global(qos: .background).async {
+            Thread.sleep(forTimeInterval: 1.0)
+            if let data = try? JSONSerialization.data(withJSONObject: ["id": 1,
+                                                                       "name": "username",
+                                                                       "phone_number": "+70000000000",
+                                                                       "access_token": "access_token",
+                                                                       "message": nil,
+                                                                       "status": nil]) {
+                completion(ServerResponse(data: data, error: nil))
+                return
+            }
+            completion(ServerResponse(data: nil, error: nil))
+        }
 
-        NetworkService.shared.request(url,
-                                      method: .post,
-                                      parameters: parameters,
-                                      encoding: JSONEncoding.default,
-                                      contentType: .json,
-                                      completion: completion)
     }
 
     func performUserRegistration(_ userInfo: RegistrationUserInfo,

@@ -33,7 +33,7 @@ struct NailItSignInResponse: Codable {
     enum CodingKeys: String, CodingKey {
         case id, name, message, status
         case phoneNumber = "phone_number"
-        case accessToken
+        case accessToken = "access_token"
     }
 }
 
@@ -60,11 +60,6 @@ struct RegistrationUserInfo: Codable {
     let phoneNumber: String
     let password: String
 
-    internal init(role: [String], phoneNumber: String, password: String) {
-        self.role = role
-        self.phoneNumber = phoneNumber
-        self.password = password
-    }
 }
 
 struct Salon: Codable {

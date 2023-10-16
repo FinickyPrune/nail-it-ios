@@ -37,32 +37,34 @@ final class Interactor {
         }
     }
 
-    func performSignInWith(_ loginData: AuthenticationDataObject, //  TODO: Change all
+    func performSignInWith(_ loginData: AuthenticationDataObject,
                            completion: @escaping (NailItSignInResult) -> Void) {
         nailItProvider.performUserAuthentication(loginData: loginData) { result in
-//            guard let data = result.data else {
-//                completion(NailItSignInResult(message: result.error?.localizedDescription,
-//                                                 error: result.error))
-//                return
-//            }
-//            do {
-//                var response = try JSONDecoder().decode(NailItSignInResponse.self, from: data)
-                let response = NailItSignInResponse(id: 1, name: "Никита", phoneNumber: "+70000000000", accessToken: "sss", message: nil, status: nil) // TODO: Remove
+            guard let data = result.data else {
+                completion(NailItSignInResult(message: result.error?.localizedDescription,
+                                              error: result.error))
+                return
+            }
+            do {
+                let response = try JSONDecoder().decode(NailItSignInResponse.self, from: data)
 
-//                if let error = result.error {
-//                    completion(NailItSignInResult(message: response.message,
-//                                                     error: error))
-//                    return
-//                }
+                if let error = result.error {
+                    completion(NailItSignInResult(message: response.message,
+                                                  error: error))
+                    return
+                }
 
-            self.userManager.updateUserWith(id: response.id, name: response.name, phone: response.phoneNumber, token: response.accessToken)
+                self.userManager.updateUserWith(id: response.id, 
+                                                name: response.name,
+                                                phone: response.phoneNumber,
+                                                token: response.accessToken)
                 completion(NailItSignInResult(message: nil,
-                                                 error: nil))
-//            } catch {
-//                log.error(error.localizedDescription)
-//                completion(NailItSignInResult(message: error.localizedDescription,
-//                                                 error: error))
-//            }
+                                              error: nil))
+            } catch {
+                log.error(error.localizedDescription)
+                completion(NailItSignInResult(message: error.localizedDescription,
+                                              error: error))
+            }
         }
     }
 
