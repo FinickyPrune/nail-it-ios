@@ -21,7 +21,7 @@ final class Interactor {
     func performUserRegistration(userInfo: RegistrationUserInfo,
                                  completion: @escaping (NailItRegistrationResult) -> Void) {
         nailItProvider.performUserRegistration(userInfo) { result in
-            guard let data = result.data else {
+            guard result.data != nil else {
                 completion(NailItRegistrationResult(message: result.error?.localizedDescription,
                                                        error: result.error))
                 return

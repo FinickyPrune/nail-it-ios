@@ -73,6 +73,6 @@ class NailItTableViewCell: UITableViewCell {
         subtitleLabel.text = "\(service.price)р"
         starsImageViews.forEach { $0.isHidden = true  }
         secondSubtitleLabel.isHidden = false
-        secondSubtitleLabel.text = service.estimate
+        secondSubtitleLabel.text = service.timeEstimate
     }
 }

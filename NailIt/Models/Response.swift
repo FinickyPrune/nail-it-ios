@@ -68,11 +68,16 @@ struct RegistrationUserInfo: Codable {
 }
 
 struct Salon: Codable {
-    let id: Int
+    let salonId: Int
     let name: String
     var rate: Float
     let address: String
     let distance: Float
+
+    enum CodingKeys: String, CodingKey {
+        case salonId = "salon_id"
+        case name, rate, address, distance
+    }
 }
 
 struct NailItSalonsListResult {
@@ -82,12 +87,19 @@ struct NailItSalonsListResult {
 }
 
 struct Service: Codable {
-    let id: Int
+    let serviceId: Int
     let title: String
-    let estimate: String
+    let timeEstimate: String
     let price: Int
-    let service: String
+    let serviceTypeTitle: String
     let distance: Float?
+
+    enum CodingKeys: String, CodingKey {
+        case serviceId = "service_id"
+        case timeEstimate = "time_estimate"
+        case serviceTypeTitle = "service_type_title"
+        case title, price, distance
+    }
 }
 
 struct NailItServicesListResult {
@@ -97,8 +109,13 @@ struct NailItServicesListResult {
 }
 
 struct ServiceType: Codable {
-    let id: Int
+    let serviceTypeId: Int
     let title: String
+
+    enum CodingKeys: String, CodingKey {
+        case serviceTypeId = "service_type_id"
+        case title
+    }
 }
 
 struct NailItServiceTypesListResult {
@@ -108,13 +125,23 @@ struct NailItServiceTypesListResult {
 }
 
 struct Appointment: Codable {
-    let id: Int
-    let title: String
-    let salon: String?
-    let address: String?
-    let master: String?
+    let appointmentId: Int
+    let serviceTitle: String
+    let salonTitle: String?
+    let salonAddress: String?
+    let masterName: String?
     let date: String
     let price: Int?
+    let time: String
+
+    enum CodingKeys: String, CodingKey {
+        case appointmentId = "appointment_id"
+        case serviceTitle = "service_title"
+        case salonTitle = "salon_title"
+        case salonAddress = "salon_address"
+        case masterName = "master_name"
+        case date, price, time
+    }
 }
 
 struct NailItAppointmentsListResult {

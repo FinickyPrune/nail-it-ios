@@ -243,6 +243,7 @@ extension SalonCatalogViewController: CLLocationManagerDelegate {
                 locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
                 locationManager?.startUpdatingLocation()
             }
+        @unknown default: break
         }
     }
 

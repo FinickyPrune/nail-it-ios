@@ -7,14 +7,7 @@
 
 import Foundation
 
-var debugMode: Bool {
-    guard let modeString = Bundle.main.object(forInfoDictionaryKey: "DEBUG_MODE") as? String else {
-        return true
-    }
-    return modeString == "YES"
-}
-
-final class APICredential {
+struct APICredential {
     static var baseURLString: String {
         return debugMode ?
         "https://639b3b1231877e43d686a6e6.mockapi.io/api/v1/" :
@@ -22,7 +15,7 @@ final class APICredential {
     }
 }
 
-final class APIPaths {
+struct APIPaths {
 
     static var registerUrl = "http://158.160.54.51:8080/auth/signup"
     static var loginUrl = ""

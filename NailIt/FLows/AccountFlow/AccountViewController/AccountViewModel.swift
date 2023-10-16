@@ -91,7 +91,7 @@ class AccountViewModel {
             self.appointments.forEach { secondApp in
                 guard let secondDate = secondApp.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") else { return }
                 let secondComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: secondDate)
-                if app.id != secondApp.id && firstComponents == secondComponents {
+                if app.appointmentId != secondApp.appointmentId && firstComponents == secondComponents {
                     conflictingAppointments.append(app)
                     conflictingAppointments.append(secondApp)
                 }

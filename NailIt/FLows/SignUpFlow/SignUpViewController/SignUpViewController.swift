@@ -74,7 +74,7 @@ class SignUpViewController: UIViewController {
             (passwordTextField.text?.isEmpty)! || (repeatPasswordTextField.text?.isEmpty)! {
             presentFailAlert(with: "Пожалуйста, заполните все поля.")
         } else {
-            ProgressHUD.show()
+            ProgressHUD.animate()
             self.viewModel?.performRegistration(name: nameTextField.text!,
                                                 phoneNumber: phoneNumberTextField.text!,
                                                 password: passwordTextField.text!,

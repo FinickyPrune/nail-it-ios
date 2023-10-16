@@ -44,7 +44,7 @@ class AppointmentViewModel {
     var salonName: String? { salon?.name }
     var serviceName: String { service.title }
     var servicePrice: Int { service.price }
-    var serviceDuration: String { service.estimate }
+    var serviceDuration: String { service.timeEstimate }
 
     var timeCount: Int { filteredAppointments.count }
     var mastersCount: Int { filteredAppointments.count }
@@ -66,7 +66,7 @@ class AppointmentViewModel {
 
     func didSelectDate(with components: DateComponents) {
         selectedDateСomponents = components
-        Interactor.shared.appointmentsForMasterList(service.id) { result in
+        Interactor.shared.appointmentsForMasterList(service.serviceId) { result in
             if result.error != nil {
                 return
             }
@@ -82,7 +82,7 @@ class AppointmentViewModel {
     }
 
     func didTapEnroll() {
-        guard let appId = selectedAppointment?.id else { return }
+        guard let appId = selectedAppointment?.appointmentId else { return }
         displayDelegate?.showLoading(self)
         Interactor.shared.enrollWith(appId: appId) { result in
             self.displayDelegate?.stopLoading(self)

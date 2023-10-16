@@ -101,7 +101,7 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
         if let cell = tableView.dequeueReusableCell(withIdentifier: AppointmentTableViewCell.identifier) as? AppointmentTableViewCell,
            let appointment = viewModel?.appointments(for: indexPath.section)?[indexPath.row] {
             cell.configure(with: appointment,
-                           isAlertColor: viewModel?.conflictingAppointments.first(where: { $0.id == appointment.id }) != nil)
+                           isAlertColor: viewModel?.conflictingAppointments.first(where: { $0.appointmentId == appointment.appointmentId }) != nil)
             return cell
         }
         return UITableViewCell()

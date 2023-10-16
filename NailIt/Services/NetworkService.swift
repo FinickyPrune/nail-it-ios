@@ -5,7 +5,6 @@
 //  Created by Anastasia Kravchenko on 27.11.2022.
 //
 
-import Foundation
 import Alamofire
 
 enum ContentType: String {

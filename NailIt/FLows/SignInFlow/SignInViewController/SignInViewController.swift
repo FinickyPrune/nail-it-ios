@@ -67,7 +67,7 @@ class SignInViewController: UIViewController {
         if (phoneNumberTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
             presentFailAlert(with: "Пожалуйста, заполните все поля.")
         } else {
-            ProgressHUD.show()
+            ProgressHUD.animate()
             self.viewModel?.performLogin(phoneNumber: phoneNumberTextField.text!,
                                          password: passwordTextField.text!) { message in
                 DispatchQueue.main.async { [self] in

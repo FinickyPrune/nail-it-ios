@@ -92,7 +92,7 @@ class SalonCatalogViewModel {
 
     func didDeselectService(with index: Int) {
         guard let service = services[safe: index] else { return }
-        selectedServices.removeAll(where: { $0.id == service.id })
+        selectedServices.removeAll(where: { $0.serviceId == service.serviceId })
     }
 
     func didTapSort() {

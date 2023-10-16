@@ -41,22 +41,14 @@ class SalonViewModel {
     func services(for serviceType: ServiceType) -> [Service] {
         guard let displayDelegate = displayDelegate else { return [] }
         if displayDelegate.isFiltering {
-            return filteredServices.filter { $0.service == serviceType.title }
+            return filteredServices.filter { (debugMode ? $0.title : $0.serviceTypeTitle) == serviceType.title }
         }
-        return services.filter { $0.service == serviceType.title }
+        return services.filter { (debugMode ? $0.title : $0.serviceTypeTitle) == serviceType.title }
     }
 
-    func serviceType(for index: Int) -> ServiceType? {
-        return serviceTypes[safe: index]
-    }
+    func count(for serviceType: ServiceType) -> Int { services(for: serviceType).count }
 
-    func count(for serviceType: ServiceType) -> Int {
-        guard let displayDelegate = displayDelegate else { return 0 }
-        if displayDelegate.isFiltering {
-            return filteredServices.filter { $0.service == serviceType.title }.count
-        }
-        return services.filter { $0.service == serviceType.title }.count
-    }
+    func serviceType(for index: Int) -> ServiceType? { serviceTypes[safe: index] }
 
     func didSelectItem(with indexPath: IndexPath) {
         guard let serviceType = serviceType(for: indexPath.section),
@@ -66,11 +58,11 @@ class SalonViewModel {
 
     func loadData(completion: @escaping (Error?) -> Void) {
 
-        Interactor.shared.getServiceTypesList { serviceTypesResult in
+        Interactor.shared.getServiceTypesList { [self] serviceTypesResult in
             if serviceTypesResult.error == nil {
-                self.serviceTypes = (serviceTypesResult.serviceTypes ?? [])
+                serviceTypes = (serviceTypesResult.serviceTypes ?? [])
 
-                Interactor.shared.getServicesList(for: self.salon.id) { result in
+                Interactor.shared.getServicesList(for: salon.salonId) { result in
                     if result.error == nil {
                         self.services.append(contentsOf: result.services ?? []) 
                         completion(nil)

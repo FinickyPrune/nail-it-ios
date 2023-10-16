@@ -19,7 +19,7 @@ final class UserManager {
     private init() {
         if let data = userDefaults.object(forKey: "user") as? Data {
             do {
-                if let user = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(data) as? User {
+                if let user = try NSKeyedUnarchiver.unarchivedObject(ofClass: User.self, from: data) {
                     self.user = user
                 } else {
                     log.error("Cannot fetch user from user defaults")

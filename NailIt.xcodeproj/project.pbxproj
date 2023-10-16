@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		944B4816DC9D20E94FA50D0B /* Pods_NailIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C70E222F8094471A14CAEE8 /* Pods_NailIt.framework */; };
-		A4E86E5350C94BF73E336948 /* Pods_NailIt_NailItUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C77F67483E133AF7131691 /* Pods_NailIt_NailItUITests.framework */; };
+		597B8A6D1B37C8C0AD65A750 /* Pods_NailItDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35A09A951BCA2A0FE4137B1 /* Pods_NailItDemo.framework */; };
+		7F90B4874E537FA82D6B06D0 /* Pods_NailIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15CF013F9497562A5E896B8 /* Pods_NailIt.framework */; };
 		AF03F7E12952231F00844E37 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03F7DF2952231F00844E37 /* AppointmentViewController.swift */; };
 		AF03F7E22952231F00844E37 /* AppointmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF03F7E02952231F00844E37 /* AppointmentViewController.xib */; };
 		AF03F7E42952232A00844E37 /* AppointmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03F7E32952232A00844E37 /* AppointmentViewModel.swift */; };
@@ -39,9 +39,6 @@
 		AF4DDD72294A3D54000B21DD /* SalonCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */; };
 		AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385BF292150EA005851B4 /* AppDelegate.swift */; };
 		AF6385CC292150EC005851B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6385CB292150EC005851B4 /* Assets.xcassets */; };
-		AF6385DA292150EC005851B4 /* NailItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385D9292150EC005851B4 /* NailItTests.swift */; };
-		AF6385E4292150EC005851B4 /* NailItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385E3292150EC005851B4 /* NailItUITests.swift */; };
-		AF6385E6292150EC005851B4 /* NailItUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385E5292150EC005851B4 /* NailItUITestsLaunchTests.swift */; };
 		AF7663D429584FDA00517409 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D229584FDA00517409 /* MasterTableViewCell.swift */; };
 		AF7663D529584FDA00517409 /* MasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7663D329584FDA00517409 /* MasterTableViewCell.xib */; };
 		AF7663D72958738500517409 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D62958738500517409 /* LocationService.swift */; };
@@ -97,7 +94,6 @@
 		AFD3D2DD2ABC389F00B5CE56 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D229584FDA00517409 /* MasterTableViewCell.swift */; };
 		AFD3D2DE2ABC389F00B5CE56 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D62958738500517409 /* LocationService.swift */; };
 		AFD3D2DF2ABC389F00B5CE56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F82933462F00063168 /* User.swift */; };
-		AFD3D2E12ABC389F00B5CE56 /* Pods_NailIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C70E222F8094471A14CAEE8 /* Pods_NailIt.framework */; };
 		AFD3D2E32ABC389F00B5CE56 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */; };
 		AFD3D2E42ABC389F00B5CE56 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD49294A3289000B21DD /* Montserrat-MediumItalic.ttf */; };
 		AFD3D2E52ABC389F00B5CE56 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD43294A3289000B21DD /* Montserrat-BoldItalic.ttf */; };
@@ -147,33 +143,12 @@
 		AFFE23F4293336CD00063168 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F3293336CD00063168 /* Response.swift */; };
 		AFFE23F7293345EF00063168 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F6293345EF00063168 /* UserManager.swift */; };
 		AFFE23F92933462F00063168 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F82933462F00063168 /* User.swift */; };
-		E4505E91C4DDDC86A211758D /* Pods_NailItTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE3B16F96BBCD26F71CE42E0 /* Pods_NailItTests.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		AF6385D6292150EC005851B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF6385B4292150EA005851B4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF6385BB292150EA005851B4;
-			remoteInfo = NailIt;
-		};
-		AF6385E0292150EC005851B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AF6385B4292150EA005851B4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AF6385BB292150EA005851B4;
-			remoteInfo = NailIt;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		3930CE015E675993798351DC /* Pods-NailIt-NailItUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailIt-NailItUITests.debug.xcconfig"; path = "Target Support Files/Pods-NailIt-NailItUITests/Pods-NailIt-NailItUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		3B7E6A0E1FF03E80313F278C /* Pods-NailItTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailItTests.debug.xcconfig"; path = "Target Support Files/Pods-NailItTests/Pods-NailItTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3FF5BCAFD32B67BC1F031B28 /* Pods-NailItTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailItTests.release.xcconfig"; path = "Target Support Files/Pods-NailItTests/Pods-NailItTests.release.xcconfig"; sourceTree = "<group>"; };
-		4C70E222F8094471A14CAEE8 /* Pods_NailIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NailIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61B4BBB8CD138DF3421285FF /* Pods-NailIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailIt.release.xcconfig"; path = "Target Support Files/Pods-NailIt/Pods-NailIt.release.xcconfig"; sourceTree = "<group>"; };
-		9BFEFD873F3722D5740C01EB /* Pods-NailIt-NailItUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailIt-NailItUITests.release.xcconfig"; path = "Target Support Files/Pods-NailIt-NailItUITests/Pods-NailIt-NailItUITests.release.xcconfig"; sourceTree = "<group>"; };
+		01DF7E32E14E3567016A04F2 /* Pods-NailIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailIt.release.xcconfig"; path = "Target Support Files/Pods-NailIt/Pods-NailIt.release.xcconfig"; sourceTree = "<group>"; };
+		63AADF06512C11B6CC7F8E7E /* Pods-NailIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailIt.debug.xcconfig"; path = "Target Support Files/Pods-NailIt/Pods-NailIt.debug.xcconfig"; sourceTree = "<group>"; };
+		AC4A29C1760ABF912A9213B6 /* Pods-NailItDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailItDemo.release.xcconfig"; path = "Target Support Files/Pods-NailItDemo/Pods-NailItDemo.release.xcconfig"; sourceTree = "<group>"; };
 		AF03F7DF2952231F00844E37 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		AF03F7E02952231F00844E37 /* AppointmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentViewController.xib; sourceTree = "<group>"; };
 		AF03F7E32952232A00844E37 /* AppointmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewModel.swift; sourceTree = "<group>"; };
@@ -202,15 +177,12 @@
 		AF4DDD6D294A3D44000B21DD /* NailItTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItTableViewCell.swift; sourceTree = "<group>"; };
 		AF4DDD6E294A3D44000B21DD /* NailItTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NailItTableViewCell.xib; sourceTree = "<group>"; };
 		AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonCatalogViewModel.swift; sourceTree = "<group>"; };
+		AF56AA812ADD76B20033A372 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF56AA832ADD76BB0033A372 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6385BC292150EA005851B4 /* NailIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NailIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF6385BF292150EA005851B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6385CB292150EC005851B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF6385D0292150EC005851B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF6385D5292150EC005851B4 /* NailItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NailItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF6385D9292150EC005851B4 /* NailItTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItTests.swift; sourceTree = "<group>"; };
-		AF6385DF292150EC005851B4 /* NailItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NailItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF6385E3292150EC005851B4 /* NailItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItUITests.swift; sourceTree = "<group>"; };
-		AF6385E5292150EC005851B4 /* NailItUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AF7663D229584FDA00517409 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
 		AF7663D329584FDA00517409 /* MasterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterTableViewCell.xib; sourceTree = "<group>"; };
 		AF7663D62958738500517409 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
@@ -249,9 +221,9 @@
 		AFFE23F3293336CD00063168 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		AFFE23F6293345EF00063168 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		AFFE23F82933462F00063168 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C8381A3F3C35C9FBEBE345BE /* Pods-NailIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailIt.debug.xcconfig"; path = "Target Support Files/Pods-NailIt/Pods-NailIt.debug.xcconfig"; sourceTree = "<group>"; };
-		DE3B16F96BBCD26F71CE42E0 /* Pods_NailItTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NailItTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8C77F67483E133AF7131691 /* Pods_NailIt_NailItUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NailIt_NailItUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C15CF013F9497562A5E896B8 /* Pods_NailIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NailIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C35A09A951BCA2A0FE4137B1 /* Pods_NailItDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NailItDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC9D25CD1A9CEDA78CBB227 /* Pods-NailItDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailItDemo.debug.xcconfig"; path = "Target Support Files/Pods-NailItDemo/Pods-NailItDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,23 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				944B4816DC9D20E94FA50D0B /* Pods_NailIt.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF6385D2292150EC005851B4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4505E91C4DDDC86A211758D /* Pods_NailItTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF6385DC292150EC005851B4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A4E86E5350C94BF73E336948 /* Pods_NailIt_NailItUITests.framework in Frameworks */,
+				7F90B4874E537FA82D6B06D0 /* Pods_NailIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,19 +239,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFD3D2E12ABC389F00B5CE56 /* Pods_NailIt.framework in Frameworks */,
+				597B8A6D1B37C8C0AD65A750 /* Pods_NailItDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0821572E7A8F8463EAC1AF23 /* Frameworks */ = {
+		0A2174E9C286E3CD638C62A7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4C70E222F8094471A14CAEE8 /* Pods_NailIt.framework */,
-				F8C77F67483E133AF7131691 /* Pods_NailIt_NailItUITests.framework */,
-				DE3B16F96BBCD26F71CE42E0 /* Pods_NailItTests.framework */,
+				AF56AA832ADD76BB0033A372 /* Alamofire.framework */,
+				AF56AA812ADD76B20033A372 /* Alamofire.framework */,
+				C15CF013F9497562A5E896B8 /* Pods_NailIt.framework */,
+				C35A09A951BCA2A0FE4137B1 /* Pods_NailItDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -314,6 +271,7 @@
 		AF4DDD3C294A3246000B21DD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				AF6385CB292150EC005851B4 /* Assets.xcassets */,
 				AF4DDD3D294A3257000B21DD /* Fonts */,
 			);
 			path = Resources;
@@ -354,14 +312,13 @@
 			path = Montserrat;
 			sourceTree = "<group>";
 		};
-		AF4DDD67294A3CF1000B21DD /* SalonCatalogViewController */ = {
+		AF4DDD67294A3CF1000B21DD /* SalonCatalogFlow */ = {
 			isa = PBXGroup;
 			children = (
-				AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */,
-				AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */,
-				AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */,
+				AFEBCB802ADD8B28000F30DB /* SalonCatalogViewController */,
+				AF802DA6294EDB540087DA0D /* SalonViewController */,
 			);
-			path = SalonCatalogViewController;
+			path = SalonCatalogFlow;
 			sourceTree = "<group>";
 		};
 		AF4DDD6C294A3D17000B21DD /* NailItTableViewCell */ = {
@@ -378,11 +335,9 @@
 			children = (
 				AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */,
 				AF6385BE292150EA005851B4 /* NailIt */,
-				AF6385D8292150EC005851B4 /* NailItTests */,
-				AF6385E2292150EC005851B4 /* NailItUITests */,
 				AF6385BD292150EA005851B4 /* Products */,
 				FD7138EAE199BC012EE26E0B /* Pods */,
-				0821572E7A8F8463EAC1AF23 /* Frameworks */,
+				0A2174E9C286E3CD638C62A7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -390,8 +345,6 @@
 			isa = PBXGroup;
 			children = (
 				AF6385BC292150EA005851B4 /* NailIt.app */,
-				AF6385D5292150EC005851B4 /* NailItTests.xctest */,
-				AF6385DF292150EC005851B4 /* NailItUITests.xctest */,
 				AFD3D3072ABC389F00B5CE56 /* NailItDemo.app */,
 			);
 			name = Products;
@@ -400,35 +353,16 @@
 		AF6385BE292150EA005851B4 /* NailIt */ = {
 			isa = PBXGroup;
 			children = (
-				AF4DDD3C294A3246000B21DD /* Resources */,
+				AFEBCB7C2ADD8A87000F30DB /* FLows */,
+				AFEBCB7F2ADD8B15000F30DB /* Views */,
 				AFFE23F2293336C500063168 /* Models */,
 				AFFE23EB2933338E00063168 /* Services */,
-				AFFA8E86292159430083764C /* ViewControllers */,
 				AFFA8E7B292159100083764C /* Extensions */,
-				AFFA8E752921586D0083764C /* Coordinators */,
+				AF4DDD3C294A3246000B21DD /* Resources */,
 				AF6385BF292150EA005851B4 /* AppDelegate.swift */,
-				AF6385CB292150EC005851B4 /* Assets.xcassets */,
 				AF6385D0292150EC005851B4 /* Info.plist */,
-				AF802DA2294ED12D0087DA0D /* NIAppearance.swift */,
 			);
 			path = NailIt;
-			sourceTree = "<group>";
-		};
-		AF6385D8292150EC005851B4 /* NailItTests */ = {
-			isa = PBXGroup;
-			children = (
-				AF6385D9292150EC005851B4 /* NailItTests.swift */,
-			);
-			path = NailItTests;
-			sourceTree = "<group>";
-		};
-		AF6385E2292150EC005851B4 /* NailItUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AF6385E3292150EC005851B4 /* NailItUITests.swift */,
-				AF6385E5292150EC005851B4 /* NailItUITestsLaunchTests.swift */,
-			);
-			path = NailItUITests;
 			sourceTree = "<group>";
 		};
 		AF7663D129584FBB00517409 /* MasterTableViewCell */ = {
@@ -450,15 +384,12 @@
 			path = SalonViewController;
 			sourceTree = "<group>";
 		};
-		AF802DAF294F365F0087DA0D /* AccountViewController */ = {
+		AF802DAF294F365F0087DA0D /* AccountFlow */ = {
 			isa = PBXGroup;
 			children = (
-				AF802DB6294F47270087DA0D /* AccountTableViewCell */,
-				AF802DB0294F36850087DA0D /* AccountViewController.swift */,
-				AF802DB1294F36850087DA0D /* AccountViewController.xib */,
-				AF802DB4294F36930087DA0D /* AccountViewModel.swift */,
+				AFEBCB812ADD8B41000F30DB /* AccountViewController */,
 			);
-			path = AccountViewController;
+			path = AccountFlow;
 			sourceTree = "<group>";
 		};
 		AF802DB6294F47270087DA0D /* AccountTableViewCell */ = {
@@ -470,18 +401,96 @@
 			path = AccountTableViewCell;
 			sourceTree = "<group>";
 		};
-		AFFA8E752921586D0083764C /* Coordinators */ = {
+		AFEBCB7C2ADD8A87000F30DB /* FLows */ = {
 			isa = PBXGroup;
 			children = (
 				AFFA8E762921586D0083764C /* RootCoordinator.swift */,
-				AFFA8E772921586D0083764C /* Coordinator.swift */,
+				AFEBCB842ADD8B98000F30DB /* AppointmnentFlow */,
+				AF4DDD67294A3CF1000B21DD /* SalonCatalogFlow */,
+				AF802DAF294F365F0087DA0D /* AccountFlow */,
+				AFEBCB7E2ADD8ABA000F30DB /* SignUpFlow */,
+				AFEBCB7D2ADD8A90000F30DB /* SignInFlow */,
 			);
-			path = Coordinators;
+			path = FLows;
+			sourceTree = "<group>";
+		};
+		AFEBCB7D2ADD8A90000F30DB /* SignInFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBCB832ADD8B6E000F30DB /* SignInViewController */,
+			);
+			path = SignInFlow;
+			sourceTree = "<group>";
+		};
+		AFEBCB7E2ADD8ABA000F30DB /* SignUpFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBCB822ADD8B58000F30DB /* SignUpViewController */,
+			);
+			path = SignUpFlow;
+			sourceTree = "<group>";
+		};
+		AFEBCB7F2ADD8B15000F30DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF4DDD6C294A3D17000B21DD /* NailItTableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFEBCB802ADD8B28000F30DB /* SalonCatalogViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */,
+				AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */,
+				AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */,
+			);
+			path = SalonCatalogViewController;
+			sourceTree = "<group>";
+		};
+		AFEBCB812ADD8B41000F30DB /* AccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF802DB6294F47270087DA0D /* AccountTableViewCell */,
+				AF802DB0294F36850087DA0D /* AccountViewController.swift */,
+				AF802DB1294F36850087DA0D /* AccountViewController.xib */,
+				AF802DB4294F36930087DA0D /* AccountViewModel.swift */,
+			);
+			path = AccountViewController;
+			sourceTree = "<group>";
+		};
+		AFEBCB822ADD8B58000F30DB /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA8E8C292159430083764C /* SignUpViewController.swift */,
+				AFFA8E8D292159430083764C /* SignUpViewModel.swift */,
+				AFFA8E8E292159430083764C /* SignUpViewController.xib */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		AFEBCB832ADD8B6E000F30DB /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA8E90292159430083764C /* SignInViewController.xib */,
+				AFFA8E91292159430083764C /* SignInViewModel.swift */,
+				AFFA8E92292159430083764C /* SignInViewController.swift */,
+			);
+			path = SignInViewController;
+			sourceTree = "<group>";
+		};
+		AFEBCB842ADD8B98000F30DB /* AppointmnentFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AF03F7DE295222D300844E37 /* AppointmnentViewController */,
+			);
+			path = AppointmnentFlow;
 			sourceTree = "<group>";
 		};
 		AFFA8E7B292159100083764C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				AFFA8E772921586D0083764C /* Coordinator.swift */,
 				AFFA8E7D292159100083764C /* Encodable.swift */,
 				AFFA8E7E292159100083764C /* UIViewController+Nib.swift */,
 				AFFA8E7F292159100083764C /* NetworkError.swift */,
@@ -495,43 +504,10 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		AFFA8E86292159430083764C /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				AF03F7DE295222D300844E37 /* AppointmnentViewController */,
-				AF802DAF294F365F0087DA0D /* AccountViewController */,
-				AF802DA6294EDB540087DA0D /* SalonViewController */,
-				AF4DDD6C294A3D17000B21DD /* NailItTableViewCell */,
-				AF4DDD67294A3CF1000B21DD /* SalonCatalogViewController */,
-				AFFA8E8B292159430083764C /* SignUpViewController */,
-				AFFA8E8F292159430083764C /* SignInViewController */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		AFFA8E8B292159430083764C /* SignUpViewController */ = {
-			isa = PBXGroup;
-			children = (
-				AFFA8E8C292159430083764C /* SignUpViewController.swift */,
-				AFFA8E8D292159430083764C /* SignUpViewModel.swift */,
-				AFFA8E8E292159430083764C /* SignUpViewController.xib */,
-			);
-			path = SignUpViewController;
-			sourceTree = "<group>";
-		};
-		AFFA8E8F292159430083764C /* SignInViewController */ = {
-			isa = PBXGroup;
-			children = (
-				AFFA8E90292159430083764C /* SignInViewController.xib */,
-				AFFA8E91292159430083764C /* SignInViewModel.swift */,
-				AFFA8E92292159430083764C /* SignInViewController.swift */,
-			);
-			path = SignInViewController;
-			sourceTree = "<group>";
-		};
 		AFFE23EB2933338E00063168 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				AF802DA2294ED12D0087DA0D /* NIAppearance.swift */,
 				AFFE23F6293345EF00063168 /* UserManager.swift */,
 				AFFE23EC2933339B00063168 /* Interactor.swift */,
 				AFFE23EE293333AA00063168 /* NetworkService.swift */,
@@ -554,12 +530,10 @@
 		FD7138EAE199BC012EE26E0B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C8381A3F3C35C9FBEBE345BE /* Pods-NailIt.debug.xcconfig */,
-				61B4BBB8CD138DF3421285FF /* Pods-NailIt.release.xcconfig */,
-				3930CE015E675993798351DC /* Pods-NailIt-NailItUITests.debug.xcconfig */,
-				9BFEFD873F3722D5740C01EB /* Pods-NailIt-NailItUITests.release.xcconfig */,
-				3B7E6A0E1FF03E80313F278C /* Pods-NailItTests.debug.xcconfig */,
-				3FF5BCAFD32B67BC1F031B28 /* Pods-NailItTests.release.xcconfig */,
+				63AADF06512C11B6CC7F8E7E /* Pods-NailIt.debug.xcconfig */,
+				01DF7E32E14E3567016A04F2 /* Pods-NailIt.release.xcconfig */,
+				DBC9D25CD1A9CEDA78CBB227 /* Pods-NailItDemo.debug.xcconfig */,
+				AC4A29C1760ABF912A9213B6 /* Pods-NailItDemo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -571,12 +545,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF6385E9292150EC005851B4 /* Build configuration list for PBXNativeTarget "NailIt" */;
 			buildPhases = (
-				90621C16588C85483795EC7D /* [CP] Check Pods Manifest.lock */,
+				5A29761E8D3F2193B7C7230B /* [CP] Check Pods Manifest.lock */,
 				AF6385B8292150EA005851B4 /* Sources */,
 				AF6385B9292150EA005851B4 /* Frameworks */,
 				AF6385BA292150EA005851B4 /* Resources */,
-				DCBF1C548A624F9C2A70697D /* [CP] Embed Pods Frameworks */,
 				AFFA8E7A292158920083764C /* ShellScript */,
+				EAC432EC69666C8A7740384E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -587,55 +561,16 @@
 			productReference = AF6385BC292150EA005851B4 /* NailIt.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AF6385D4292150EC005851B4 /* NailItTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF6385EC292150EC005851B4 /* Build configuration list for PBXNativeTarget "NailItTests" */;
-			buildPhases = (
-				CA2343CFE71A4C4667188141 /* [CP] Check Pods Manifest.lock */,
-				AF6385D1292150EC005851B4 /* Sources */,
-				AF6385D2292150EC005851B4 /* Frameworks */,
-				AF6385D3292150EC005851B4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF6385D7292150EC005851B4 /* PBXTargetDependency */,
-			);
-			name = NailItTests;
-			productName = NailItTests;
-			productReference = AF6385D5292150EC005851B4 /* NailItTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AF6385DE292150EC005851B4 /* NailItUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AF6385EF292150EC005851B4 /* Build configuration list for PBXNativeTarget "NailItUITests" */;
-			buildPhases = (
-				CF840B38C1E8732FAE7D656E /* [CP] Check Pods Manifest.lock */,
-				AF6385DB292150EC005851B4 /* Sources */,
-				AF6385DC292150EC005851B4 /* Frameworks */,
-				AF6385DD292150EC005851B4 /* Resources */,
-				EED3CDDEAD82876527E60376 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AF6385E1292150EC005851B4 /* PBXTargetDependency */,
-			);
-			name = NailItUITests;
-			productName = NailItUITests;
-			productReference = AF6385DF292150EC005851B4 /* NailItUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		AFD3D2B92ABC389F00B5CE56 /* NailItDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFD3D3042ABC389F00B5CE56 /* Build configuration list for PBXNativeTarget "NailItDemo" */;
 			buildPhases = (
-				AFD3D2BA2ABC389F00B5CE56 /* [CP] Check Pods Manifest.lock */,
+				1791A3C090551D04A3FC0886 /* [CP] Check Pods Manifest.lock */,
 				AFD3D2BB2ABC389F00B5CE56 /* Sources */,
 				AFD3D2E02ABC389F00B5CE56 /* Frameworks */,
 				AFD3D2E22ABC389F00B5CE56 /* Resources */,
-				AFD3D3022ABC389F00B5CE56 /* [CP] Embed Pods Frameworks */,
 				AFD3D3032ABC389F00B5CE56 /* ShellScript */,
+				92613A672F5947B356F2356C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -654,18 +589,10 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					AF6385BB292150EA005851B4 = {
 						CreatedOnToolsVersion = 14.0.1;
-					};
-					AF6385D4292150EC005851B4 = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = AF6385BB292150EA005851B4;
-					};
-					AF6385DE292150EC005851B4 = {
-						CreatedOnToolsVersion = 14.0.1;
-						TestTargetID = AF6385BB292150EA005851B4;
 					};
 				};
 			};
@@ -683,8 +610,6 @@
 			projectRoot = "";
 			targets = (
 				AF6385BB292150EA005851B4 /* NailIt */,
-				AF6385D4292150EC005851B4 /* NailItTests */,
-				AF6385DE292150EC005851B4 /* NailItUITests */,
 				AFD3D2B92ABC389F00B5CE56 /* NailItDemo */,
 			);
 		};
@@ -729,20 +654,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF6385D3292150EC005851B4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF6385DD292150EC005851B4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AFD3D2E22ABC389F00B5CE56 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -784,7 +695,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		90621C16588C85483795EC7D /* [CP] Check Pods Manifest.lock */ = {
+		1791A3C090551D04A3FC0886 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NailItDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A29761E8D3F2193B7C7230B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -806,43 +739,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AFD3D2BA2ABC389F00B5CE56 /* [CP] Check Pods Manifest.lock */ = {
+		92613A672F5947B356F2356C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NailIt-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AFD3D3022ABC389F00B5CE56 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NailIt/Pods-NailIt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NailItDemo/Pods-NailItDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NailIt/Pods-NailIt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NailItDemo/Pods-NailItDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NailIt/Pods-NailIt-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NailItDemo/Pods-NailItDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AFD3D3032ABC389F00B5CE56 /* ShellScript */ = {
@@ -881,51 +792,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
 		};
-		CA2343CFE71A4C4667188141 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NailItTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		CF840B38C1E8732FAE7D656E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NailIt-NailItUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DCBF1C548A624F9C2A70697D /* [CP] Embed Pods Frameworks */ = {
+		EAC432EC69666C8A7740384E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -940,23 +807,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NailIt/Pods-NailIt-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EED3CDDEAD82876527E60376 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NailIt-NailItUITests/Pods-NailIt-NailItUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-NailIt-NailItUITests/Pods-NailIt-NailItUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NailIt-NailItUITests/Pods-NailIt-NailItUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1005,23 +855,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AF6385D1292150EC005851B4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF6385DA292150EC005851B4 /* NailItTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF6385DB292150EC005851B4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AF6385E4292150EC005851B4 /* NailItUITests.swift in Sources */,
-				AF6385E6292150EC005851B4 /* NailItUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		AFD3D2BB2ABC389F00B5CE56 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1067,24 +900,12 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		AF6385D7292150EC005851B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF6385BB292150EA005851B4 /* NailIt */;
-			targetProxy = AF6385D6292150EC005851B4 /* PBXContainerItemProxy */;
-		};
-		AF6385E1292150EC005851B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AF6385BB292150EA005851B4 /* NailIt */;
-			targetProxy = AF6385E0292150EC005851B4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
 		AF6385E7292150EC005851B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1145,6 +966,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1197,7 +1019,7 @@
 		};
 		AF6385EA292150EC005851B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8381A3F3C35C9FBEBE345BE /* Pods-NailIt.debug.xcconfig */;
+			baseConfigurationReference = 63AADF06512C11B6CC7F8E7E /* Pods-NailIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1205,18 +1027,26 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_MODE = NO;
 				DEVELOPMENT_TEAM = G9B4VPJY3R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyBeaver\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/TinyConstraints\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}\"/Alamofire\"",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NailIt/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kravchenko.nsu.NailIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1227,7 +1057,7 @@
 		};
 		AF6385EB292150EC005851B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61B4BBB8CD138DF3421285FF /* Pods-NailIt.release.xcconfig */;
+			baseConfigurationReference = 01DF7E32E14E3567016A04F2 /* Pods-NailIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1241,7 +1071,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1255,89 +1085,9 @@
 			};
 			name = Release;
 		};
-		AF6385ED292150EC005851B4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B7E6A0E1FF03E80313F278C /* Pods-NailItTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G9B4VPJY3R;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kravchenko.nsu.NailItTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NailIt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NailIt";
-			};
-			name = Debug;
-		};
-		AF6385EE292150EC005851B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FF5BCAFD32B67BC1F031B28 /* Pods-NailItTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G9B4VPJY3R;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kravchenko.nsu.NailItTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NailIt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NailIt";
-			};
-			name = Release;
-		};
-		AF6385F0292150EC005851B4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3930CE015E675993798351DC /* Pods-NailIt-NailItUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G9B4VPJY3R;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kravchenko.nsu.NailItUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NailIt;
-			};
-			name = Debug;
-		};
-		AF6385F1292150EC005851B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BFEFD873F3722D5740C01EB /* Pods-NailIt-NailItUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G9B4VPJY3R;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.kravchenko.nsu.NailItUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NailIt;
-			};
-			name = Release;
-		};
 		AFD3D3052ABC389F00B5CE56 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C8381A3F3C35C9FBEBE345BE /* Pods-NailIt.debug.xcconfig */;
+			baseConfigurationReference = DBC9D25CD1A9CEDA78CBB227 /* Pods-NailItDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1351,12 +1101,13 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kravchenko.nsu.NailIt;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -1367,7 +1118,7 @@
 		};
 		AFD3D3062ABC389F00B5CE56 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61B4BBB8CD138DF3421285FF /* Pods-NailIt.release.xcconfig */;
+			baseConfigurationReference = AC4A29C1760ABF912A9213B6 /* Pods-NailItDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1381,7 +1132,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1412,24 +1163,6 @@
 			buildConfigurations = (
 				AF6385EA292150EC005851B4 /* Debug */,
 				AF6385EB292150EC005851B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF6385EC292150EC005851B4 /* Build configuration list for PBXNativeTarget "NailItTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF6385ED292150EC005851B4 /* Debug */,
-				AF6385EE292150EC005851B4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AF6385EF292150EC005851B4 /* Build configuration list for PBXNativeTarget "NailItUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AF6385F0292150EC005851B4 /* Debug */,
-				AF6385F1292150EC005851B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

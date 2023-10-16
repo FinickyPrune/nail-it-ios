@@ -11,6 +11,13 @@ import SwiftyBeaver
 
 let log = SwiftyBeaver.self
 
+var debugMode: Bool {
+    guard let modeString = Bundle.main.object(forInfoDictionaryKey: "DEBUG_MODE") as? String else {
+        return true
+    }
+    return modeString == "YES"
+}
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

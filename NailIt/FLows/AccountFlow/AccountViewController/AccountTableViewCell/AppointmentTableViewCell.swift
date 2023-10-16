@@ -33,9 +33,14 @@ class AppointmentTableViewCell: UITableViewCell {
 
         contentView.backgroundColor = isAlertColor ? UIColor(red: 0.95, green: 0.724, blue: 0.665, alpha: 1) : UIColor(red: 0.949, green: 0.859, blue: 0.835, alpha: 0.5)
 
-        serviceNameLabel.text = appointment.title
-        salonNameLabel.text = " \(appointment.address ?? ""), \(appointment.salon ?? "")"
-        masterNameLabel.text = appointment.master
+        serviceNameLabel.text = appointment.serviceTitle
+        salonNameLabel.text = " \(appointment.salonAddress ?? ""), \(appointment.salonTitle ?? "")"
+        masterNameLabel.text = appointment.masterName
+
+        if debugMode {
+            dateLabel.text = appointment.date
+            timeLabel.text = appointment.time
+        }
 
         if let date = appointment.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") {
             let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: date)

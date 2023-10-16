@@ -205,7 +205,7 @@ extension AppointmentViewController: AppointmentViewModelDisplayDelegate {
 
     func showLoading(_ viewModel: AppointmentViewModel) {
         DispatchQueue.main.async {
-            ProgressHUD.show()
+            ProgressHUD.animate()
         }
 
     }
