@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -64,6 +64,9 @@
                                     <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
                                     <color key="textColor" red="0.94901960784313721" green="0.54509803921568623" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SignInViewController.signInLabel"/>
+                                    </userDefinedRuntimeAttributes>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9a1-SP-cHM">
                                     <rect key="frame" x="0.0" y="279" width="354" height="180"/>
@@ -78,6 +81,9 @@
                                             <color key="textColor" red="0.89411771299999998" green="0.5647059083" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SignInViewController.phonePlaceholder"/>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="textFieldCompleteEditing:" destination="-1" eventType="editingDidEndOnExit" id="U8O-oP-LR4"/>
                                             </connections>
@@ -92,6 +98,9 @@
                                             <color key="textColor" red="0.89411771299999998" green="0.5647059083" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SignInViewController.passwordPlaceholder"/>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="textFieldCompleteEditing:" destination="-1" eventType="editingDidEndOnExit" id="BMg-Hi-hk6"/>
                                             </connections>
@@ -107,6 +116,9 @@
                                             <color key="tintColor" red="0.98039215800000001" green="0.94509804249999996" blue="0.81960785390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Войти"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SignInViewController.signInButton"/>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="signInButtonPressed:" destination="-1" eventType="touchUpInside" id="CFz-HN-Jmh"/>
                                             </connections>
@@ -123,6 +135,9 @@
                                             <state key="normal" title="Еще нет аккаунта? Зарегистрироваться">
                                                 <color key="titleColor" red="0.88235294819999999" green="0.42745098469999998" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SignInViewController.signUpButton"/>
+                                            </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="singUpButtonPressed:" destination="-1" eventType="touchUpInside" id="OcF-lh-Tet"/>
                                             </connections>

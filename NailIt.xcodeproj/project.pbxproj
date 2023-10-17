@@ -55,6 +55,10 @@
 		AF802DB9294F47420087DA0D /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */; };
 		AF802DBA294F47420087DA0D /* AppointmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */; };
 		AF94B17A2955DD5400B34ACF /* UILabel+DynamicHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF94B1792955DD5400B34ACF /* UILabel+DynamicHeight.swift */; };
+		AF9B6DCA2ADEED310027E0A2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AF9B6DC92ADEED310027E0A2 /* Localizable.xcstrings */; };
+		AF9B6DCB2ADEED310027E0A2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AF9B6DC92ADEED310027E0A2 /* Localizable.xcstrings */; };
+		AF9B6DCD2ADEF15C0027E0A2 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B6DCC2ADEF15C0027E0A2 /* Localizable.swift */; };
+		AF9B6DCE2ADEF15C0027E0A2 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B6DCC2ADEF15C0027E0A2 /* Localizable.swift */; };
 		AFA01E302ABB436E0018D39D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */; };
 		AFA2940229476ECC00F699A6 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2940129476ECC00F699A6 /* Collection+Safe.swift */; };
 		AFD3D2B82ABC387500B5CE56 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3D2B72ABC387500B5CE56 /* Credentials.swift */; };
@@ -199,6 +203,8 @@
 		AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewCell.swift; sourceTree = "<group>"; };
 		AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentTableViewCell.xib; sourceTree = "<group>"; };
 		AF94B1792955DD5400B34ACF /* UILabel+DynamicHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DynamicHeight.swift"; sourceTree = "<group>"; };
+		AF9B6DC92ADEED310027E0A2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = NailIt/Localizable.xcstrings; sourceTree = "<group>"; };
+		AF9B6DCC2ADEF15C0027E0A2 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		AFA2940129476ECC00F699A6 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
 		AFD3D2B72ABC387500B5CE56 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
@@ -333,6 +339,7 @@
 		AF6385B3292150EA005851B4 = {
 			isa = PBXGroup;
 			children = (
+				AF9B6DC92ADEED310027E0A2 /* Localizable.xcstrings */,
 				AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */,
 				AF6385BE292150EA005851B4 /* NailIt */,
 				AF6385BD292150EA005851B4 /* Products */,
@@ -500,6 +507,7 @@
 				AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */,
 				AF94B1792955DD5400B34ACF /* UILabel+DynamicHeight.swift */,
 				AF7663D829589EE700517409 /* String+Date.swift */,
+				AF9B6DCC2ADEF15C0027E0A2 /* Localizable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -603,6 +611,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = AF6385B3292150EA005851B4;
 			productRefGroup = AF6385BD292150EA005851B4 /* Products */;
@@ -630,6 +639,7 @@
 				AF4DDD62294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				AFFA8E9F292159430083764C /* SignInViewController.xib in Resources */,
 				AF4DDD54294A3289000B21DD /* Montserrat-Italic.ttf in Resources */,
+				AF9B6DCA2ADEED310027E0A2 /* Localizable.xcstrings in Resources */,
 				AF4DDD61294A3289000B21DD /* Montserrat-SemiBold.ttf in Resources */,
 				AF4DDD60294A3289000B21DD /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				AF4DDD5C294A3289000B21DD /* Montserrat-LightItalic.ttf in Resources */,
@@ -668,6 +678,7 @@
 				AFD3D2EA2ABC389F00B5CE56 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				AFD3D2EB2ABC389F00B5CE56 /* SignInViewController.xib in Resources */,
 				AFD3D2EC2ABC389F00B5CE56 /* Montserrat-Italic.ttf in Resources */,
+				AF9B6DCB2ADEED310027E0A2 /* Localizable.xcstrings in Resources */,
 				AFD3D2ED2ABC389F00B5CE56 /* Montserrat-SemiBold.ttf in Resources */,
 				AFD3D2EE2ABC389F00B5CE56 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				AFD3D2EF2ABC389F00B5CE56 /* Montserrat-LightItalic.ttf in Resources */,
@@ -851,6 +862,7 @@
 				AF802DA9294EDB6C0087DA0D /* SalonViewController.swift in Sources */,
 				AF7663D429584FDA00517409 /* MasterTableViewCell.swift in Sources */,
 				AF7663D72958738500517409 /* LocationService.swift in Sources */,
+				AF9B6DCD2ADEF15C0027E0A2 /* Localizable.swift in Sources */,
 				AFFE23F92933462F00063168 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -894,6 +906,7 @@
 				AFD3D2DC2ABC389F00B5CE56 /* SalonViewController.swift in Sources */,
 				AFD3D2DD2ABC389F00B5CE56 /* MasterTableViewCell.swift in Sources */,
 				AFD3D2DE2ABC389F00B5CE56 /* LocationService.swift in Sources */,
+				AF9B6DCE2ADEF15C0027E0A2 /* Localizable.swift in Sources */,
 				AFD3D2DF2ABC389F00B5CE56 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
