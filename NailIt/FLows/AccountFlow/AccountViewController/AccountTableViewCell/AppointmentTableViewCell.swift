@@ -48,6 +48,6 @@ class AppointmentTableViewCell: UITableViewCell {
             timeLabel.text = "\(components.hour ?? 0):\(components.minute ?? 0)"
 
         }
-        priceLabel.text = "\(appointment.price ?? 0)р"
+        priceLabel.text = "\(appointment.price ?? 0)\("NailIt.currency".localized)"
     }
 }

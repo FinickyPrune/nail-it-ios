@@ -25,8 +25,8 @@ struct APIPaths {
     static var serviceTypesListUrl: String { APICredential.baseURLString + (debugMode ? "serviceTypes" : "services/types") }
     static var appointmentsListUrl: String { APICredential.baseURLString + (debugMode ? "appointments" : "clients/appointments/{id}") }
     static var mastersListUrl: String { APICredential.baseURLString +      (debugMode ? "masters"      : "masters") }
+    static var allServicesUrl: String { APICredential.baseURLString +      (debugMode ? "services"     : "services/all?lat={lat}&lon={lon}") } 
 
     static let appointmentsForMasterUrl = "http://158.160.54.51:8080/masters/{service_id}/provision"
     static let enrollUrl = "http://158.160.54.51:8080/services/enroll/{app_id}?userId={user_id}"
-    static let allServicesUrl = "http://158.160.54.51:8080/services/all?lat={lat}&lon={lon}"  // TODO: Change
 }

@@ -53,7 +53,7 @@ final class AppointmentViewController: UIViewController {
                                                      height: heightFor(text: viewModel?.serviceName ?? "",
                                                                        font: UIFont(name: "Montserrat-Bold", size: 20)!,
                                                                        width: serviceNameLabel.frame.width)))
-        serivcePriceLabel.text = "\(viewModel?.servicePrice ?? 0)р"
+        serivcePriceLabel.text = "\(viewModel?.servicePrice ?? 0)\("NailIt.currency".localized)"
         serviceDurationLabel.text = viewModel?.serviceDuration
         setupCalendar()
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,11 +15,15 @@
         <array key="Montserrat-SemiBold.ttf">
             <string>Montserrat-SemiBold</string>
         </array>
+        <array key="Montserrat-VariableFont_wght.ttf">
+            <string>MontserratRoman-Regular</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SalonCatalogViewController" customModule="NailIt" customModuleProvider="target">
             <connections>
                 <outlet property="allServicesButton" destination="19b-ub-JQL" id="g0a-ax-mfk"/>
+                <outlet property="bannerLabel" destination="g8l-4J-EWl" id="HFH-Od-qwe"/>
                 <outlet property="bannerView" destination="JE0-Jh-Iek" id="SSo-EP-gzo"/>
                 <outlet property="enrollButton" destination="K6n-Im-eQH" id="Asp-7A-Fdl"/>
                 <outlet property="sortButton" destination="KXj-2C-wpU" id="qj9-8T-slc"/>
@@ -39,17 +43,16 @@
                         <constraint firstAttribute="width" constant="140" id="YU2-te-JOc"/>
                         <constraint firstAttribute="height" constant="30" id="eVX-2P-tFz"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <fontDescription key="fontDescription" name="MontserratRoman-Regular" family="Montserrat" pointSize="16"/>
                     <color key="tintColor" red="0.94901960784313721" green="0.54509803921568623" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="По рейтингу">
                         <color key="titleColor" red="0.89411764705882346" green="0.56470588235294117" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                     <state key="selected" title="По рейтингу"/>
-                    <buttonConfiguration key="configuration" style="plain" title="По рейтингу">
-                        <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                        <color key="baseForegroundColor" red="0.89411764705882346" green="0.56470588235294117" blue="0.43137254901960786" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SalonCatalogViewController.byRateButton"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="didTapSort:" destination="-1" eventType="touchUpInside" id="J0N-tU-IYQ"/>
                     </connections>
@@ -61,17 +64,16 @@
                         <constraint firstAttribute="width" constant="140" id="rh5-fx-KYl"/>
                         <constraint firstAttribute="height" constant="30" id="xQ0-Yu-56M"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <fontDescription key="fontDescription" name="MontserratRoman-Regular" family="Montserrat" pointSize="16"/>
                     <color key="tintColor" red="0.94901960780000005" green="0.5450980392" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="По рейтингу">
+                    <state key="normal" title="По услугам">
                         <color key="titleColor" red="0.89411764709999997" green="0.56470588239999997" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </state>
                     <state key="selected" title="По рейтингу"/>
-                    <buttonConfiguration key="configuration" style="plain" title="По услугам">
-                        <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                        <color key="baseForegroundColor" red="0.89411764709999997" green="0.56470588239999997" blue="0.43137254899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SalonCatalogViewController.byServiceButton"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="didTapAllServices:" destination="-1" eventType="touchUpInside" id="doq-L4-RkR"/>
                     </connections>
@@ -88,6 +90,9 @@
                             <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                             <color key="textColor" red="0.70588237050000002" green="0.42745098469999998" blue="0.38823530080000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SalonCatalogViewController.noneLabel"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-binoculars 1" translatesAutoresizingMaskIntoConstraints="NO" id="1OL-Jh-DdO">
                             <rect key="frame" x="170.66666666666666" y="150" width="49" height="39"/>
@@ -117,6 +122,9 @@
                     <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Записаться"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SalonCatalogViewController.enrollButton"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <action selector="didTapEnroll" destination="-1" eventType="touchUpInside" id="vSw-9J-E09"/>
                     </connections>

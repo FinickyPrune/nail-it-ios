@@ -11,7 +11,9 @@ enum TokenType {
     case nailIt
 }
 
-final class User: NSObject, NSCoding {
+final class User: NSObject, NSSecureCoding {
+
+    static var supportsSecureCoding: Bool = true
 
     var nailItToken: String?
     var id: Int?

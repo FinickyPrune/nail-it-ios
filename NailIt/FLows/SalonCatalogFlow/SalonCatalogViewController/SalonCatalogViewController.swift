@@ -13,9 +13,11 @@ final class SalonCatalogViewController: UIViewController {
     @IBOutlet private weak var sortButton: UIButton!
     @IBOutlet private weak var allServicesButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
+
+    @IBOutlet private weak var bannerLabel: UILabel!
     @IBOutlet private weak var bannerView: UIView!
 
-    @IBOutlet private weak var enrollButton: UIView!
+    @IBOutlet private weak var enrollButton: UIButton!
 
     private let searchController = UISearchController(searchResultsController: nil)
     var isSearchBarEmpty: Bool {
@@ -31,10 +33,12 @@ final class SalonCatalogViewController: UIViewController {
         sortButton.layer.cornerRadius = 15
         sortButton.layer.borderWidth = 1
         sortButton.layer.borderColor = sortButton.tintColor.cgColor
+        sortButton.titleLabel?.font = UIFont.montserratRegular(size: 16)
 
         allServicesButton.layer.cornerRadius = 15
         allServicesButton.layer.borderWidth = 1
         allServicesButton.layer.borderColor = allServicesButton.tintColor.cgColor
+        allServicesButton.titleLabel?.font = UIFont.montserratRegular(size: 16)
 
         tableView.delegate = self
         tableView.dataSource = self
@@ -43,8 +47,11 @@ final class SalonCatalogViewController: UIViewController {
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
 
+        bannerLabel.font = UIFont.montserratSemiBold(size: 16)
+
         enrollButton.layer.cornerRadius = 15
         enrollButton.isHidden = true
+        enrollButton.titleLabel?.font = UIFont.montserratBold(size: 16)
 
         locationManager = CLLocationManager()
         locationManager?.delegate = self
@@ -89,17 +96,21 @@ final class SalonCatalogViewController: UIViewController {
 
         searchBar.setPlaceholderColor(NIAppearance.nailItPlaceholderTextColor)
         searchBar.setTextColor(color: NIAppearance.nailItPlaceholderTextColor)
+        searchBar.setPlaceholderFont(UIFont.montserratSemiBold(size: 16))
         searchBar.searchTextField.leftView?.tintColor = NIAppearance.nailItPlaceholderTextColor
-        searchBar.placeholder = "Найти салон"
+        searchBar.placeholder = "SalonCatalogViewController.searchPlaceholder".localized
         searchBar.delegate = self
         searchBar.searchTextField.backgroundColor = NIAppearance.nailItOrangeColor
+
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.montserratBold(size: 16),
+                                                                   NSAttributedString.Key.foregroundColor: NIAppearance.nailItOrangeColor]
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"),
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(didTapAccount))
         navigationItem.rightBarButtonItem?.tintColor = NIAppearance.nailItBrownColor
 
-        navigationItem.title = "Поиск салона"
+        navigationItem.title = "SalonCatalogViewController.navigationLabel".localized
 
         navigationItem.searchController = searchController
         searchController.searchResultsUpdater = self
