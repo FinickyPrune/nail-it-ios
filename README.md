@@ -13,7 +13,13 @@ There you will also be able to see available appointment times and sign up.
   <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/978056d7-e9d4-41b6-b1d2-89492104c54e" width="250" /> 
     </p>
 
-  - Browse services of masters and salons, in any city or neighbourhood
+  - Browse salons or services in any city or neighbourhood
+
+    <p float="left">
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/082a018f-28f7-49a2-96af-c52638ab7d5f" width="250" />
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/b61e5fc0-5662-4693-83d1-004d691aad1e" width="250" /> 
+    </p>
+ 
   - Find verified masters who have confirmed their professional skills
   - View available services and appointment times at salons
   - Make an appointment at any convenient time
