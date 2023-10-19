@@ -25,4 +25,9 @@ There you will also be able to see available appointment times and sign up.
   - View available services and appointment times at salons
   - Make an appointment at any convenient time
   - View your appointment history
+
+    <p float="left">
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/26b93072-c589-4927-8c61-388d8d45c16a" width="250" />
+    </p>
+
   - View the price of the service in advance
