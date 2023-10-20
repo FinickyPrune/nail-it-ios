@@ -5,11 +5,13 @@
 //  Created by Anastasia Kravchenko on 25.12.2022.
 //
 
-import Foundation
+import CoreLocation
 
-final class LocationService {
+final class LocationService: NSObject {
 
     static let shared = LocationService()
+
+    private let locationManager: CLLocationManager = CLLocationManager()
 
     private(set) var currentLat: Double?
     private(set) var currentLon: Double?
@@ -18,7 +20,15 @@ final class LocationService {
 
     private var timer: Timer?
 
-    private init() {
+    deinit {
+        timer?.invalidate()
+        timer = nil
+    }
+
+    func start() {
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+
         DispatchQueue.main.async { [weak self] in
             self?.timer = Timer.scheduledTimer(withTimeInterval: 5 * 60, repeats: true) { [weak self] _ in
                 self?.canChangeLocation = true
@@ -26,12 +36,7 @@ final class LocationService {
         }
     }
 
-    deinit {
-        timer?.invalidate()
-        timer = nil
-    }
-
-    func setCoordinates(lat: Double, lon: Double) {
+    private func setCoordinates(lat: Double, lon: Double) {
         if canChangeLocation {
             currentLat = lat
             currentLon = lon
@@ -40,6 +45,32 @@ final class LocationService {
             NotificationCenter.default.post(Notification(name: .didUpdateLocation))
         }
     }
+}
+
+extension LocationService: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            return
+        case .restricted:
+            return
+        case .denied:
+            return
+        case .authorizedAlways, .authorizedWhenInUse, .authorized:
+            if CLLocationManager.locationServicesEnabled() {
+                locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                locationManager.startUpdatingLocation()
+            }
+        @unknown default: break
+        }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        setCoordinates(lat: locValue.latitude, lon: locValue.longitude)
+    }
+
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {}
 }
 
 extension Notification.Name {

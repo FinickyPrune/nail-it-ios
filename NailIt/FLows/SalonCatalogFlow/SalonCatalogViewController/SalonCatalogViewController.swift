@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreLocation
 
 final class SalonCatalogViewController: UIViewController {
 
@@ -25,7 +24,6 @@ final class SalonCatalogViewController: UIViewController {
     }
 
     var viewModel: SalonCatalogViewModel?
-    var locationManager: CLLocationManager?
     private var isFirstTime = true
 
     override func viewDidLoad() {
@@ -53,10 +51,6 @@ final class SalonCatalogViewController: UIViewController {
         enrollButton.isHidden = true
         enrollButton.titleLabel?.font = UIFont.montserratBold(size: 16)
 
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.requestWhenInUseAuthorization()
-
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillHide),
                                                name: UIResponder.keyboardWillHideNotification,
@@ -65,12 +59,6 @@ final class SalonCatalogViewController: UIViewController {
                                                selector: #selector(keyboardWillShow),
                                                name: UIResponder.keyboardWillShowNotification,
                                                object: nil)
-
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(fetchDataWithLocation),
-                                               name: .didUpdateLocation,
-                                               object: nil)
-
     }
 
     @objc private func keyboardWillShow(notification: NSNotification) {
@@ -84,10 +72,6 @@ final class SalonCatalogViewController: UIViewController {
     @objc private func keyboardWillHide(notification: NSNotification) {
         let contentInset = UIEdgeInsets.zero
         tableView.contentInset = contentInset
-    }
-
-    @objc private func fetchDataWithLocation(notification: Notification) {
-        fetchData()
     }
 
     private func setupNavigationBar() {
@@ -122,12 +106,14 @@ final class SalonCatalogViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+
         setupNavigationBar()
         tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
         setupNavigationBar()
     }
 
@@ -152,15 +138,6 @@ final class SalonCatalogViewController: UIViewController {
         viewModel?.didTapEnroll()
     }
 
-    private func fetchData() {
-        viewModel?.loadData { error in
-            if error == nil {
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            }
-        }
-    }
 }
 
 extension SalonCatalogViewController: UITableViewDataSource, UITableViewDelegate {
@@ -209,9 +186,7 @@ extension SalonCatalogViewController: UITableViewDataSource, UITableViewDelegate
     }
 }
 
-extension SalonCatalogViewController: UISearchBarDelegate {}
-
-extension SalonCatalogViewController: UISearchResultsUpdating {
+extension SalonCatalogViewController: UISearchBarDelegate, UISearchResultsUpdating {
 
     func updateSearchResults(for searchController: UISearchController) {
         NSObject.cancelPreviousPerformRequests(withTarget: self, selector: #selector(updateCellsWithSearchResult), object: nil)
@@ -236,34 +211,5 @@ extension SalonCatalogViewController: SalonCatalogViewModelDisplayDelegate {
 
     var isFiltering: Bool {
         return searchController.isActive && !isSearchBarEmpty
-    }
-}
-
-extension SalonCatalogViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        switch status {
-        case .notDetermined:
-            return
-        case .restricted:
-            return
-        case .denied:
-            return
-        case .authorizedAlways, .authorizedWhenInUse, .authorized:
-            if CLLocationManager.locationServicesEnabled() {
-                locationManager?.delegate = self
-                locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-                locationManager?.startUpdatingLocation()
-            }
-        @unknown default: break
-        }
-    }
-
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-        LocationService.shared.setCoordinates(lat: locValue.latitude, lon: locValue.longitude)
-    }
-
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // Handle failure to get a user’s location
     }
 }

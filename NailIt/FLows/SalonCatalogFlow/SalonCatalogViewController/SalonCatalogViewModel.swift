@@ -25,7 +25,6 @@ class SalonCatalogViewModel {
     weak var actionDelegate: SalonCatalogViewModelActionDelegate?
 
     private(set) var isSorting = false
-
     private(set) var isServicesMode = false
 
     private var salons = [Salon]()
@@ -36,7 +35,6 @@ class SalonCatalogViewModel {
     private var selectedServices = [Service]()
 
     var count: Int {
-
         guard let displayDelegate = displayDelegate else { return 0 }
         displayDelegate.showBanner(self, false)
 
@@ -57,6 +55,24 @@ class SalonCatalogViewModel {
     }
 
     var selectedServicesCount: Int { selectedServices.count }
+
+    init() {
+        LocationService.shared.start()
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(fetchDataWithLocation),
+                                               name: .didUpdateLocation,
+                                               object: nil)
+    }
+
+    @objc private func fetchDataWithLocation(notification: Notification) {
+        loadData { error in
+            if error == nil {
+                DispatchQueue.main.async {
+                    self.displayDelegate?.reloadTable(self)
+                }
+            }
+        }
+    }
 
     func salon(for index: Int) -> Salon? {
         guard let displayDelegate = displayDelegate else { return nil }
@@ -137,9 +153,7 @@ class SalonCatalogViewModel {
         }
     }
 
-    func didLoginSuccessfully() {
-        
-    }
+    func didLoginSuccessfully() {}
 
     func didTapAccount() {
         actionDelegate?.salonCatalogViewModelAttempsToDisplayAccountController(self)
