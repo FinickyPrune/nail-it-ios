@@ -40,20 +40,18 @@ class AccountViewModel {
 
     var sectionsCount: Int { 2 }
 
-    func count(for index: Int) -> Int? {
-        guard let section = Section(rawValue: index) else { return nil }
-        let now = Date()
-        switch section {
-        case .coming:
-            return appointments.filter { $0.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") ?? Date() > now }.count
-        case .history:
-            return appointments.filter { $0.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") ?? Date() < now }.count
-        }
-
-    }
-
     func appointments(for index: Int) -> [Appointment]? {
         guard let section = Section(rawValue: index) else { return nil }
+
+        if debugMode {
+            switch section {
+            case .coming:
+                return appointments.filter { $0.date < appointments[Int(appointments.count/2)].date }
+            case .history:
+                return appointments.filter { $0.date > appointments[Int(appointments.count/2)].date }
+            }
+        }
+
         let now = Date()
         switch section {
         case .coming:
@@ -61,6 +59,10 @@ class AccountViewModel {
         case .history:
             return appointments.filter { $0.date.dateFromFormattedString(format: "yyyy-MM-dd HH:mm:ss.SSSSZZZ") ?? Date() < now }
         }
+    }
+
+    func count(for index: Int) -> Int? {
+        appointments(for: index)?.count
     }
 
     func section(for index: Int) -> Section? {

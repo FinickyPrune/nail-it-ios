@@ -88,10 +88,10 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
         label.frame = view.bounds.insetBy(dx: 13, dy: 2)
         switch section {
         case .coming:
-            label.text = "Мои записи"
+            label.text = "AccountViewController.enrolls".localized
             label.font = UIFont(name: "Montserrat-Bold", size: 20)
         case .history:
-            label.text = "Прошедшие"
+            label.text = "AccountViewController.previousEnrolls".localized
             label.font = UIFont(name: "Montserrat-SemiBold", size: 16)
         }
         return view

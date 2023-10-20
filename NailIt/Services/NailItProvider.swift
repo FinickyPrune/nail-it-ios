@@ -17,8 +17,8 @@ final class NailItProvider {
         DispatchQueue.global(qos: .background).async {
             Thread.sleep(forTimeInterval: 1.0)
             if let data = try? JSONSerialization.data(withJSONObject: ["id": 1,
-                                                                       "name": "username",
-                                                                       "phone_number": "+70000000000",
+                                                                       "name": "FinickyPrune",
+                                                                       "phone_number": "+75551989111",
                                                                        "access_token": "access_token",
                                                                        "message": nil,
                                                                        "status": nil]) {
