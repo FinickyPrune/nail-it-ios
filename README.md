@@ -35,8 +35,9 @@ There you will also be able to see available appointment times and sign up.
   <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/7d074a00-0382-4c89-af70-3de59e61f731" width="250" /> 
     </p>
 
-  - View your appointment history
+  - View your appointment history and get alert if there are conflicting appointments
 
     <p float="left">
   <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/81134b68-8c38-4555-90eb-89517912a606" width="250" />
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/3e54eafc-8bee-440a-8891-88be09f2c5cd" width="250" />
     </p>
