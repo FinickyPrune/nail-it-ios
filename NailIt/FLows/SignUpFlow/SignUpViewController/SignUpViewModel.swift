@@ -22,16 +22,16 @@ class SignUpViewModel {
                              completion: @escaping (_: String?) -> Void) {
         
         if !isNameValid(name) {
-            completion("Пожалуйста, измените имя.")
+            completion("NailIt.invalidNameAlert".localized)
             return
         }
         
         if !isPhoneNumberValid(phoneNumber) {
-            completion("Пожалуйста, измените номер.")
+            completion("NailIt.invalidNameAlert".localized)
         }
         
         if !isPasswordsMatch(password, repeatPassword) || password.count < 6 {
-            completion("Пароли не совпадают.")
+            completion("NailIt.differentPasswordsAlert".localized)
             return
         }
     

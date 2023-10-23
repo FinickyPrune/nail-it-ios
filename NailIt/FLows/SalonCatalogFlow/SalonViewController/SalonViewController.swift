@@ -60,8 +60,9 @@ class SalonViewController: UIViewController {
         let searchBar = searchController.searchBar
         searchBar.setPlaceholderColor(NIAppearance.nailItPlaceholderTextColor)
         searchBar.setTextColor(color: NIAppearance.nailItPlaceholderTextColor)
+        searchBar.setPlaceholderFont(UIFont.montserratSemiBold(size: 16))
         searchBar.searchTextField.leftView?.tintColor = NIAppearance.nailItPlaceholderTextColor
-        searchBar.placeholder = "Найти услугу"
+        searchBar.placeholder = "SalonViewController.searchPlaceholder".localized
         searchBar.delegate = self
         searchBar.searchTextField.backgroundColor = NIAppearance.nailItOrangeColor
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"),
@@ -127,7 +128,7 @@ extension SalonViewController: UITableViewDataSource, UITableViewDelegate {
         label.textColor = .black
         label.font = UIFont(name: "Montserrat-SemiBold", size: 16)
         label.textAlignment = .center
-        label.text = serviceType.title
+        label.text = serviceType.serviceTypeTitle
         let labelWidth = label.intrinsicContentSize.width
         label.frame = CGRect(origin: CGPoint(x: (view.bounds.width - labelWidth)/2, y: 0),
                              size: CGSize(width: labelWidth, height: view.bounds.height))

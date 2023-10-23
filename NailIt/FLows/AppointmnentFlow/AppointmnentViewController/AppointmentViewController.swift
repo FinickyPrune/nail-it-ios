@@ -5,7 +5,7 @@
 //  Created by Anastasia Kravchenko on 21.12.2022.
 //
 
-import UIKit
+import TinyConstraints
 import ProgressHUD
 
 @available(iOS 16.0, *)
@@ -53,7 +53,7 @@ final class AppointmentViewController: UIViewController {
                                                      height: heightFor(text: viewModel?.serviceName ?? "",
                                                                        font: UIFont(name: "Montserrat-Bold", size: 20)!,
                                                                        width: serviceNameLabel.frame.width)))
-        serivcePriceLabel.text = "\(viewModel?.servicePrice ?? 0)\("NailIt.currency".localized)"
+        serivcePriceLabel.text = "\(viewModel?.servicePrice ?? "0.0")\("NailIt.currency".localized)"
         serviceDurationLabel.text = viewModel?.serviceDuration
         setupCalendar()
 
@@ -160,17 +160,13 @@ final class AppointmentViewController: UIViewController {
         calendarView?.calendar = Calendar(identifier: .gregorian)
         calendarView?.translatesAutoresizingMaskIntoConstraints = false
         calendarParentView.addSubview(calendarView!)
-        calendarView?.widthAnchor.constraint(equalTo: calendarParentView.widthAnchor).isActive = true
-        calendarView?.heightAnchor.constraint(equalTo: calendarParentView.heightAnchor).isActive = true
-        calendarView?.centerXAnchor.constraint(equalTo: calendarParentView.centerXAnchor).isActive = true
-        calendarView?.centerYAnchor.constraint(equalTo: calendarParentView.centerYAnchor).isActive = true
+        calendarView?.edgesToSuperview()
 
         calendarView?.tintColor = NIAppearance.nailItOrangeColor
         calendarView?.availableDateRange = DateInterval(start: .now, end: .distantFuture)
 
         let selection = UICalendarSelectionSingleDate(delegate: self)
         calendarView?.selectionBehavior = selection
-
     }
 
     @IBAction func textFieldDidEdited(_ sender: Any) {

@@ -27,9 +27,9 @@
 		<string>Montserrat-Black.ttf</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Приложение хочет использовать вашу локацию.</string>
+	<string>The app wants to use your location.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Приложение хочет использовать вашу локацию.</string>
+	<string>The app wants to use your location.</string>
 	<key>DEBUG_MODE</key>
 	<string>$(DEBUG_MODE)</string>
 </dict>

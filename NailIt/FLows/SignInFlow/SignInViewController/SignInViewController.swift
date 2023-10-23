@@ -65,7 +65,7 @@ class SignInViewController: UIViewController {
     @IBAction func signInButtonPressed(_ sender: Any) {
         self.view.endEditing(true)
         if (phoneNumberTextField.text?.isEmpty)! || (passwordTextField.text?.isEmpty)! {
-            presentFailAlert(with: "Пожалуйста, заполните все поля.")
+            presentFailAlert(with: "NailIt.emptyFieldsAlert".localized)
         } else {
             ProgressHUD.animate()
             self.viewModel?.performLogin(phoneNumber: phoneNumberTextField.text!,

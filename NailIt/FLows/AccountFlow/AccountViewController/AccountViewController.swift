@@ -125,7 +125,7 @@ extension AccountViewController: AccountViewModelDisplayDelegate {
     }
 
     private func presentFailAlert(with message: String) {
-        let alertController = UIAlertController(title: "Внимание", message: message, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "NailIt.warning".localized, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         present(alertController, animated: true)
     }

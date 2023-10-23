@@ -32,8 +32,8 @@ class AccountViewModel {
 
     private var appointments = [Appointment]() {
         didSet {
-            if conflictingAppointments.count != 0 {
-                displayDelegate?.dispayAlert(self, message: "У Вас есть конфликтующие записи.")
+            if conflictingAppointments.count != 0 || debugMode {
+                displayDelegate?.dispayAlert(self, message: "Nailit.conflictingAppointmentsAlert".localized)
             }
         }
     }
