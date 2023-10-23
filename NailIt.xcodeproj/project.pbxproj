@@ -1,0 +1,1209 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		597B8A6D1B37C8C0AD65A750 /* Pods_NailItDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C35A09A951BCA2A0FE4137B1 /* Pods_NailItDemo.framework */; };
+		7F90B4874E537FA82D6B06D0 /* Pods_NailIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C15CF013F9497562A5E896B8 /* Pods_NailIt.framework */; };
+		AF03F7E12952231F00844E37 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03F7DF2952231F00844E37 /* AppointmentViewController.swift */; };
+		AF03F7E22952231F00844E37 /* AppointmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF03F7E02952231F00844E37 /* AppointmentViewController.xib */; };
+		AF03F7E42952232A00844E37 /* AppointmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03F7E32952232A00844E37 /* AppointmentViewModel.swift */; };
+		AF1BF6472AE63F4300DDDDE5 /* DebugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BF6462AE63F4300DDDDE5 /* DebugData.swift */; };
+		AF1BF6482AE63FAD00DDDDE5 /* DebugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BF6462AE63F4300DDDDE5 /* DebugData.swift */; };
+		AF4DDD51294A3289000B21DD /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD3F294A3288000B21DD /* Montserrat-Light.ttf */; };
+		AF4DDD52294A3289000B21DD /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD40294A3289000B21DD /* Montserrat-Thin.ttf */; };
+		AF4DDD53294A3289000B21DD /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD41294A3289000B21DD /* Montserrat-Bold.ttf */; };
+		AF4DDD54294A3289000B21DD /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD42294A3289000B21DD /* Montserrat-Italic.ttf */; };
+		AF4DDD55294A3289000B21DD /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD43294A3289000B21DD /* Montserrat-BoldItalic.ttf */; };
+		AF4DDD56294A3289000B21DD /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD44294A3289000B21DD /* Montserrat-Regular.ttf */; };
+		AF4DDD57294A3289000B21DD /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD45294A3289000B21DD /* Montserrat-Medium.ttf */; };
+		AF4DDD58294A3289000B21DD /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD46294A3289000B21DD /* Montserrat-ExtraLightItalic.ttf */; };
+		AF4DDD59294A3289000B21DD /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD47294A3289000B21DD /* Montserrat-ThinItalic.ttf */; };
+		AF4DDD5A294A3289000B21DD /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD48294A3289000B21DD /* Montserrat-ExtraLight.ttf */; };
+		AF4DDD5B294A3289000B21DD /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD49294A3289000B21DD /* Montserrat-MediumItalic.ttf */; };
+		AF4DDD5C294A3289000B21DD /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4A294A3289000B21DD /* Montserrat-LightItalic.ttf */; };
+		AF4DDD5D294A3289000B21DD /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4B294A3289000B21DD /* Montserrat-ExtraBold.ttf */; };
+		AF4DDD5E294A3289000B21DD /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4C294A3289000B21DD /* Montserrat-BlackItalic.ttf */; };
+		AF4DDD5F294A3289000B21DD /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4D294A3289000B21DD /* Montserrat-Black.ttf */; };
+		AF4DDD60294A3289000B21DD /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4E294A3289000B21DD /* Montserrat-ExtraBoldItalic.ttf */; };
+		AF4DDD61294A3289000B21DD /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4F294A3289000B21DD /* Montserrat-SemiBold.ttf */; };
+		AF4DDD62294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD50294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf */; };
+		AF4DDD65294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD63294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf */; };
+		AF4DDD66294A329C000B21DD /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD64294A329C000B21DD /* Montserrat-VariableFont_wght.ttf */; };
+		AF4DDD6A294A3D0F000B21DD /* SalonCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */; };
+		AF4DDD6B294A3D0F000B21DD /* SalonCatalogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */; };
+		AF4DDD6F294A3D44000B21DD /* NailItTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD6D294A3D44000B21DD /* NailItTableViewCell.swift */; };
+		AF4DDD70294A3D44000B21DD /* NailItTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD6E294A3D44000B21DD /* NailItTableViewCell.xib */; };
+		AF4DDD72294A3D54000B21DD /* SalonCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */; };
+		AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385BF292150EA005851B4 /* AppDelegate.swift */; };
+		AF6385CC292150EC005851B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6385CB292150EC005851B4 /* Assets.xcassets */; };
+		AF7663D429584FDA00517409 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D229584FDA00517409 /* MasterTableViewCell.swift */; };
+		AF7663D529584FDA00517409 /* MasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7663D329584FDA00517409 /* MasterTableViewCell.xib */; };
+		AF7663D72958738500517409 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D62958738500517409 /* LocationService.swift */; };
+		AF7663D929589EE700517409 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D829589EE700517409 /* String+Date.swift */; };
+		AF802DA1294ED0AF0087DA0D /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */; };
+		AF802DA3294ED12D0087DA0D /* NIAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA2294ED12D0087DA0D /* NIAppearance.swift */; };
+		AF802DA5294ED4030087DA0D /* UISearchbar+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */; };
+		AF802DA9294EDB6C0087DA0D /* SalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA7294EDB6C0087DA0D /* SalonViewController.swift */; };
+		AF802DAA294EDB6C0087DA0D /* SalonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DA8294EDB6C0087DA0D /* SalonViewController.xib */; };
+		AF802DAC294EDD840087DA0D /* SalonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DAB294EDD840087DA0D /* SalonViewModel.swift */; };
+		AF802DB2294F36850087DA0D /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB0294F36850087DA0D /* AccountViewController.swift */; };
+		AF802DB3294F36850087DA0D /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DB1294F36850087DA0D /* AccountViewController.xib */; };
+		AF802DB5294F36930087DA0D /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB4294F36930087DA0D /* AccountViewModel.swift */; };
+		AF802DB9294F47420087DA0D /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */; };
+		AF802DBA294F47420087DA0D /* AppointmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */; };
+		AF94B17A2955DD5400B34ACF /* UILabel+DynamicHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF94B1792955DD5400B34ACF /* UILabel+DynamicHeight.swift */; };
+		AF9B6DCA2ADEED310027E0A2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AF9B6DC92ADEED310027E0A2 /* Localizable.xcstrings */; };
+		AF9B6DCB2ADEED310027E0A2 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = AF9B6DC92ADEED310027E0A2 /* Localizable.xcstrings */; };
+		AF9B6DCD2ADEF15C0027E0A2 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B6DCC2ADEF15C0027E0A2 /* Localizable.swift */; };
+		AF9B6DCE2ADEF15C0027E0A2 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9B6DCC2ADEF15C0027E0A2 /* Localizable.swift */; };
+		AFA01E302ABB436E0018D39D /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */; };
+		AFA2940229476ECC00F699A6 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2940129476ECC00F699A6 /* Collection+Safe.swift */; };
+		AFD3D2B82ABC387500B5CE56 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3D2B72ABC387500B5CE56 /* Credentials.swift */; };
+		AFD3D2BC2ABC389F00B5CE56 /* String+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D829589EE700517409 /* String+Date.swift */; };
+		AFD3D2BD2ABC389F00B5CE56 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E762921586D0083764C /* RootCoordinator.swift */; };
+		AFD3D2BE2ABC389F00B5CE56 /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7D292159100083764C /* Encodable.swift */; };
+		AFD3D2BF2ABC389F00B5CE56 /* SalonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DAB294EDD840087DA0D /* SalonViewModel.swift */; };
+		AFD3D2C02ABC389F00B5CE56 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E772921586D0083764C /* Coordinator.swift */; };
+		AFD3D2C12ABC389F00B5CE56 /* AppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */; };
+		AFD3D2C22ABC389F00B5CE56 /* UISearchbar+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */; };
+		AFD3D2C32ABC389F00B5CE56 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E8D292159430083764C /* SignUpViewModel.swift */; };
+		AFD3D2C42ABC389F00B5CE56 /* Collection+Safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA2940129476ECC00F699A6 /* Collection+Safe.swift */; };
+		AFD3D2C52ABC389F00B5CE56 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F3293336CD00063168 /* Response.swift */; };
+		AFD3D2C62ABC389F00B5CE56 /* NIAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA2294ED12D0087DA0D /* NIAppearance.swift */; };
+		AFD3D2C72ABC389F00B5CE56 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23EE293333AA00063168 /* NetworkService.swift */; };
+		AFD3D2C82ABC389F00B5CE56 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */; };
+		AFD3D2C92ABC389F00B5CE56 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23EC2933339B00063168 /* Interactor.swift */; };
+		AFD3D2CA2ABC389F00B5CE56 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7F292159100083764C /* NetworkError.swift */; };
+		AFD3D2CB2ABC389F00B5CE56 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB4294F36930087DA0D /* AccountViewModel.swift */; };
+		AFD3D2CC2ABC389F00B5CE56 /* NailItProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F02933349000063168 /* NailItProvider.swift */; };
+		AFD3D2CD2ABC389F00B5CE56 /* UIViewController+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7E292159100083764C /* UIViewController+Nib.swift */; };
+		AFD3D2CE2ABC389F00B5CE56 /* SalonCatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */; };
+		AFD3D2CF2ABC389F00B5CE56 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03F7DF2952231F00844E37 /* AppointmentViewController.swift */; };
+		AFD3D2D02ABC389F00B5CE56 /* AppointmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03F7E32952232A00844E37 /* AppointmentViewModel.swift */; };
+		AFD3D2D12ABC389F00B5CE56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6385BF292150EA005851B4 /* AppDelegate.swift */; };
+		AFD3D2D22ABC389F00B5CE56 /* UIToolbar+ToolbarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E80292159100083764C /* UIToolbar+ToolbarPicker.swift */; };
+		AFD3D2D32ABC389F00B5CE56 /* SalonCatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */; };
+		AFD3D2D42ABC389F00B5CE56 /* NailItTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DDD6D294A3D44000B21DD /* NailItTableViewCell.swift */; };
+		AFD3D2D52ABC389F00B5CE56 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E92292159430083764C /* SignInViewController.swift */; };
+		AFD3D2D62ABC389F00B5CE56 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E8C292159430083764C /* SignUpViewController.swift */; };
+		AFD3D2D72ABC389F00B5CE56 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E91292159430083764C /* SignInViewModel.swift */; };
+		AFD3D2D82ABC389F00B5CE56 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DB0294F36850087DA0D /* AccountViewController.swift */; };
+		AFD3D2D92ABC389F00B5CE56 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F6293345EF00063168 /* UserManager.swift */; };
+		AFD3D2DA2ABC389F00B5CE56 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD3D2B72ABC387500B5CE56 /* Credentials.swift */; };
+		AFD3D2DB2ABC389F00B5CE56 /* UILabel+DynamicHeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF94B1792955DD5400B34ACF /* UILabel+DynamicHeight.swift */; };
+		AFD3D2DC2ABC389F00B5CE56 /* SalonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF802DA7294EDB6C0087DA0D /* SalonViewController.swift */; };
+		AFD3D2DD2ABC389F00B5CE56 /* MasterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D229584FDA00517409 /* MasterTableViewCell.swift */; };
+		AFD3D2DE2ABC389F00B5CE56 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7663D62958738500517409 /* LocationService.swift */; };
+		AFD3D2DF2ABC389F00B5CE56 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F82933462F00063168 /* User.swift */; };
+		AFD3D2E32ABC389F00B5CE56 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */; };
+		AFD3D2E42ABC389F00B5CE56 /* Montserrat-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD49294A3289000B21DD /* Montserrat-MediumItalic.ttf */; };
+		AFD3D2E52ABC389F00B5CE56 /* Montserrat-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD43294A3289000B21DD /* Montserrat-BoldItalic.ttf */; };
+		AFD3D2E62ABC389F00B5CE56 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD45294A3289000B21DD /* Montserrat-Medium.ttf */; };
+		AFD3D2E72ABC389F00B5CE56 /* Montserrat-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4C294A3289000B21DD /* Montserrat-BlackItalic.ttf */; };
+		AFD3D2E82ABC389F00B5CE56 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD40294A3289000B21DD /* Montserrat-Thin.ttf */; };
+		AFD3D2E92ABC389F00B5CE56 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD44294A3289000B21DD /* Montserrat-Regular.ttf */; };
+		AFD3D2EA2ABC389F00B5CE56 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD50294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf */; };
+		AFD3D2EB2ABC389F00B5CE56 /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFA8E90292159430083764C /* SignInViewController.xib */; };
+		AFD3D2EC2ABC389F00B5CE56 /* Montserrat-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD42294A3289000B21DD /* Montserrat-Italic.ttf */; };
+		AFD3D2ED2ABC389F00B5CE56 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4F294A3289000B21DD /* Montserrat-SemiBold.ttf */; };
+		AFD3D2EE2ABC389F00B5CE56 /* Montserrat-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4E294A3289000B21DD /* Montserrat-ExtraBoldItalic.ttf */; };
+		AFD3D2EF2ABC389F00B5CE56 /* Montserrat-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4A294A3289000B21DD /* Montserrat-LightItalic.ttf */; };
+		AFD3D2F02ABC389F00B5CE56 /* AppointmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF03F7E02952231F00844E37 /* AppointmentViewController.xib */; };
+		AFD3D2F12ABC389F00B5CE56 /* SalonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DA8294EDB6C0087DA0D /* SalonViewController.xib */; };
+		AFD3D2F22ABC389F00B5CE56 /* Montserrat-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4D294A3289000B21DD /* Montserrat-Black.ttf */; };
+		AFD3D2F32ABC389F00B5CE56 /* SalonCatalogViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */; };
+		AFD3D2F42ABC389F00B5CE56 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD3F294A3288000B21DD /* Montserrat-Light.ttf */; };
+		AFD3D2F52ABC389F00B5CE56 /* AppointmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */; };
+		AFD3D2F62ABC389F00B5CE56 /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD64294A329C000B21DD /* Montserrat-VariableFont_wght.ttf */; };
+		AFD3D2F72ABC389F00B5CE56 /* MasterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7663D329584FDA00517409 /* MasterTableViewCell.xib */; };
+		AFD3D2F82ABC389F00B5CE56 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD47294A3289000B21DD /* Montserrat-ThinItalic.ttf */; };
+		AFD3D2F92ABC389F00B5CE56 /* NailItTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD6E294A3D44000B21DD /* NailItTableViewCell.xib */; };
+		AFD3D2FA2ABC389F00B5CE56 /* Montserrat-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD46294A3289000B21DD /* Montserrat-ExtraLightItalic.ttf */; };
+		AFD3D2FB2ABC389F00B5CE56 /* Montserrat-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD48294A3289000B21DD /* Montserrat-ExtraLight.ttf */; };
+		AFD3D2FC2ABC389F00B5CE56 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF802DB1294F36850087DA0D /* AccountViewController.xib */; };
+		AFD3D2FD2ABC389F00B5CE56 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD63294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf */; };
+		AFD3D2FE2ABC389F00B5CE56 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFA8E8E292159430083764C /* SignUpViewController.xib */; };
+		AFD3D2FF2ABC389F00B5CE56 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD41294A3289000B21DD /* Montserrat-Bold.ttf */; };
+		AFD3D3002ABC389F00B5CE56 /* Montserrat-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD4B294A3289000B21DD /* Montserrat-ExtraBold.ttf */; };
+		AFD3D3012ABC389F00B5CE56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6385CB292150EC005851B4 /* Assets.xcassets */; };
+		AFF99DD22AE043670046FCD1 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF99DD12AE043670046FCD1 /* UIFont.swift */; };
+		AFF99DD32AE043D70046FCD1 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF99DD12AE043670046FCD1 /* UIFont.swift */; };
+		AFFA8E782921586D0083764C /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E762921586D0083764C /* RootCoordinator.swift */; };
+		AFFA8E792921586D0083764C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E772921586D0083764C /* Coordinator.swift */; };
+		AFFA8E82292159100083764C /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7D292159100083764C /* Encodable.swift */; };
+		AFFA8E83292159100083764C /* UIViewController+Nib.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7E292159100083764C /* UIViewController+Nib.swift */; };
+		AFFA8E84292159100083764C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E7F292159100083764C /* NetworkError.swift */; };
+		AFFA8E85292159100083764C /* UIToolbar+ToolbarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E80292159100083764C /* UIToolbar+ToolbarPicker.swift */; };
+		AFFA8E9C292159430083764C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E8C292159430083764C /* SignUpViewController.swift */; };
+		AFFA8E9D292159430083764C /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E8D292159430083764C /* SignUpViewModel.swift */; };
+		AFFA8E9E292159430083764C /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFA8E8E292159430083764C /* SignUpViewController.xib */; };
+		AFFA8E9F292159430083764C /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFA8E90292159430083764C /* SignInViewController.xib */; };
+		AFFA8EA0292159430083764C /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E91292159430083764C /* SignInViewModel.swift */; };
+		AFFA8EA1292159430083764C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFA8E92292159430083764C /* SignInViewController.swift */; };
+		AFFE23ED2933339B00063168 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23EC2933339B00063168 /* Interactor.swift */; };
+		AFFE23EF293333AA00063168 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23EE293333AA00063168 /* NetworkService.swift */; };
+		AFFE23F12933349000063168 /* NailItProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F02933349000063168 /* NailItProvider.swift */; };
+		AFFE23F4293336CD00063168 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F3293336CD00063168 /* Response.swift */; };
+		AFFE23F7293345EF00063168 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F6293345EF00063168 /* UserManager.swift */; };
+		AFFE23F92933462F00063168 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFE23F82933462F00063168 /* User.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		01DF7E32E14E3567016A04F2 /* Pods-NailIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailIt.release.xcconfig"; path = "Target Support Files/Pods-NailIt/Pods-NailIt.release.xcconfig"; sourceTree = "<group>"; };
+		63AADF06512C11B6CC7F8E7E /* Pods-NailIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailIt.debug.xcconfig"; path = "Target Support Files/Pods-NailIt/Pods-NailIt.debug.xcconfig"; sourceTree = "<group>"; };
+		AC4A29C1760ABF912A9213B6 /* Pods-NailItDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailItDemo.release.xcconfig"; path = "Target Support Files/Pods-NailItDemo/Pods-NailItDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AF03F7DF2952231F00844E37 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
+		AF03F7E02952231F00844E37 /* AppointmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentViewController.xib; sourceTree = "<group>"; };
+		AF03F7E32952232A00844E37 /* AppointmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewModel.swift; sourceTree = "<group>"; };
+		AF1BF6462AE63F4300DDDDE5 /* DebugData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugData.swift; sourceTree = "<group>"; };
+		AF4DDD3F294A3288000B21DD /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		AF4DDD40294A3289000B21DD /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
+		AF4DDD41294A3289000B21DD /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		AF4DDD42294A3289000B21DD /* Montserrat-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic.ttf"; sourceTree = "<group>"; };
+		AF4DDD43294A3289000B21DD /* Montserrat-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BoldItalic.ttf"; sourceTree = "<group>"; };
+		AF4DDD44294A3289000B21DD /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		AF4DDD45294A3289000B21DD /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		AF4DDD46294A3289000B21DD /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		AF4DDD47294A3289000B21DD /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; };
+		AF4DDD48294A3289000B21DD /* Montserrat-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraLight.ttf"; sourceTree = "<group>"; };
+		AF4DDD49294A3289000B21DD /* Montserrat-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-MediumItalic.ttf"; sourceTree = "<group>"; };
+		AF4DDD4A294A3289000B21DD /* Montserrat-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-LightItalic.ttf"; sourceTree = "<group>"; };
+		AF4DDD4B294A3289000B21DD /* Montserrat-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBold.ttf"; sourceTree = "<group>"; };
+		AF4DDD4C294A3289000B21DD /* Montserrat-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-BlackItalic.ttf"; sourceTree = "<group>"; };
+		AF4DDD4D294A3289000B21DD /* Montserrat-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.ttf"; sourceTree = "<group>"; };
+		AF4DDD4E294A3289000B21DD /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		AF4DDD4F294A3289000B21DD /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		AF4DDD50294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		AF4DDD63294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		AF4DDD64294A329C000B21DD /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonCatalogViewController.swift; sourceTree = "<group>"; };
+		AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalonCatalogViewController.xib; sourceTree = "<group>"; };
+		AF4DDD6D294A3D44000B21DD /* NailItTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItTableViewCell.swift; sourceTree = "<group>"; };
+		AF4DDD6E294A3D44000B21DD /* NailItTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NailItTableViewCell.xib; sourceTree = "<group>"; };
+		AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonCatalogViewModel.swift; sourceTree = "<group>"; };
+		AF56AA812ADD76B20033A372 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF56AA832ADD76BB0033A372 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF6385BC292150EA005851B4 /* NailIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NailIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF6385BF292150EA005851B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AF6385CB292150EC005851B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AF6385D0292150EC005851B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF7663D229584FDA00517409 /* MasterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewCell.swift; sourceTree = "<group>"; };
+		AF7663D329584FDA00517409 /* MasterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MasterTableViewCell.xib; sourceTree = "<group>"; };
+		AF7663D62958738500517409 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		AF7663D829589EE700517409 /* String+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Date.swift"; sourceTree = "<group>"; };
+		AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		AF802DA2294ED12D0087DA0D /* NIAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NIAppearance.swift; sourceTree = "<group>"; };
+		AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchbar+Color.swift"; sourceTree = "<group>"; };
+		AF802DA7294EDB6C0087DA0D /* SalonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonViewController.swift; sourceTree = "<group>"; };
+		AF802DA8294EDB6C0087DA0D /* SalonViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SalonViewController.xib; sourceTree = "<group>"; };
+		AF802DAB294EDD840087DA0D /* SalonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonViewModel.swift; sourceTree = "<group>"; };
+		AF802DB0294F36850087DA0D /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AF802DB1294F36850087DA0D /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		AF802DB4294F36930087DA0D /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentTableViewCell.swift; sourceTree = "<group>"; };
+		AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentTableViewCell.xib; sourceTree = "<group>"; };
+		AF94B1792955DD5400B34ACF /* UILabel+DynamicHeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DynamicHeight.swift"; sourceTree = "<group>"; };
+		AF9B6DC92ADEED310027E0A2 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; name = Localizable.xcstrings; path = NailIt/Localizable.xcstrings; sourceTree = "<group>"; };
+		AF9B6DCC2ADEF15C0027E0A2 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		AFA2940129476ECC00F699A6 /* Collection+Safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Safe.swift"; sourceTree = "<group>"; };
+		AFD3D2B72ABC387500B5CE56 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		AFD3D3072ABC389F00B5CE56 /* NailItDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NailItDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF99DD12AE043670046FCD1 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		AFFA8E762921586D0083764C /* RootCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		AFFA8E772921586D0083764C /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AFFA8E7D292159100083764C /* Encodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+		AFFA8E7E292159100083764C /* UIViewController+Nib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Nib.swift"; sourceTree = "<group>"; };
+		AFFA8E7F292159100083764C /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		AFFA8E80292159100083764C /* UIToolbar+ToolbarPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIToolbar+ToolbarPicker.swift"; sourceTree = "<group>"; };
+		AFFA8E8C292159430083764C /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		AFFA8E8D292159430083764C /* SignUpViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		AFFA8E8E292159430083764C /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		AFFA8E90292159430083764C /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInViewController.xib; sourceTree = "<group>"; };
+		AFFA8E91292159430083764C /* SignInViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		AFFA8E92292159430083764C /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		AFFE23EC2933339B00063168 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		AFFE23EE293333AA00063168 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		AFFE23F02933349000063168 /* NailItProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NailItProvider.swift; sourceTree = "<group>"; };
+		AFFE23F3293336CD00063168 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		AFFE23F6293345EF00063168 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		AFFE23F82933462F00063168 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		C15CF013F9497562A5E896B8 /* Pods_NailIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NailIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C35A09A951BCA2A0FE4137B1 /* Pods_NailItDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NailItDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC9D25CD1A9CEDA78CBB227 /* Pods-NailItDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NailItDemo.debug.xcconfig"; path = "Target Support Files/Pods-NailItDemo/Pods-NailItDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AF6385B9292150EA005851B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F90B4874E537FA82D6B06D0 /* Pods_NailIt.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD3D2E02ABC389F00B5CE56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				597B8A6D1B37C8C0AD65A750 /* Pods_NailItDemo.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A2174E9C286E3CD638C62A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF56AA832ADD76BB0033A372 /* Alamofire.framework */,
+				AF56AA812ADD76B20033A372 /* Alamofire.framework */,
+				C15CF013F9497562A5E896B8 /* Pods_NailIt.framework */,
+				C35A09A951BCA2A0FE4137B1 /* Pods_NailItDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF03F7DE295222D300844E37 /* AppointmnentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF7663D129584FBB00517409 /* MasterTableViewCell */,
+				AF03F7DF2952231F00844E37 /* AppointmentViewController.swift */,
+				AF03F7E02952231F00844E37 /* AppointmentViewController.xib */,
+				AF03F7E32952232A00844E37 /* AppointmentViewModel.swift */,
+			);
+			path = AppointmnentViewController;
+			sourceTree = "<group>";
+		};
+		AF4DDD3C294A3246000B21DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF6385CB292150EC005851B4 /* Assets.xcassets */,
+				AF4DDD3D294A3257000B21DD /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AF4DDD3D294A3257000B21DD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AF4DDD3E294A325D000B21DD /* Montserrat */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		AF4DDD3E294A325D000B21DD /* Montserrat */ = {
+			isa = PBXGroup;
+			children = (
+				AF4DDD4D294A3289000B21DD /* Montserrat-Black.ttf */,
+				AF4DDD4C294A3289000B21DD /* Montserrat-BlackItalic.ttf */,
+				AF4DDD41294A3289000B21DD /* Montserrat-Bold.ttf */,
+				AF4DDD43294A3289000B21DD /* Montserrat-BoldItalic.ttf */,
+				AF4DDD4B294A3289000B21DD /* Montserrat-ExtraBold.ttf */,
+				AF4DDD4E294A3289000B21DD /* Montserrat-ExtraBoldItalic.ttf */,
+				AF4DDD48294A3289000B21DD /* Montserrat-ExtraLight.ttf */,
+				AF4DDD46294A3289000B21DD /* Montserrat-ExtraLightItalic.ttf */,
+				AF4DDD42294A3289000B21DD /* Montserrat-Italic.ttf */,
+				AF4DDD3F294A3288000B21DD /* Montserrat-Light.ttf */,
+				AF4DDD63294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf */,
+				AF4DDD64294A329C000B21DD /* Montserrat-VariableFont_wght.ttf */,
+				AF4DDD4A294A3289000B21DD /* Montserrat-LightItalic.ttf */,
+				AF4DDD45294A3289000B21DD /* Montserrat-Medium.ttf */,
+				AF4DDD49294A3289000B21DD /* Montserrat-MediumItalic.ttf */,
+				AF4DDD44294A3289000B21DD /* Montserrat-Regular.ttf */,
+				AF4DDD4F294A3289000B21DD /* Montserrat-SemiBold.ttf */,
+				AF4DDD50294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf */,
+				AF4DDD40294A3289000B21DD /* Montserrat-Thin.ttf */,
+				AF4DDD47294A3289000B21DD /* Montserrat-ThinItalic.ttf */,
+			);
+			path = Montserrat;
+			sourceTree = "<group>";
+		};
+		AF4DDD67294A3CF1000B21DD /* SalonCatalogFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBCB802ADD8B28000F30DB /* SalonCatalogViewController */,
+				AF802DA6294EDB540087DA0D /* SalonViewController */,
+			);
+			path = SalonCatalogFlow;
+			sourceTree = "<group>";
+		};
+		AF4DDD6C294A3D17000B21DD /* NailItTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF4DDD6D294A3D44000B21DD /* NailItTableViewCell.swift */,
+				AF4DDD6E294A3D44000B21DD /* NailItTableViewCell.xib */,
+			);
+			path = NailItTableViewCell;
+			sourceTree = "<group>";
+		};
+		AF6385B3292150EA005851B4 = {
+			isa = PBXGroup;
+			children = (
+				AF9B6DC92ADEED310027E0A2 /* Localizable.xcstrings */,
+				AFA01E2F2ABB436E0018D39D /* .swiftlint.yml */,
+				AF6385BE292150EA005851B4 /* NailIt */,
+				AF6385BD292150EA005851B4 /* Products */,
+				FD7138EAE199BC012EE26E0B /* Pods */,
+				0A2174E9C286E3CD638C62A7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AF6385BD292150EA005851B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF6385BC292150EA005851B4 /* NailIt.app */,
+				AFD3D3072ABC389F00B5CE56 /* NailItDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AF6385BE292150EA005851B4 /* NailIt */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBCB7C2ADD8A87000F30DB /* FLows */,
+				AFEBCB7F2ADD8B15000F30DB /* Views */,
+				AFFE23F2293336C500063168 /* Models */,
+				AFFE23EB2933338E00063168 /* Services */,
+				AFFA8E7B292159100083764C /* Extensions */,
+				AF4DDD3C294A3246000B21DD /* Resources */,
+				AF6385BF292150EA005851B4 /* AppDelegate.swift */,
+				AF6385D0292150EC005851B4 /* Info.plist */,
+			);
+			path = NailIt;
+			sourceTree = "<group>";
+		};
+		AF7663D129584FBB00517409 /* MasterTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF7663D229584FDA00517409 /* MasterTableViewCell.swift */,
+				AF7663D329584FDA00517409 /* MasterTableViewCell.xib */,
+			);
+			path = MasterTableViewCell;
+			sourceTree = "<group>";
+		};
+		AF802DA6294EDB540087DA0D /* SalonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF802DA7294EDB6C0087DA0D /* SalonViewController.swift */,
+				AF802DA8294EDB6C0087DA0D /* SalonViewController.xib */,
+				AF802DAB294EDD840087DA0D /* SalonViewModel.swift */,
+			);
+			path = SalonViewController;
+			sourceTree = "<group>";
+		};
+		AF802DAF294F365F0087DA0D /* AccountFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBCB812ADD8B41000F30DB /* AccountViewController */,
+			);
+			path = AccountFlow;
+			sourceTree = "<group>";
+		};
+		AF802DB6294F47270087DA0D /* AccountTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AF802DB7294F47420087DA0D /* AppointmentTableViewCell.swift */,
+				AF802DB8294F47420087DA0D /* AppointmentTableViewCell.xib */,
+			);
+			path = AccountTableViewCell;
+			sourceTree = "<group>";
+		};
+		AFEBCB7C2ADD8A87000F30DB /* FLows */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA8E762921586D0083764C /* RootCoordinator.swift */,
+				AFEBCB842ADD8B98000F30DB /* AppointmnentFlow */,
+				AF4DDD67294A3CF1000B21DD /* SalonCatalogFlow */,
+				AF802DAF294F365F0087DA0D /* AccountFlow */,
+				AFEBCB7E2ADD8ABA000F30DB /* SignUpFlow */,
+				AFEBCB7D2ADD8A90000F30DB /* SignInFlow */,
+			);
+			path = FLows;
+			sourceTree = "<group>";
+		};
+		AFEBCB7D2ADD8A90000F30DB /* SignInFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBCB832ADD8B6E000F30DB /* SignInViewController */,
+			);
+			path = SignInFlow;
+			sourceTree = "<group>";
+		};
+		AFEBCB7E2ADD8ABA000F30DB /* SignUpFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AFEBCB822ADD8B58000F30DB /* SignUpViewController */,
+			);
+			path = SignUpFlow;
+			sourceTree = "<group>";
+		};
+		AFEBCB7F2ADD8B15000F30DB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF4DDD6C294A3D17000B21DD /* NailItTableViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AFEBCB802ADD8B28000F30DB /* SalonCatalogViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF4DDD68294A3D0F000B21DD /* SalonCatalogViewController.swift */,
+				AF4DDD69294A3D0F000B21DD /* SalonCatalogViewController.xib */,
+				AF4DDD71294A3D54000B21DD /* SalonCatalogViewModel.swift */,
+			);
+			path = SalonCatalogViewController;
+			sourceTree = "<group>";
+		};
+		AFEBCB812ADD8B41000F30DB /* AccountViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AF802DB6294F47270087DA0D /* AccountTableViewCell */,
+				AF802DB0294F36850087DA0D /* AccountViewController.swift */,
+				AF802DB1294F36850087DA0D /* AccountViewController.xib */,
+				AF802DB4294F36930087DA0D /* AccountViewModel.swift */,
+			);
+			path = AccountViewController;
+			sourceTree = "<group>";
+		};
+		AFEBCB822ADD8B58000F30DB /* SignUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA8E8C292159430083764C /* SignUpViewController.swift */,
+				AFFA8E8D292159430083764C /* SignUpViewModel.swift */,
+				AFFA8E8E292159430083764C /* SignUpViewController.xib */,
+			);
+			path = SignUpViewController;
+			sourceTree = "<group>";
+		};
+		AFEBCB832ADD8B6E000F30DB /* SignInViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA8E90292159430083764C /* SignInViewController.xib */,
+				AFFA8E91292159430083764C /* SignInViewModel.swift */,
+				AFFA8E92292159430083764C /* SignInViewController.swift */,
+			);
+			path = SignInViewController;
+			sourceTree = "<group>";
+		};
+		AFEBCB842ADD8B98000F30DB /* AppointmnentFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AF03F7DE295222D300844E37 /* AppointmnentViewController */,
+			);
+			path = AppointmnentFlow;
+			sourceTree = "<group>";
+		};
+		AFFA8E7B292159100083764C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFFA8E772921586D0083764C /* Coordinator.swift */,
+				AFFA8E7D292159100083764C /* Encodable.swift */,
+				AFFA8E7E292159100083764C /* UIViewController+Nib.swift */,
+				AFFA8E7F292159100083764C /* NetworkError.swift */,
+				AFFA8E80292159100083764C /* UIToolbar+ToolbarPicker.swift */,
+				AFA2940129476ECC00F699A6 /* Collection+Safe.swift */,
+				AF802DA0294ED0AF0087DA0D /* UIColor+Hex.swift */,
+				AF802DA4294ED4030087DA0D /* UISearchbar+Color.swift */,
+				AF94B1792955DD5400B34ACF /* UILabel+DynamicHeight.swift */,
+				AF7663D829589EE700517409 /* String+Date.swift */,
+				AF9B6DCC2ADEF15C0027E0A2 /* Localizable.swift */,
+				AFF99DD12AE043670046FCD1 /* UIFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AFFE23EB2933338E00063168 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AF802DA2294ED12D0087DA0D /* NIAppearance.swift */,
+				AFFE23F6293345EF00063168 /* UserManager.swift */,
+				AFFE23EC2933339B00063168 /* Interactor.swift */,
+				AFFE23EE293333AA00063168 /* NetworkService.swift */,
+				AFFE23F02933349000063168 /* NailItProvider.swift */,
+				AF7663D62958738500517409 /* LocationService.swift */,
+				AFD3D2B72ABC387500B5CE56 /* Credentials.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AFFE23F2293336C500063168 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFFE23F3293336CD00063168 /* Response.swift */,
+				AFFE23F82933462F00063168 /* User.swift */,
+				AF1BF6462AE63F4300DDDDE5 /* DebugData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FD7138EAE199BC012EE26E0B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63AADF06512C11B6CC7F8E7E /* Pods-NailIt.debug.xcconfig */,
+				01DF7E32E14E3567016A04F2 /* Pods-NailIt.release.xcconfig */,
+				DBC9D25CD1A9CEDA78CBB227 /* Pods-NailItDemo.debug.xcconfig */,
+				AC4A29C1760ABF912A9213B6 /* Pods-NailItDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AF6385BB292150EA005851B4 /* NailIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF6385E9292150EC005851B4 /* Build configuration list for PBXNativeTarget "NailIt" */;
+			buildPhases = (
+				5A29761E8D3F2193B7C7230B /* [CP] Check Pods Manifest.lock */,
+				AF6385B8292150EA005851B4 /* Sources */,
+				AF6385B9292150EA005851B4 /* Frameworks */,
+				AF6385BA292150EA005851B4 /* Resources */,
+				AFFA8E7A292158920083764C /* ShellScript */,
+				EAC432EC69666C8A7740384E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NailIt;
+			productName = NailIt;
+			productReference = AF6385BC292150EA005851B4 /* NailIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AFD3D2B92ABC389F00B5CE56 /* NailItDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD3D3042ABC389F00B5CE56 /* Build configuration list for PBXNativeTarget "NailItDemo" */;
+			buildPhases = (
+				1791A3C090551D04A3FC0886 /* [CP] Check Pods Manifest.lock */,
+				AFD3D2BB2ABC389F00B5CE56 /* Sources */,
+				AFD3D2E02ABC389F00B5CE56 /* Frameworks */,
+				AFD3D2E22ABC389F00B5CE56 /* Resources */,
+				AFD3D3032ABC389F00B5CE56 /* ShellScript */,
+				92613A672F5947B356F2356C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NailItDemo;
+			productName = NailIt;
+			productReference = AFD3D3072ABC389F00B5CE56 /* NailItDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AF6385B4292150EA005851B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					AF6385BB292150EA005851B4 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = AF6385B7292150EA005851B4 /* Build configuration list for PBXProject "NailIt" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = AF6385B3292150EA005851B4;
+			productRefGroup = AF6385BD292150EA005851B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AF6385BB292150EA005851B4 /* NailIt */,
+				AFD3D2B92ABC389F00B5CE56 /* NailItDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AF6385BA292150EA005851B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFA01E302ABB436E0018D39D /* .swiftlint.yml in Resources */,
+				AF4DDD5B294A3289000B21DD /* Montserrat-MediumItalic.ttf in Resources */,
+				AF4DDD55294A3289000B21DD /* Montserrat-BoldItalic.ttf in Resources */,
+				AF4DDD57294A3289000B21DD /* Montserrat-Medium.ttf in Resources */,
+				AF4DDD5E294A3289000B21DD /* Montserrat-BlackItalic.ttf in Resources */,
+				AF4DDD52294A3289000B21DD /* Montserrat-Thin.ttf in Resources */,
+				AF4DDD56294A3289000B21DD /* Montserrat-Regular.ttf in Resources */,
+				AF4DDD62294A3289000B21DD /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				AFFA8E9F292159430083764C /* SignInViewController.xib in Resources */,
+				AF4DDD54294A3289000B21DD /* Montserrat-Italic.ttf in Resources */,
+				AF9B6DCA2ADEED310027E0A2 /* Localizable.xcstrings in Resources */,
+				AF4DDD61294A3289000B21DD /* Montserrat-SemiBold.ttf in Resources */,
+				AF4DDD60294A3289000B21DD /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				AF4DDD5C294A3289000B21DD /* Montserrat-LightItalic.ttf in Resources */,
+				AF03F7E22952231F00844E37 /* AppointmentViewController.xib in Resources */,
+				AF802DAA294EDB6C0087DA0D /* SalonViewController.xib in Resources */,
+				AF4DDD5F294A3289000B21DD /* Montserrat-Black.ttf in Resources */,
+				AF4DDD6B294A3D0F000B21DD /* SalonCatalogViewController.xib in Resources */,
+				AF4DDD51294A3289000B21DD /* Montserrat-Light.ttf in Resources */,
+				AF802DBA294F47420087DA0D /* AppointmentTableViewCell.xib in Resources */,
+				AF4DDD66294A329C000B21DD /* Montserrat-VariableFont_wght.ttf in Resources */,
+				AF7663D529584FDA00517409 /* MasterTableViewCell.xib in Resources */,
+				AF4DDD59294A3289000B21DD /* Montserrat-ThinItalic.ttf in Resources */,
+				AF4DDD70294A3D44000B21DD /* NailItTableViewCell.xib in Resources */,
+				AF4DDD58294A3289000B21DD /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				AF4DDD5A294A3289000B21DD /* Montserrat-ExtraLight.ttf in Resources */,
+				AF802DB3294F36850087DA0D /* AccountViewController.xib in Resources */,
+				AF4DDD65294A329C000B21DD /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
+				AFFA8E9E292159430083764C /* SignUpViewController.xib in Resources */,
+				AF4DDD53294A3289000B21DD /* Montserrat-Bold.ttf in Resources */,
+				AF4DDD5D294A3289000B21DD /* Montserrat-ExtraBold.ttf in Resources */,
+				AF6385CC292150EC005851B4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD3D2E22ABC389F00B5CE56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD3D2E32ABC389F00B5CE56 /* .swiftlint.yml in Resources */,
+				AFD3D2E42ABC389F00B5CE56 /* Montserrat-MediumItalic.ttf in Resources */,
+				AFD3D2E52ABC389F00B5CE56 /* Montserrat-BoldItalic.ttf in Resources */,
+				AFD3D2E62ABC389F00B5CE56 /* Montserrat-Medium.ttf in Resources */,
+				AFD3D2E72ABC389F00B5CE56 /* Montserrat-BlackItalic.ttf in Resources */,
+				AFD3D2E82ABC389F00B5CE56 /* Montserrat-Thin.ttf in Resources */,
+				AFD3D2E92ABC389F00B5CE56 /* Montserrat-Regular.ttf in Resources */,
+				AFD3D2EA2ABC389F00B5CE56 /* Montserrat-SemiBoldItalic.ttf in Resources */,
+				AFD3D2EB2ABC389F00B5CE56 /* SignInViewController.xib in Resources */,
+				AFD3D2EC2ABC389F00B5CE56 /* Montserrat-Italic.ttf in Resources */,
+				AF9B6DCB2ADEED310027E0A2 /* Localizable.xcstrings in Resources */,
+				AFD3D2ED2ABC389F00B5CE56 /* Montserrat-SemiBold.ttf in Resources */,
+				AFD3D2EE2ABC389F00B5CE56 /* Montserrat-ExtraBoldItalic.ttf in Resources */,
+				AFD3D2EF2ABC389F00B5CE56 /* Montserrat-LightItalic.ttf in Resources */,
+				AFD3D2F02ABC389F00B5CE56 /* AppointmentViewController.xib in Resources */,
+				AFD3D2F12ABC389F00B5CE56 /* SalonViewController.xib in Resources */,
+				AFD3D2F22ABC389F00B5CE56 /* Montserrat-Black.ttf in Resources */,
+				AFD3D2F32ABC389F00B5CE56 /* SalonCatalogViewController.xib in Resources */,
+				AFD3D2F42ABC389F00B5CE56 /* Montserrat-Light.ttf in Resources */,
+				AFD3D2F52ABC389F00B5CE56 /* AppointmentTableViewCell.xib in Resources */,
+				AFD3D2F62ABC389F00B5CE56 /* Montserrat-VariableFont_wght.ttf in Resources */,
+				AFD3D2F72ABC389F00B5CE56 /* MasterTableViewCell.xib in Resources */,
+				AFD3D2F82ABC389F00B5CE56 /* Montserrat-ThinItalic.ttf in Resources */,
+				AFD3D2F92ABC389F00B5CE56 /* NailItTableViewCell.xib in Resources */,
+				AFD3D2FA2ABC389F00B5CE56 /* Montserrat-ExtraLightItalic.ttf in Resources */,
+				AFD3D2FB2ABC389F00B5CE56 /* Montserrat-ExtraLight.ttf in Resources */,
+				AFD3D2FC2ABC389F00B5CE56 /* AccountViewController.xib in Resources */,
+				AFD3D2FD2ABC389F00B5CE56 /* Montserrat-Italic-VariableFont_wght.ttf in Resources */,
+				AFD3D2FE2ABC389F00B5CE56 /* SignUpViewController.xib in Resources */,
+				AFD3D2FF2ABC389F00B5CE56 /* Montserrat-Bold.ttf in Resources */,
+				AFD3D3002ABC389F00B5CE56 /* Montserrat-ExtraBold.ttf in Resources */,
+				AFD3D3012ABC389F00B5CE56 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1791A3C090551D04A3FC0886 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NailItDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A29761E8D3F2193B7C7230B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NailIt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92613A672F5947B356F2356C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NailItDemo/Pods-NailItDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NailItDemo/Pods-NailItDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NailItDemo/Pods-NailItDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFD3D3032ABC389F00B5CE56 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		AFFA8E7A292158920083764C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		EAC432EC69666C8A7740384E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NailIt/Pods-NailIt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NailIt/Pods-NailIt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NailIt/Pods-NailIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AF6385B8292150EA005851B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7663D929589EE700517409 /* String+Date.swift in Sources */,
+				AFFA8E782921586D0083764C /* RootCoordinator.swift in Sources */,
+				AFFA8E82292159100083764C /* Encodable.swift in Sources */,
+				AF802DAC294EDD840087DA0D /* SalonViewModel.swift in Sources */,
+				AFFA8E792921586D0083764C /* Coordinator.swift in Sources */,
+				AF802DB9294F47420087DA0D /* AppointmentTableViewCell.swift in Sources */,
+				AF802DA5294ED4030087DA0D /* UISearchbar+Color.swift in Sources */,
+				AFFA8E9D292159430083764C /* SignUpViewModel.swift in Sources */,
+				AFA2940229476ECC00F699A6 /* Collection+Safe.swift in Sources */,
+				AFFE23F4293336CD00063168 /* Response.swift in Sources */,
+				AFF99DD22AE043670046FCD1 /* UIFont.swift in Sources */,
+				AF802DA3294ED12D0087DA0D /* NIAppearance.swift in Sources */,
+				AFFE23EF293333AA00063168 /* NetworkService.swift in Sources */,
+				AF802DA1294ED0AF0087DA0D /* UIColor+Hex.swift in Sources */,
+				AFFE23ED2933339B00063168 /* Interactor.swift in Sources */,
+				AFFA8E84292159100083764C /* NetworkError.swift in Sources */,
+				AF802DB5294F36930087DA0D /* AccountViewModel.swift in Sources */,
+				AFFE23F12933349000063168 /* NailItProvider.swift in Sources */,
+				AFFA8E83292159100083764C /* UIViewController+Nib.swift in Sources */,
+				AF4DDD6A294A3D0F000B21DD /* SalonCatalogViewController.swift in Sources */,
+				AF03F7E12952231F00844E37 /* AppointmentViewController.swift in Sources */,
+				AF03F7E42952232A00844E37 /* AppointmentViewModel.swift in Sources */,
+				AF6385C0292150EA005851B4 /* AppDelegate.swift in Sources */,
+				AFFA8E85292159100083764C /* UIToolbar+ToolbarPicker.swift in Sources */,
+				AF4DDD72294A3D54000B21DD /* SalonCatalogViewModel.swift in Sources */,
+				AF4DDD6F294A3D44000B21DD /* NailItTableViewCell.swift in Sources */,
+				AFFA8EA1292159430083764C /* SignInViewController.swift in Sources */,
+				AFFA8E9C292159430083764C /* SignUpViewController.swift in Sources */,
+				AFFA8EA0292159430083764C /* SignInViewModel.swift in Sources */,
+				AF802DB2294F36850087DA0D /* AccountViewController.swift in Sources */,
+				AFFE23F7293345EF00063168 /* UserManager.swift in Sources */,
+				AF1BF6472AE63F4300DDDDE5 /* DebugData.swift in Sources */,
+				AFD3D2B82ABC387500B5CE56 /* Credentials.swift in Sources */,
+				AF94B17A2955DD5400B34ACF /* UILabel+DynamicHeight.swift in Sources */,
+				AF802DA9294EDB6C0087DA0D /* SalonViewController.swift in Sources */,
+				AF7663D429584FDA00517409 /* MasterTableViewCell.swift in Sources */,
+				AF7663D72958738500517409 /* LocationService.swift in Sources */,
+				AF9B6DCD2ADEF15C0027E0A2 /* Localizable.swift in Sources */,
+				AFFE23F92933462F00063168 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD3D2BB2ABC389F00B5CE56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD3D2BC2ABC389F00B5CE56 /* String+Date.swift in Sources */,
+				AFD3D2BD2ABC389F00B5CE56 /* RootCoordinator.swift in Sources */,
+				AFD3D2BE2ABC389F00B5CE56 /* Encodable.swift in Sources */,
+				AFD3D2BF2ABC389F00B5CE56 /* SalonViewModel.swift in Sources */,
+				AFD3D2C02ABC389F00B5CE56 /* Coordinator.swift in Sources */,
+				AFD3D2C12ABC389F00B5CE56 /* AppointmentTableViewCell.swift in Sources */,
+				AFD3D2C22ABC389F00B5CE56 /* UISearchbar+Color.swift in Sources */,
+				AFD3D2C32ABC389F00B5CE56 /* SignUpViewModel.swift in Sources */,
+				AFD3D2C42ABC389F00B5CE56 /* Collection+Safe.swift in Sources */,
+				AFD3D2C52ABC389F00B5CE56 /* Response.swift in Sources */,
+				AFF99DD32AE043D70046FCD1 /* UIFont.swift in Sources */,
+				AFD3D2C62ABC389F00B5CE56 /* NIAppearance.swift in Sources */,
+				AFD3D2C72ABC389F00B5CE56 /* NetworkService.swift in Sources */,
+				AFD3D2C82ABC389F00B5CE56 /* UIColor+Hex.swift in Sources */,
+				AFD3D2C92ABC389F00B5CE56 /* Interactor.swift in Sources */,
+				AFD3D2CA2ABC389F00B5CE56 /* NetworkError.swift in Sources */,
+				AFD3D2CB2ABC389F00B5CE56 /* AccountViewModel.swift in Sources */,
+				AFD3D2CC2ABC389F00B5CE56 /* NailItProvider.swift in Sources */,
+				AFD3D2CD2ABC389F00B5CE56 /* UIViewController+Nib.swift in Sources */,
+				AFD3D2CE2ABC389F00B5CE56 /* SalonCatalogViewController.swift in Sources */,
+				AFD3D2CF2ABC389F00B5CE56 /* AppointmentViewController.swift in Sources */,
+				AFD3D2D02ABC389F00B5CE56 /* AppointmentViewModel.swift in Sources */,
+				AFD3D2D12ABC389F00B5CE56 /* AppDelegate.swift in Sources */,
+				AFD3D2D22ABC389F00B5CE56 /* UIToolbar+ToolbarPicker.swift in Sources */,
+				AFD3D2D32ABC389F00B5CE56 /* SalonCatalogViewModel.swift in Sources */,
+				AFD3D2D42ABC389F00B5CE56 /* NailItTableViewCell.swift in Sources */,
+				AFD3D2D52ABC389F00B5CE56 /* SignInViewController.swift in Sources */,
+				AFD3D2D62ABC389F00B5CE56 /* SignUpViewController.swift in Sources */,
+				AFD3D2D72ABC389F00B5CE56 /* SignInViewModel.swift in Sources */,
+				AFD3D2D82ABC389F00B5CE56 /* AccountViewController.swift in Sources */,
+				AFD3D2D92ABC389F00B5CE56 /* UserManager.swift in Sources */,
+				AF1BF6482AE63FAD00DDDDE5 /* DebugData.swift in Sources */,
+				AFD3D2DA2ABC389F00B5CE56 /* Credentials.swift in Sources */,
+				AFD3D2DB2ABC389F00B5CE56 /* UILabel+DynamicHeight.swift in Sources */,
+				AFD3D2DC2ABC389F00B5CE56 /* SalonViewController.swift in Sources */,
+				AFD3D2DD2ABC389F00B5CE56 /* MasterTableViewCell.swift in Sources */,
+				AFD3D2DE2ABC389F00B5CE56 /* LocationService.swift in Sources */,
+				AF9B6DCE2ADEF15C0027E0A2 /* Localizable.swift in Sources */,
+				AFD3D2DF2ABC389F00B5CE56 /* User.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		AF6385E7292150EC005851B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AF6385E8292150EC005851B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AF6385EA292150EC005851B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63AADF06512C11B6CC7F8E7E /* Pods-NailIt.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_MODE = NO;
+				DEVELOPMENT_TEAM = G9B4VPJY3R;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/ProgressHUD\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/SwiftyBeaver\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}/TinyConstraints\"",
+					"\"${PODS_CONFIGURATION_BUILD_DIR}\"/Alamofire\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NailIt/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kravchenko.nsu.NailIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AF6385EB292150EC005851B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01DF7E32E14E3567016A04F2 /* Pods-NailIt.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_MODE = NO;
+				DEVELOPMENT_TEAM = G9B4VPJY3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NailIt/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kravchenko.nsu.NailIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AFD3D3052ABC389F00B5CE56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBC9D25CD1A9CEDA78CBB227 /* Pods-NailItDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_MODE = YES;
+				DEVELOPMENT_TEAM = G9B4VPJY3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NailIt/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kravchenko.nsu.NailIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AFD3D3062ABC389F00B5CE56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC4A29C1760ABF912A9213B6 /* Pods-NailItDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_MODE = YES;
+				DEVELOPMENT_TEAM = G9B4VPJY3R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NailIt/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kravchenko.nsu.NailIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AF6385B7292150EA005851B4 /* Build configuration list for PBXProject "NailIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF6385E7292150EC005851B4 /* Debug */,
+				AF6385E8292150EC005851B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF6385E9292150EC005851B4 /* Build configuration list for PBXNativeTarget "NailIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF6385EA292150EC005851B4 /* Debug */,
+				AF6385EB292150EC005851B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFD3D3042ABC389F00B5CE56 /* Build configuration list for PBXNativeTarget "NailItDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD3D3052ABC389F00B5CE56 /* Debug */,
+				AFD3D3062ABC389F00B5CE56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AF6385B4292150EA005851B4 /* Project object */;
+}

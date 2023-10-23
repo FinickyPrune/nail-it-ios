@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Regular.ttf">
+            <string>Montserrat-Regular</string>
+        </array>
+        <array key="Montserrat-SemiBold.ttf">
+            <string>Montserrat-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInViewController" customModule="NailIt" customModuleProvider="target">
+            <connections>
+                <outlet property="passwordTextField" destination="IQQ-Ky-qa8" id="FE9-aT-2UV"/>
+                <outlet property="phoneNumberTextField" destination="B9C-Vl-zEb" id="bc0-PA-Adv"/>
+                <outlet property="scrollView" destination="DCE-oD-sO3" id="SMg-fv-SjE"/>
+                <outlet property="signInButton" destination="Dbe-B6-du4" id="Q35-99-Bgt"/>
+                <outlet property="signUpButton" destination="ESM-CA-eeH" id="YoC-r8-UhB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg circles 2" translatesAutoresizingMaskIntoConstraints="NO" id="GnB-ia-yUU">
+                    <rect key="frame" x="165.5" y="-2" width="248.5" height="248.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="GnB-ia-yUU" secondAttribute="height" multiplier="1:1" id="PRb-Vb-9PU"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg circles" translatesAutoresizingMaskIntoConstraints="NO" id="mib-sc-0ID">
+                    <rect key="frame" x="0.0" y="622" width="290" height="290"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="mib-sc-0ID" secondAttribute="height" multiplier="1:1" id="dgI-BE-9OV"/>
+                    </constraints>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCE-oD-sO3">
+                    <rect key="frame" x="30" y="86" width="354" height="741"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yco-lK-b3F">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="459"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3T-2b-mcM">
+                                    <rect key="frame" x="0.0" y="0.0" width="354" height="200"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="200" id="kOC-6R-bu0"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Войти в аккаунт" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OOu-UD-sVb">
+                                    <rect key="frame" x="0.0" y="200" width="354" height="49"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="49" id="QDt-lL-Lyi"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="24"/>
+                                    <color key="textColor" red="0.94901960784313721" green="0.54509803921568623" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SignInViewController.signInLabel"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9a1-SP-cHM">
+                                    <rect key="frame" x="0.0" y="279" width="354" height="180"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер телефона" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B9C-Vl-zEb">
+                                            <rect key="frame" x="22" y="0.0" width="310" height="30"/>
+                                            <color key="backgroundColor" red="0.93333339689999995" green="0.86274516580000005" blue="0.8392156959" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="310" id="1T5-UX-NTv"/>
+                                                <constraint firstAttribute="height" constant="30" id="Mxd-cT-5kO"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.89411771299999998" green="0.5647059083" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" textContentType="tel"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SignInViewController.phonePlaceholder"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textFieldCompleteEditing:" destination="-1" eventType="editingDidEndOnExit" id="U8O-oP-LR4"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IQQ-Ky-qa8">
+                                            <rect key="frame" x="22" y="40" width="310" height="30"/>
+                                            <color key="backgroundColor" red="0.93333333333333335" green="0.86274509803921573" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="310" id="AP4-1N-ZTL"/>
+                                                <constraint firstAttribute="height" constant="30" id="jfC-jE-j81"/>
+                                            </constraints>
+                                            <color key="textColor" red="0.89411771299999998" green="0.5647059083" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SignInViewController.passwordPlaceholder"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="textFieldCompleteEditing:" destination="-1" eventType="editingDidEndOnExit" id="BMg-Hi-hk6"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbe-B6-du4">
+                                            <rect key="frame" x="77" y="80" width="200" height="30"/>
+                                            <color key="backgroundColor" red="0.88235294819999999" green="0.42745098469999998" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="200" id="gcu-Wh-kbV"/>
+                                                <constraint firstAttribute="height" constant="30" id="kNa-Na-GnJ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="16"/>
+                                            <color key="tintColor" red="0.98039215800000001" green="0.94509804249999996" blue="0.81960785390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Войти"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SignInViewController.signInButton"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="signInButtonPressed:" destination="-1" eventType="touchUpInside" id="CFz-HN-Jmh"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ESM-CA-eeH">
+                                            <rect key="frame" x="77" y="120" width="200" height="60"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="60" id="5cy-Do-ILn"/>
+                                                <constraint firstAttribute="width" constant="200" id="dKZ-ug-ZnN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                            <color key="tintColor" red="0.88235294819999999" green="0.42745098469999998" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Еще нет аккаунта? Зарегистрироваться">
+                                                <color key="titleColor" red="0.88235294819999999" green="0.42745098469999998" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="localizationKey" value="SignInViewController.signUpButton"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="singUpButtonPressed:" destination="-1" eventType="touchUpInside" id="OcF-lh-Tet"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="x3T-2b-mcM" firstAttribute="top" secondItem="yco-lK-b3F" secondAttribute="top" id="11C-et-94W"/>
+                                <constraint firstAttribute="trailing" secondItem="OOu-UD-sVb" secondAttribute="trailing" id="3a3-lG-gl6"/>
+                                <constraint firstAttribute="trailing" secondItem="9a1-SP-cHM" secondAttribute="trailing" id="4EQ-gd-OUr"/>
+                                <constraint firstItem="9a1-SP-cHM" firstAttribute="leading" secondItem="yco-lK-b3F" secondAttribute="leading" id="9uQ-Sv-0wU"/>
+                                <constraint firstAttribute="bottom" secondItem="9a1-SP-cHM" secondAttribute="bottom" id="Ou9-UF-1Pu"/>
+                                <constraint firstItem="x3T-2b-mcM" firstAttribute="bottom" secondItem="OOu-UD-sVb" secondAttribute="top" id="Upk-du-dbU"/>
+                                <constraint firstAttribute="trailing" secondItem="x3T-2b-mcM" secondAttribute="trailing" id="WL7-9B-bYA"/>
+                                <constraint firstItem="9a1-SP-cHM" firstAttribute="top" secondItem="OOu-UD-sVb" secondAttribute="bottom" constant="30" id="Wcf-Ky-wIV"/>
+                                <constraint firstItem="OOu-UD-sVb" firstAttribute="leading" secondItem="yco-lK-b3F" secondAttribute="leading" id="iWu-LY-MJ2"/>
+                                <constraint firstItem="x3T-2b-mcM" firstAttribute="leading" secondItem="yco-lK-b3F" secondAttribute="leading" id="qYg-eh-0bQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="yco-lK-b3F" firstAttribute="centerX" secondItem="DCE-oD-sO3" secondAttribute="centerX" id="6m8-2d-5Hk"/>
+                        <constraint firstAttribute="bottom" secondItem="yco-lK-b3F" secondAttribute="bottom" id="7CP-lX-bJZ"/>
+                        <constraint firstItem="yco-lK-b3F" firstAttribute="leading" secondItem="DCE-oD-sO3" secondAttribute="leading" id="YNR-BK-SHd"/>
+                        <constraint firstAttribute="trailing" secondItem="yco-lK-b3F" secondAttribute="trailing" id="YlV-2w-0Je"/>
+                        <constraint firstItem="yco-lK-b3F" firstAttribute="top" secondItem="DCE-oD-sO3" secondAttribute="top" id="u3f-II-rG2"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DCE-oD-sO3" secondAttribute="bottom" constant="35" id="35v-Vw-AZ2"/>
+                <constraint firstItem="GnB-ia-yUU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-50" id="377-TM-9Zg"/>
+                <constraint firstItem="mib-sc-0ID" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.7" id="Oik-TT-pH1"/>
+                <constraint firstItem="DCE-oD-sO3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="RNF-p8-3Xu"/>
+                <constraint firstItem="DCE-oD-sO3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="38" id="ans-qX-6Be"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DCE-oD-sO3" secondAttribute="trailing" constant="30" id="ctQ-cw-GVy"/>
+                <constraint firstItem="GnB-ia-yUU" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.6" id="dja-9o-2t3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mib-sc-0ID" secondAttribute="bottom" constant="-50" id="glQ-ll-DXP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GnB-ia-yUU" secondAttribute="trailing" id="lsv-T8-NAd"/>
+                <constraint firstItem="mib-sc-0ID" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pRn-bd-4i3"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="96"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="bg circles" width="300" height="300"/>
+        <image name="bg circles 2" width="300" height="300"/>
+    </resources>
+</document>
