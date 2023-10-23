@@ -11,7 +11,7 @@ There you will also be able to see available appointment times and sign up.
     <p float="left">
   <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/32d06620-c963-4888-9dbd-02a02d55b57c" width="250" />
   <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/ae01f0b1-57ce-4ca9-a7f2-f0743c5db7e3" width="250" />
-  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/978056d7-e9d4-41b6-b1d2-89492104c54e" width="250" /> 
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/5f193fd6-f5cd-4bb6-a4f2-1f0aba9ccb50" width="250" /> 
     </p>
 
   - Browse salons or services in any city or neighbourhood
