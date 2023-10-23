@@ -17,24 +17,26 @@ There you will also be able to see available appointment times and sign up.
   - Browse salons or services in any city or neighbourhood
 
     <p float="left">
-  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/8c6eed42-0dc8-471b-a05c-31f44dd7bc8f" width="250" />
-  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/b61e5fc0-5662-4693-83d1-004d691aad1e" width="250" /> 
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/d7ea33bf-ca11-4de7-9e9c-2b1dd29740a0" width="250" />
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/4eeee2ff-e23a-4fa0-aecf-a5da89c57b6d" width="250" /> 
   <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/0ae5d8ce-9d9e-4c30-84cd-3d1df55aa91d" width="250" /> 
     </p>
 
-  - Find verified masters who have confirmed their professional skills
   - View available services with prices at salons
 
     <p float="left">
-  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/a2644b3d-1ec1-41c6-ab4e-4aa15e2cc351" width="250" />
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/709ad480-b381-4406-8e4b-48bfc6b89377" width="250" />
     </p>
 
   - Make an appointment at any convenient time
+
+    <p float="left">
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/e854c3e2-500c-4980-93cb-289835c44126" width="250" />
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/7d074a00-0382-4c89-af70-3de59e61f731" width="250" /> 
+    </p>
+
   - View your appointment history
 
     <p float="left">
-  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/b104fe3f-b38c-4a02-941f-5dd5d8305e65" width="250" />
+  <img src="https://github.com/FinickyPrune/nail-it-ios/assets/44488721/81134b68-8c38-4555-90eb-89517912a606" width="250" />
     </p>
-
-
-  - View appointment times
