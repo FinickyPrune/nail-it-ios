@@ -149,7 +149,7 @@ class SalonCatalogViewModel {
         }
 
         filteredSalons = salons.filter { salon -> Bool in
-            return salon.name.lowercased().contains(searchText.lowercased())
+            return salon.salonName.lowercased().contains(searchText.lowercased())
         }
     }
 

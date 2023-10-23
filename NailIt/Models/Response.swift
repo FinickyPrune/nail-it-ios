@@ -64,14 +64,15 @@ struct RegistrationUserInfo: Codable {
 
 struct Salon: Codable {
     let salonId: Int
-    let name: String
+    let salonName: String
     var rate: Float
     let address: String
     let distance: Float
 
     enum CodingKeys: String, CodingKey {
         case salonId = "salon_id"
-        case name, rate, address, distance
+        case salonName = "salon_name"
+        case rate, address, distance
     }
 }
 
@@ -85,7 +86,7 @@ struct Service: Codable {
     let serviceId: Int
     let title: String
     let timeEstimate: String
-    let price: Int
+    let price: String
     let serviceTypeTitle: String
     let distance: Float?
 
@@ -105,11 +106,11 @@ struct NailItServicesListResult {
 
 struct ServiceType: Codable {
     let serviceTypeId: Int
-    let title: String
+    let serviceTypeTitle: String
 
     enum CodingKeys: String, CodingKey {
         case serviceTypeId = "service_type_id"
-        case title
+        case serviceTypeTitle = "service_type_title"
     }
 }
 
@@ -126,7 +127,7 @@ struct Appointment: Codable {
     let salonAddress: String?
     let masterName: String?
     let date: String
-    let price: Int?
+    let price: String?
     let time: String
 
     enum CodingKeys: String, CodingKey {
@@ -146,16 +147,28 @@ struct NailItAppointmentsListResult {
 }
 
 struct Master: Codable, Hashable {
-    let id: Int
+    let masterId: Int
     let name: String
     let rate: Float
     let beautySalonId: Int?
     let masterCategoryId: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case masterId = "master_id"
+        case beautySalonId = "beauty_salon_id"
+        case masterCategoryId = "master_category_id"
+        case name, rate
+    }
 }
 
 struct MasterWithAppResponse: Codable {
     let master: Master
     let appointmentDtos: [Appointment]
+
+    enum CodingKeys: String, CodingKey {
+        case appointmentDtos = "appointmnet_dtos"
+        case master
+    }
 }
 
 struct NailItMastersWithTimesListResult {

@@ -34,16 +34,16 @@ class SalonViewModel {
         self.salon = salon
     }
 
-    var salonName: String { salon.name }
+    var salonName: String { salon.salonName }
 
     var sectionsCount: Int { serviceTypes.count }
 
     func services(for serviceType: ServiceType) -> [Service] {
         guard let displayDelegate = displayDelegate else { return [] }
         if displayDelegate.isFiltering {
-            return filteredServices.filter { (debugMode ? $0.title : $0.serviceTypeTitle) == serviceType.title }
+            return filteredServices.filter { $0.serviceTypeTitle == serviceType.serviceTypeTitle }
         }
-        return services.filter { (debugMode ? $0.title : $0.serviceTypeTitle) == serviceType.title }
+        return services.filter { $0.serviceTypeTitle == serviceType.serviceTypeTitle }
     }
 
     func count(for serviceType: ServiceType) -> Int { services(for: serviceType).count }

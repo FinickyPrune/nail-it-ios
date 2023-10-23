@@ -41,9 +41,9 @@ class AppointmentViewModel {
         actionDelegate?.appointmentViewModelAttempsToDisplayAccountController(self)
     }
 
-    var salonName: String? { salon?.name }
+    var salonName: String? { salon?.salonName }
     var serviceName: String { service.title }
-    var servicePrice: Int { service.price }
+    var servicePrice: String { service.price }
     var serviceDuration: String { service.timeEstimate }
 
     var timeCount: Int { filteredAppointments.count }
@@ -93,8 +93,6 @@ class AppointmentViewModel {
 
             } else {
                 log.error(result.error?.localizedDescription as Any)
-                //                self.displayDelegate?.presentMessage(self, message: result.error?.localizedDescription ?? "Что-то пошло не так :(")
-
                     self.actionDelegate?.appointmentViewModelAttempsToDismissController(self)
 
             }

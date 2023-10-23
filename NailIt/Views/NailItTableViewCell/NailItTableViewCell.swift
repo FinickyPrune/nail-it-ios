@@ -59,7 +59,7 @@ class NailItTableViewCell: UITableViewCell {
 
     func configure(with salon: Salon) {
         cellType = .salon
-        titleLabel.text = salon.name
+        titleLabel.text = salon.salonName
         subtitleLabel.text = salon.address
         let rate = Int(round(salon.rate))
         starsImageViews.forEach { $0.isHidden = false }

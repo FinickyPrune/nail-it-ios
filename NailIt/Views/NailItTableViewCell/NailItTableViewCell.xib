@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,14 +25,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очень длинное название" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJh-xv-m6v">
-                        <rect key="frame" x="13" y="13.000000000000002" width="134" height="19.666666666666671"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Очень длинное название" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJh-xv-m6v">
+                        <rect key="frame" x="13" y="13.000000000000004" width="134" height="39.333333333333343"/>
                         <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoV-ua-ofR">
-                        <rect key="frame" x="13" y="37.666666666666664" width="134" height="16"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoV-ua-ofR">
+                        <rect key="frame" x="13" y="57.333333333333343" width="134" height="16"/>
                         <fontDescription key="fontDescription" name="MontserratRoman-Regular" family="Montserrat" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -44,7 +44,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ya-oj-OKc">
-                        <rect key="frame" x="13" y="58.666666666666657" width="75" height="15"/>
+                        <rect key="frame" x="13" y="78.333333333333329" width="75" height="15"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H7T-s6-ua8">
                                 <rect key="frame" x="0.0" y="-0.33333333333333215" width="15" height="14.666666666666666"/>
@@ -60,6 +60,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="8VU-k9-18P" secondAttribute="height" multiplier="1:1" id="KqS-7M-FrK"/>
                                     <constraint firstAttribute="height" constant="15" id="X3I-Ob-OpC"/>
+                                    <constraint firstAttribute="width" secondItem="8VU-k9-18P" secondAttribute="height" multiplier="1:1" id="bSo-PR-S3u"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vHk-GI-eLR">
@@ -68,6 +69,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vHk-GI-eLR" secondAttribute="height" multiplier="1:1" id="1Qh-WL-FQI"/>
                                     <constraint firstAttribute="height" constant="15" id="bD7-ho-g2C"/>
+                                    <constraint firstAttribute="width" secondItem="vHk-GI-eLR" secondAttribute="height" multiplier="1:1" id="mJk-ux-3DJ"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fcJ-WM-hCP">
@@ -76,6 +78,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="AnB-Es-H3b"/>
                                     <constraint firstAttribute="width" secondItem="fcJ-WM-hCP" secondAttribute="height" multiplier="1:1" id="Ckl-ud-dyu"/>
+                                    <constraint firstAttribute="width" secondItem="fcJ-WM-hCP" secondAttribute="height" multiplier="1:1" id="k9c-ku-b1S"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="v4N-vj-aKZ">
@@ -84,15 +87,12 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="TIu-CJ-9oC"/>
                                     <constraint firstAttribute="width" secondItem="v4N-vj-aKZ" secondAttribute="height" multiplier="1:1" id="WcA-p8-Qzs"/>
+                                    <constraint firstAttribute="width" secondItem="v4N-vj-aKZ" secondAttribute="height" multiplier="1:1" id="wiC-Zo-PxL"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="8VU-k9-18P" firstAttribute="width" secondItem="8VU-k9-18P" secondAttribute="height" multiplier="1:1" id="bSo-PR-S3u"/>
                             <constraint firstAttribute="height" constant="15" id="g61-iV-MZa"/>
-                            <constraint firstItem="fcJ-WM-hCP" firstAttribute="width" secondItem="fcJ-WM-hCP" secondAttribute="height" multiplier="1:1" id="k9c-ku-b1S"/>
-                            <constraint firstItem="vHk-GI-eLR" firstAttribute="width" secondItem="vHk-GI-eLR" secondAttribute="height" multiplier="1:1" id="mJk-ux-3DJ"/>
-                            <constraint firstItem="v4N-vj-aKZ" firstAttribute="width" secondItem="v4N-vj-aKZ" secondAttribute="height" multiplier="1:1" id="wiC-Zo-PxL"/>
                         </constraints>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="salon" translatesAutoresizingMaskIntoConstraints="NO" id="boD-xa-8aV">
@@ -118,6 +118,7 @@
                     <constraint firstItem="aoV-ua-ofR" firstAttribute="width" secondItem="CJh-xv-m6v" secondAttribute="width" id="dY5-XC-7h3"/>
                     <constraint firstItem="boD-xa-8aV" firstAttribute="leading" secondItem="CJh-xv-m6v" secondAttribute="trailing" constant="20" id="iFY-nH-5Th"/>
                     <constraint firstAttribute="bottom" secondItem="boD-xa-8aV" secondAttribute="bottom" constant="13" id="s5F-DR-KTK"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4ya-oj-OKc" secondAttribute="bottom" constant="15" id="uDV-kC-zB0"/>
                     <constraint firstItem="4ya-oj-OKc" firstAttribute="top" secondItem="aoV-ua-ofR" secondAttribute="bottom" constant="5" id="v5r-ln-mGI"/>
                     <constraint firstAttribute="trailing" secondItem="boD-xa-8aV" secondAttribute="trailing" constant="13" id="vL1-uJ-ONE"/>
                 </constraints>
