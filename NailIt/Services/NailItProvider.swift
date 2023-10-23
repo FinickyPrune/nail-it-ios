@@ -16,12 +16,7 @@ final class NailItProvider {
 
         DispatchQueue.global(qos: .background).async {
             Thread.sleep(forTimeInterval: 1.0)
-            if let data = try? JSONSerialization.data(withJSONObject: ["id": 1,
-                                                                       "name": "FinickyPrune",
-                                                                       "phone_number": "+75551989111",
-                                                                       "access_token": "access_token",
-                                                                       "message": nil,
-                                                                       "status": nil]) {
+            if let data = try? JSONSerialization.data(withJSONObject: DebugData.loginData()) {
                 completion(ServerResponse(data: data, error: nil))
                 return
             }
@@ -96,6 +91,20 @@ final class NailItProvider {
     func appointmentsForMasterList(_ serviceId: Int,
                                    completion: @escaping (ServerResponse) -> Void) {
         guard let url = URL(string: APIPaths.appointmentsForMasterUrl.replacingOccurrences(of: "{service_id}", with: String(serviceId))) else { return }
+
+        if debugMode {
+
+            DispatchQueue.global(qos: .background).async {
+                Thread.sleep(forTimeInterval: 1.0)
+                if let data = try? JSONSerialization.data(withJSONObject: DebugData.mastersWithAppointmentsData()) {
+                    completion(ServerResponse(data: data, error: nil))
+                    return
+                }
+                completion(ServerResponse(data: nil, error: nil))
+            }
+
+        }
+
         NetworkService.shared.request(url,
                                       method: .get,
                                       encoding: JSONEncoding.default,

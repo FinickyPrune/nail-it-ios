@@ -12,6 +12,8 @@
 		AF03F7E12952231F00844E37 /* AppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03F7DF2952231F00844E37 /* AppointmentViewController.swift */; };
 		AF03F7E22952231F00844E37 /* AppointmentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF03F7E02952231F00844E37 /* AppointmentViewController.xib */; };
 		AF03F7E42952232A00844E37 /* AppointmentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03F7E32952232A00844E37 /* AppointmentViewModel.swift */; };
+		AF1BF6472AE63F4300DDDDE5 /* DebugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BF6462AE63F4300DDDDE5 /* DebugData.swift */; };
+		AF1BF6482AE63FAD00DDDDE5 /* DebugData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1BF6462AE63F4300DDDDE5 /* DebugData.swift */; };
 		AF4DDD51294A3289000B21DD /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD3F294A3288000B21DD /* Montserrat-Light.ttf */; };
 		AF4DDD52294A3289000B21DD /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD40294A3289000B21DD /* Montserrat-Thin.ttf */; };
 		AF4DDD53294A3289000B21DD /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4DDD41294A3289000B21DD /* Montserrat-Bold.ttf */; };
@@ -158,6 +160,7 @@
 		AF03F7DF2952231F00844E37 /* AppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewController.swift; sourceTree = "<group>"; };
 		AF03F7E02952231F00844E37 /* AppointmentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppointmentViewController.xib; sourceTree = "<group>"; };
 		AF03F7E32952232A00844E37 /* AppointmentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppointmentViewModel.swift; sourceTree = "<group>"; };
+		AF1BF6462AE63F4300DDDDE5 /* DebugData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugData.swift; sourceTree = "<group>"; };
 		AF4DDD3F294A3288000B21DD /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Light.ttf"; sourceTree = "<group>"; };
 		AF4DDD40294A3289000B21DD /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Thin.ttf"; sourceTree = "<group>"; };
 		AF4DDD41294A3289000B21DD /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
@@ -535,6 +538,7 @@
 			children = (
 				AFFE23F3293336CD00063168 /* Response.swift */,
 				AFFE23F82933462F00063168 /* User.swift */,
+				AF1BF6462AE63F4300DDDDE5 /* DebugData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -862,6 +866,7 @@
 				AFFA8EA0292159430083764C /* SignInViewModel.swift in Sources */,
 				AF802DB2294F36850087DA0D /* AccountViewController.swift in Sources */,
 				AFFE23F7293345EF00063168 /* UserManager.swift in Sources */,
+				AF1BF6472AE63F4300DDDDE5 /* DebugData.swift in Sources */,
 				AFD3D2B82ABC387500B5CE56 /* Credentials.swift in Sources */,
 				AF94B17A2955DD5400B34ACF /* UILabel+DynamicHeight.swift in Sources */,
 				AF802DA9294EDB6C0087DA0D /* SalonViewController.swift in Sources */,
@@ -907,6 +912,7 @@
 				AFD3D2D72ABC389F00B5CE56 /* SignInViewModel.swift in Sources */,
 				AFD3D2D82ABC389F00B5CE56 /* AccountViewController.swift in Sources */,
 				AFD3D2D92ABC389F00B5CE56 /* UserManager.swift in Sources */,
+				AF1BF6482AE63FAD00DDDDE5 /* DebugData.swift in Sources */,
 				AFD3D2DA2ABC389F00B5CE56 /* Credentials.swift in Sources */,
 				AFD3D2DB2ABC389F00B5CE56 /* UILabel+DynamicHeight.swift in Sources */,
 				AFD3D2DC2ABC389F00B5CE56 /* SalonViewController.swift in Sources */,
