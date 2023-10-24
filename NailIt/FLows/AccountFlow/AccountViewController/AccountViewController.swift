@@ -89,10 +89,10 @@ extension AccountViewController: UITableViewDataSource, UITableViewDelegate {
         switch section {
         case .coming:
             label.text = "AccountViewController.enrolls".localized
-            label.font = UIFont(name: "Montserrat-Bold", size: 20)
+            label.font = UIFont.montserratBold(size: 20)
         case .history:
             label.text = "AccountViewController.previousEnrolls".localized
-            label.font = UIFont(name: "Montserrat-SemiBold", size: 16)
+            label.font = UIFont.montserratSemiBold(size: 16)
         }
         return view
     }

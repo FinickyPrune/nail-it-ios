@@ -188,6 +188,40 @@
         }
       }
     },
+    "NailIt.failedSignIn" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign In Error"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка входа"
+          }
+        }
+      }
+    },
+    "NailIt.failedSignUp" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sign Up Error"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ошибка регистрации"
+          }
+        }
+      }
+    },
     "NailIt.invalidNameAlert" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -539,7 +573,7 @@
         },
         "ru" : {
           "stringUnit" : {
-            "state" : "needs_review",
+            "state" : "translated",
             "value" : "Регистрация"
           }
         }

@@ -18,7 +18,7 @@ class SignInViewController: UIViewController {
     
     @IBOutlet private weak var scrollView: UIScrollView!
     
-    private let failMessage = "Ошибка входа"
+    private let failMessage = "NailIt.failedSignIn".localized
     
     var viewModel: SignInViewModel?
     

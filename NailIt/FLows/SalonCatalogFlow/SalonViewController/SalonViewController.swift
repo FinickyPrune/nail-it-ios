@@ -55,27 +55,6 @@ class SalonViewController: UIViewController {
         tableView.contentInset = contentInset
     }
 
-    private func setupNavigationBar() {
-        searchController.obscuresBackgroundDuringPresentation = false
-        let searchBar = searchController.searchBar
-        searchBar.setPlaceholderColor(NIAppearance.nailItPlaceholderTextColor)
-        searchBar.setTextColor(color: NIAppearance.nailItPlaceholderTextColor)
-        searchBar.setPlaceholderFont(UIFont.montserratSemiBold(size: 16))
-        searchBar.searchTextField.leftView?.tintColor = NIAppearance.nailItPlaceholderTextColor
-        searchBar.placeholder = "SalonViewController.searchPlaceholder".localized
-        searchBar.delegate = self
-        searchBar.searchTextField.backgroundColor = NIAppearance.nailItOrangeColor
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"),
-                                                            style: .plain,
-                                                            target: self,
-                                                            action: #selector(didTapAccount))
-        navigationItem.rightBarButtonItem?.tintColor = NIAppearance.nailItBrownColor
-                navigationController?.navigationBar.backItem?.title = ""
-        navigationItem.title = viewModel?.salonName ?? ""
-        navigationItem.searchController = searchController
-        searchController.searchResultsUpdater = self
-    }
-
     @objc private func didTapAccount() {
         viewModel?.didTapAccount()
     }
@@ -93,6 +72,27 @@ class SalonViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         setupNavigationBar()
+    }
+
+    private func setupNavigationBar() {
+        searchController.obscuresBackgroundDuringPresentation = false
+        let searchBar = searchController.searchBar
+        searchBar.setPlaceholderColor(Appearance.Color.nailItPlaceholderTextColor)
+        searchBar.setTextColor(color: Appearance.Color.nailItPlaceholderTextColor)
+        searchBar.setPlaceholderFont(UIFont.montserratSemiBold(size: 16))
+        searchBar.searchTextField.leftView?.tintColor = Appearance.Color.nailItPlaceholderTextColor
+        searchBar.placeholder = "SalonViewController.searchPlaceholder".localized
+        searchBar.delegate = self
+        searchBar.searchTextField.backgroundColor = Appearance.Color.nailItOrangeColor
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"),
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(didTapAccount))
+        navigationItem.rightBarButtonItem?.tintColor = Appearance.Color.nailItBrownColor
+        navigationController?.navigationBar.backItem?.title = ""
+        navigationItem.title = viewModel?.salonName ?? ""
+        navigationItem.searchController = searchController
+        searchController.searchResultsUpdater = self
     }
 
     private func fetchData() {
@@ -126,7 +126,7 @@ extension SalonViewController: UITableViewDataSource, UITableViewDelegate {
         let label = UILabel()
         view.addSubview(label)
         label.textColor = .black
-        label.font = UIFont(name: "Montserrat-SemiBold", size: 16)
+        label.font = UIFont.montserratSemiBold(size: 16)
         label.textAlignment = .center
         label.text = serviceType.serviceTypeTitle
         let labelWidth = label.intrinsicContentSize.width
