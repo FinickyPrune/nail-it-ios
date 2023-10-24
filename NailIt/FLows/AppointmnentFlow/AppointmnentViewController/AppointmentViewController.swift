@@ -51,7 +51,7 @@ final class AppointmentViewController: UIViewController {
         serviceNameLabel.frame = CGRect(origin: serviceNameLabel.frame.origin,
                                         size: CGSize(width: serviceNameLabel.frame.width,
                                                      height: heightFor(text: viewModel?.serviceName ?? "",
-                                                                       font: UIFont(name: "Montserrat-Bold", size: 20)!,
+                                                                       font: UIFont.montserratBold(size: 20),
                                                                        width: serviceNameLabel.frame.width)))
         serivcePriceLabel.text = "\(viewModel?.servicePrice ?? "0.0")\("NailIt.currency".localized)"
         serviceDurationLabel.text = viewModel?.serviceDuration
@@ -96,7 +96,7 @@ final class AppointmentViewController: UIViewController {
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(didTapAccount))
-        navigationItem.rightBarButtonItem?.tintColor = NIAppearance.nailItBrownColor
+        navigationItem.rightBarButtonItem?.tintColor = Appearance.Color.nailItBrownColor
         navigationController?.navigationBar.backItem?.title = ""
         navigationItem.title = viewModel?.salonName ?? ""
     }
@@ -162,7 +162,7 @@ final class AppointmentViewController: UIViewController {
         calendarParentView.addSubview(calendarView!)
         calendarView?.edgesToSuperview()
 
-        calendarView?.tintColor = NIAppearance.nailItOrangeColor
+        calendarView?.tintColor = Appearance.Color.nailItOrangeColor
         calendarView?.availableDateRange = DateInterval(start: .now, end: .distantFuture)
 
         let selection = UICalendarSelectionSingleDate(delegate: self)
@@ -213,9 +213,9 @@ extension AppointmentViewController: AppointmentViewModelDisplayDelegate {
     }
 
     func presentMessage(_ viewModel: AppointmentViewModel, message: String) {
-//        DispatchQueue.main.async {
-//            self.presentFailAlert(with: message)
-//        }
+        DispatchQueue.main.async {
+            self.presentFailAlert(with: message)
+        }
     }
 
     func reloadTableView(_ viewModel: AppointmentViewModel) {
@@ -271,9 +271,9 @@ extension AppointmentViewController: UITableViewDataSource, UITableViewDelegate 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel?.didSelectMaster(with: indexPath.row)
         if let indexPath = selectedMasterIndexPath {
-            tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = UIColor(red: 0.949, green: 0.859, blue: 0.835, alpha: 0.5)
+            tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = Appearance.Color.selectedMasterCellColor
         }
-        tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = UIColor(red: 0.949, green: 0.859, blue: 0.835, alpha: 1)
+        tableView.cellForRow(at: indexPath)?.contentView.backgroundColor = Appearance.Color.unselectedMasterCellColor
         selectedMasterIndexPath = indexPath
     }
 

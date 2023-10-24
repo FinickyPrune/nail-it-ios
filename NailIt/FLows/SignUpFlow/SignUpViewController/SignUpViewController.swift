@@ -22,8 +22,8 @@ class SignUpViewController: UIViewController {
     
     var viewModel: SignUpViewModel?
     
-    private let failMessage = "Ошибка регистрации"
-    
+    private let failMessage = "NailIt.failedSignUp".localized
+
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.layer.cornerRadius = 15

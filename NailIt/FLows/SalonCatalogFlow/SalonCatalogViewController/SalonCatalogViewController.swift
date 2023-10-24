@@ -78,21 +78,21 @@ final class SalonCatalogViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         let searchBar = searchController.searchBar
 
-        searchBar.setPlaceholderColor(NIAppearance.nailItPlaceholderTextColor)
-        searchBar.setTextColor(color: NIAppearance.nailItPlaceholderTextColor)
+        searchBar.setPlaceholderColor(Appearance.Color.nailItPlaceholderTextColor)
+        searchBar.setTextColor(color: Appearance.Color.nailItPlaceholderTextColor)
         searchBar.setPlaceholderFont(UIFont.montserratSemiBold(size: 16))
-        searchBar.searchTextField.leftView?.tintColor = NIAppearance.nailItPlaceholderTextColor
+        searchBar.searchTextField.leftView?.tintColor = Appearance.Color.nailItPlaceholderTextColor
         searchBar.placeholder = "SalonCatalogViewController.searchPlaceholder".localized
         searchBar.delegate = self
-        searchBar.searchTextField.backgroundColor = NIAppearance.nailItOrangeColor
+        searchBar.searchTextField.backgroundColor = Appearance.Color.nailItOrangeColor
 
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont.montserratBold(size: 16),
-                                                                   NSAttributedString.Key.foregroundColor: NIAppearance.nailItOrangeColor]
+                                                                   NSAttributedString.Key.foregroundColor: Appearance.Color.nailItOrangeColor]
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal"),
                                                             style: .plain,
                                                             target: self,
                                                             action: #selector(didTapAccount))
-        navigationItem.rightBarButtonItem?.tintColor = NIAppearance.nailItBrownColor
+        navigationItem.rightBarButtonItem?.tintColor = Appearance.Color.nailItBrownColor
 
         navigationItem.title = "SalonCatalogViewController.navigationLabel".localized
 
@@ -120,8 +120,8 @@ final class SalonCatalogViewController: UIViewController {
     @IBAction private func didTapSort(_ sender: UIButton) {
         guard let viewModel = viewModel, !viewModel.isServicesMode else { return }
         viewModel.didTapSort()
-        sender.backgroundColor =  viewModel.isSorting ? NIAppearance.nailItOrangeColor : .white
-        sender.setTitleColor( !viewModel.isSorting ? NIAppearance.nailItOrangeColor : .white, for: .normal)
+        sender.backgroundColor =  viewModel.isSorting ? Appearance.Color.nailItOrangeColor : .white
+        sender.setTitleColor( !viewModel.isSorting ? Appearance.Color.nailItOrangeColor : .white, for: .normal)
     }
 
     @IBAction private func didTapAllServices(_ sender: UIButton) {
@@ -130,8 +130,8 @@ final class SalonCatalogViewController: UIViewController {
         tableView.allowsMultipleSelection = viewModel.isServicesMode
         tableView.allowsMultipleSelectionDuringEditing = viewModel.isServicesMode
         enrollButton.isHidden = !viewModel.isServicesMode
-        sender.backgroundColor =  viewModel.isServicesMode ? NIAppearance.nailItOrangeColor : .white
-        sender.setTitleColor( !viewModel.isServicesMode ? NIAppearance.nailItOrangeColor : .white, for: .normal)
+        sender.backgroundColor =  viewModel.isServicesMode ? Appearance.Color.nailItOrangeColor : .white
+        sender.setTitleColor( !viewModel.isServicesMode ? Appearance.Color.nailItOrangeColor : .white, for: .normal)
     }
 
     @IBAction private func didTapEnroll() {
