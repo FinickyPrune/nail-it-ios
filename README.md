@@ -4,6 +4,15 @@
 Aggregator of services in the field of beauty (hairdressing salons, tattoo salons, nail salons, etc.) with an emphasis on the masters, their rating. 
 There you will also be able to see available appointment times and sign up.
 
+App was designed and developed as part of an university course. 
+
+Our team is consists of 4 brilliant students:
+  - [@dyuganov](https://github.com/dyuganov) in role of Project Manager and Designer
+  - Student 2
+  - Student 3
+  - And me as in role of iOS Developer
+
+
 ## Realised flows
 
   - Register in the system and log in to your account
