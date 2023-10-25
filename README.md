@@ -6,12 +6,15 @@ There you will also be able to see available appointment times and sign up.
 
 App was designed and developed as part of an university course. 
 
-Our team is consists of 4 brilliant students:
+Our team consisted of 4 brilliant students:
   - [@dyuganov](https://github.com/dyuganov) in role of Project Manager and Designer
-  - Student 2
-  - Student 3
+  - [mmalakhova](https://github.com/mmalakhova) in role of Backend Developer
+  - [@valvifor](https://github.com/valvifor) in role of QA
   - And me as in role of iOS Developer
 
+App has two targets supporting different API.
+  - NailIt target supports backed developed by our team
+  - NailItDemo target supports debug API provided by [mockapi.io](https://mockapi.io) service.
 
 ## Realised flows
 
